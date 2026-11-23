@@ -31,6 +31,11 @@ jobs:
       BATCH: ${{ github.workspace }}/../pr743-batch
       MODE: ${{ inputs.mode }}
     steps:
+      - name: Checkout this review repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
       - name: Checkout the private source at the exact reviewed head
         uses: actions/checkout@v4
         with:
@@ -90,12 +95,14 @@ jobs:
             --output "$BATCH/native-runtime-audit.json"
 
       - name: Reviewer independent decoded-media audit
+        continue-on-error: true
         if: inputs.mode == 'render'
         run: |
           set -euo pipefail
           python reviewer/independent_media_audit.py "$BATCH" "$BATCH/reviewer-independent-media.json"
 
       - name: Reviewer static scale audit over 100000 seeds
+        continue-on-error: true
         if: inputs.mode == 'render'
         run: |
           set -euo pipefail
@@ -103,6 +110,7 @@ jobs:
             source/generators/loaded_viscoelastic_strip_creep_reversal "$BATCH/scale-static.json"
 
       - name: Production finite-strain controls and reviewer model domain checks
+        continue-on-error: true
         if: inputs.mode == 'render'
         run: |
           set -euo pipefail
@@ -114,6 +122,7 @@ jobs:
             "$BATCH" source/generators/loaded_viscoelastic_strip_creep_reversal "$BATCH/model-domain.json"
 
       - name: Exact-head test suite and dependency check
+        continue-on-error: true
         if: inputs.mode == 'render'
         run: |
           set -euo pipefail
@@ -128,7 +137,7 @@ jobs:
           exit $code
 
       - name: Publish the provisional inspection page and the key frames
-        if: inputs.mode == 'render' || inputs.mode == 'frames'
+        if: always() && (inputs.mode == 'render' || inputs.mode == 'frames')
         run: |
           set -euo pipefail
           python reviewer/provisional_page.py "$BATCH" "$GITHUB_WORKSPACE/publish"
@@ -138,7 +147,7 @@ jobs:
           python reviewer/write_media_hashes.py "$BATCH" media-hashes.json
 
       - name: Assemble and publish the official validated bundle
-        if: inputs.mode == 'bundle'
+        if: always() && inputs.mode == 'bundle'
         run: |
           set -euo pipefail
           test -f reviewer/visual/native-semantic-visual.json
@@ -164,6 +173,7 @@ jobs:
           ls -la
 
       - name: Commit and publish the site content
+        if: always() && (inputs.mode == 'render' || inputs.mode == 'frames')
         run: |
           set -euo pipefail
           git config user.name "review-bot"
@@ -177,8 +187,14 @@ jobs:
             git push origin HEAD:main
           fi
 
+      - name: Check every automatic gate
+        if: always() && inputs.mode == 'render'
+        run: |
+          set -euo pipefail
+          python reviewer/check_gates.py "$BATCH"
+
       - name: Upload the batch evidence as an artifact
-        if: inputs.mode == 'render'
+        if: always() && inputs.mode == 'render'
         uses: actions/upload-artifact@v4
         with:
           name: pr743-batch-render
