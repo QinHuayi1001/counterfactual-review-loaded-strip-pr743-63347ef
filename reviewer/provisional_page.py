@@ -43,12 +43,12 @@ for entry in sorted(manifest["cases"], key=lambda c: c["case_id"]):
     cards.append("""
 <article class="case" data-case-id="%(cid)s">
   <h2>%(cid)s</h2>
-  <p class="facts">L %(L).0f mm · section %(A).3g mm&sup2; · payload %(m).3f g · intervention frame %(i)d · first changed frame %(fc)d · evidence frame %(ef)d · True creep %(tc).2f mm · CF lift %(cf).2f mm</p>
+  <p class="facts">L %(L).0f mm · section %(A).3g mm&sup2; · payload %(m).3f g · intervention frame %(i)d · first changed frame %(fc)d · evidence frame %(ef)d · True creep %(tc).2f mm · CF lift %(cfmm).2f mm</p>
   <div class="grid">
-    <figure><figcaption>True</figcaption><video controls muted playsinline preload="auto" src="%(true)s"></video></figure>
-    <figure><figcaption>Counterfactual</figcaption><video controls muted playsinline preload="auto" src="%(cf)s"></video></figure>
-    <figure><figcaption>Binary mask (0/255)</figcaption><video controls muted playsinline preload="auto" src="%(mask)s"></video></figure>
-    <figure><figcaption>Red mask overlay #FF0000</figcaption><video controls muted playsinline preload="auto" src="%(overlay)s"></video></figure>
+    <figure><figcaption>True</figcaption><video controls muted playsinline preload="auto" src="%(src_true)s"></video></figure>
+    <figure><figcaption>Counterfactual</figcaption><video controls muted playsinline preload="auto" src="%(src_cf)s"></video></figure>
+    <figure><figcaption>Binary mask (0/255)</figcaption><video controls muted playsinline preload="auto" src="%(src_mask)s"></video></figure>
+    <figure><figcaption>Red mask overlay #FF0000</figcaption><video controls muted playsinline preload="auto" src="%(src_overlay)s"></video></figure>
   </div>
   <details><summary>Standalone prompts</summary><h3>True</h3><p>%(pt)s</p><h3>Counterfactual</h3><p>%(pc)s</p></details>
 </article>""" % {
@@ -60,8 +60,9 @@ for entry in sorted(manifest["cases"], key=lambda c: c["case_id"]):
         "fc": meta["first_changed_frame"],
         "ef": meta["evidence_frame"],
         "tc": abs(motion["true"]["displacement_from_intervention_m"]) * 1000,
-        "cf": abs(motion["counterfactual"]["displacement_from_intervention_m"]) * 1000,
-        "true": sources["true"], "cf": sources["cf"], "mask": sources["mask"], "overlay": sources["overlay"],
+        "cfmm": abs(motion["cf"]["displacement_from_intervention_m"]) * 1000,
+        "src_true": sources["true"], "src_cf": sources["cf"],
+        "src_mask": sources["mask"], "src_overlay": sources["overlay"],
         "pt": html.escape(prompts["true"]), "pc": html.escape(prompts["cf"]),
     })
 

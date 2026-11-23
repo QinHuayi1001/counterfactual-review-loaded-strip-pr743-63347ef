@@ -38,10 +38,11 @@ manifest = json.loads((BATCH / "case-manifest.json").read_text())
 case_ids = [c["case_id"] for c in manifest["cases"]]
 
 # 1. published spectrum anchor -----------------------------------------------------
-weights = EI / EI.sum()
+# the published spectrum is stated as a share of the total instantaneous modulus
+weights = EI / (EINF + EI.sum())
 add("published_spectrum_anchor",
     abs(float(EINF + EI.sum()) - 3.25e6) < 1.0
-    and np.allclose(weights, [0.45, 0.26, 0.10], atol=0.005)
+    and np.allclose(weights, [0.45, 0.26, 0.10], atol=0.005)  # shares of the total modulus
     and np.allclose(TAU, [0.047, 0.97, 18.0]),
     instantaneous_modulus_Pa=float(EINF + EI.sum()),
     weights=[round(float(w), 5) for w in weights],
@@ -94,7 +95,12 @@ strains = np.concatenate([s.reshape(-1) for s in strains])
 eps_lo, eps_hi = float(strains.min()), float(strains.max())
 strain_residual = max(strain_residuals)
 grid_eps = np.linspace(eps_lo, eps_hi, 24)
-grid_ev = np.stack([np.linspace(ev_lo[i], ev_hi[i], 8) for i in range(3)], axis=1)
+# one node per grid point: three internal states per node, shaped (3, nodes),
+# exactly as the production solver passes them to the constitutive law.
+grid_ev = np.stack([np.linspace(ev_lo[i], ev_hi[i], 8) for i in range(3)], axis=1).T
+batch_count = grid_eps.size * grid_ev.shape[1]
+batch_eps = np.repeat(grid_eps, grid_ev.shape[1])
+batch_ev = np.tile(grid_ev, (1, grid_eps.size))
 
 # 2. infinitesimal tangent consistency --------------------------------------------
 eps_small = np.array([1e-9, 1e-8, 1e-7])
@@ -112,13 +118,14 @@ h = 1e-6
 eps_probe = np.linspace(max(eps_lo, 1e-4), eps_hi, 12)
 residuals = []
 for e in eps_probe:
-    for ev in grid_ev:
-        _, _, u = model.constitutive(np.array([e]), ev, EI, EINF)
-        up = model.constitutive(np.array([e + h]), ev, EI, EINF)[2]
-        um = model.constitutive(np.array([e - h]), ev, EI, EINF)[2]
-        derivative = float((up - um) / (2 * h))
-        _, p, _ = model.constitutive(np.array([e]), ev, EI, EINF)
-        residuals.append(abs(derivative - float(p[0])) / max(abs(float(p[0])), 1.0))
+    for ev in grid_ev.T:
+        strain = np.array([e])
+        internal = ev.reshape(3, 1)
+        up = float(model.constitutive(strain + h, internal, EI, EINF)[2][0])
+        um = float(model.constitutive(strain - h, internal, EI, EINF)[2][0])
+        derivative = (up - um) / (2 * h)
+        nominal = float(model.constitutive(strain, internal, EI, EINF)[1][0])
+        residuals.append(abs(derivative - nominal) / max(abs(nominal), 1.0))
 add("stored_energy_is_conjugate_to_nominal_stress",
     max(residuals) < 1e-4,
     max_relative_residual=float(max(residuals)),
@@ -126,7 +133,7 @@ add("stored_energy_is_conjugate_to_nominal_stress",
     note="numerical dU/dlambda matches the nominal stress produced by the same call")
 
 # 4. stored energy is non-negative and finite ---------------------------------------
-energies = model.constitutive(grid_eps, grid_ev, EI, EINF)[2]
+energies = model.constitutive(batch_eps, batch_ev, EI, EINF)[2]
 add("stored_energy_non_negative_and_finite",
     bool(np.all(np.isfinite(energies)) and np.all(energies >= -1e-9)),
     min_energy_J_per_m3=float(np.min(energies)),
@@ -134,7 +141,7 @@ add("stored_energy_non_negative_and_finite",
     grid_points=int(np.asarray(energies).size))
 
 # 5. positive tangent over the delivered operating range -----------------------------
-tangents = model.constitutive_tangents(grid_eps, grid_ev, EI, EINF)[0]
+tangents = model.constitutive_tangents(batch_eps, batch_ev, EI, EINF)[0]
 add("positive_tangent_over_delivered_operating_range",
     bool(np.all(np.asarray(tangents) > 0)),
     min_tangent_Pa=float(np.min(tangents)),
@@ -143,14 +150,14 @@ add("positive_tangent_over_delivered_operating_range",
 
 # 6. single-branch operator isolation -------------------------------------------------
 eps_one = np.array([0.05])
-ev_one = np.array([[0.02, 0.08, 0.15]])
+ev_one = np.array([[0.02], [0.08], [0.15]])
 branch, _, _ = model.constitutive(eps_one, ev_one, EI, EINF)
 r_true = model.viscous_rate(branch, EI, TAU, np.ones(3), 1 + eps_one)
 r_cf = model.viscous_rate(branch, EI, TAU, np.array([1.0, -1.0, 1.0]), 1 + eps_one)
 add("counterfactual_changes_only_the_middle_internal_flow",
     bool(np.array_equal(r_true[[0, 2]], r_cf[[0, 2]]) and np.array_equal(r_true[1], -r_cf[1])),
-    true_rates=[float(v) for v in np.atleast_1d(r_true)],
-    counterfactual_rates=[float(v) for v in np.atleast_1d(r_cf)])
+    true_rates=[float(v) for v in np.atleast_1d(r_true).ravel()],
+    counterfactual_rates=[float(v) for v in np.atleast_1d(r_cf).ravel()])
 
 # 7. dissipation sign contract -------------------------------------------------------
 stretch = 1 + eps_one
@@ -158,9 +165,10 @@ Q = stretch * branch
 power_true = Q * r_true
 power_cf = Q * r_cf
 add("true_dissipates_and_counterfactual_supplies_energy_in_the_middle_branch_only",
-    bool(np.all(power_true >= 0) and power_cf[1] < 0 and np.all(power_cf[[0, 2]] >= 0)),
-    true_branch_power_W_per_m3=[float(v) for v in np.atleast_1d(power_true)],
-    counterfactual_branch_power_W_per_m3=[float(v) for v in np.atleast_1d(power_cf)],
+    bool(np.all(power_true >= 0) and float(power_cf[1].ravel()[0]) < 0
+         and np.all(power_cf[[0, 2]] >= 0)),
+    true_branch_power_W_per_m3=[float(v) for v in np.atleast_1d(power_true).ravel()],
+    counterfactual_branch_power_W_per_m3=[float(v) for v in np.atleast_1d(power_cf).ravel()],
     note="the declared single violation: s * epsilon_v_dot < 0 in the middle branch")
 
 # 8. delivered strains stay inside the declared sampling domain ----------------------
