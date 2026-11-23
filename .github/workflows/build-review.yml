@@ -183,13 +183,18 @@ jobs:
           git config user.email "review-bot@users.noreply.github.com"
           paths=""
           for p in index.html evidence review.json bundle-manifest.json stage-validation.json media frames media-hashes.json .nojekyll; do
-            if [ -e "$p" ]; then paths="$paths $p"; fi
+            # include a path when it exists now or is already tracked, so that a
+            # directory this mode replaces is staged as a deletion
+            if [ -e "$p" ] || git ls-files --error-unmatch "$p" >/dev/null 2>&1; then
+              paths="$paths $p"
+            fi
           done
           if [ -z "$paths" ]; then
             echo "nothing published in this mode"
             exit 0
           fi
-          git add -- $paths
+          # stage the published site only; source/ and the batch stay ignored
+          git add -A -- $paths
           git status --porcelain | head -40
           if git diff --cached --quiet; then
             echo "nothing to publish"
