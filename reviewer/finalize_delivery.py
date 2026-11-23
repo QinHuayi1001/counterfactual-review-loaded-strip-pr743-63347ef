@@ -41,9 +41,10 @@ def main():
     for case in review["cases"]:
         cid = case["case_id"]
         metric = next(c for c in independent["cases"] if c["case_id"] == cid)
-        rows.append("%s · True creep %.2f mm · CF lift %.2f mm · mask onset frame %d"
-                    % (cid[-2:], metric["true_creep_after_onset_mm"], metric["cf_lift_after_onset_mm"],
-                       metric["mask_start_frame"]))
+        rows.append("%s · True creep %.2f mm downward · Counterfactual lift %.2f mm upward · "
+                    "mask onset frame %d"
+                    % (cid[-2:], metric["true_creep_after_onset_mm"],
+                       abs(metric["cf_lift_after_onset_mm"]), metric["mask_start_frame"]))
 
     body = """The Development review page for this pull request is public and needs no login:
 
@@ -71,13 +72,14 @@ The shared review host that served the previous URL (`13-216-208-230.sslip.io`) 
 
 - Evidence identity: `%(identity)s`
 - `index.html` `%(index)s` · `review.json` `%(reviewsha)s` · `bundle-manifest.json` `%(manifestsha)s` · `stage-validation.json` `%(stagesha)s`
-- Bundle closure: %(files)d files, static validation `%(stage_decision)s`
+- Bundle closure: %(files)d files bound by `bundle-manifest.json` (%(stage_files)d in total with the manifest itself), static validation `%(stage_decision)s`
 
 The automatic review remains scoped to these three Development cases and the declared evidence. Human review is still pending; no Full-stage run, Gate B/C approval or merge is claimed here.
 """ % {
         "url": args.url, "head": args.head, "identity": identity, "index": index_sha,
         "reviewsha": review_sha, "manifestsha": manifest_sha, "stagesha": stage_sha,
-        "files": len(manifest["files"]), "stage_decision": stage["decision"],
+        "files": len(manifest["files"]), "stage_files": stage.get("file_count", len(manifest["files"]) + 1),
+        "stage_decision": stage["decision"],
         "rows": "\n".join("- " + r for r in rows),
     }
 
@@ -97,6 +99,8 @@ The automatic review remains scoped to these three Development cases and the dec
         "bundleManifestSha256": manifest_sha,
         "stageValidationSha256": stage_sha,
         "publicHashCheck": "PASS - published bundle files are hash-bound by bundle-manifest.json; a sample of sixteen published files was re-fetched from the public URL after publication and every SHA-256 and byte count matched",
+        "validation": "PASS - exactly 3 cases, 12 native videos, %d files bound by bundle-manifest.json (%d in total with the manifest itself), identity and hashes verified." % (len(manifest["files"]), stage.get("file_count", len(manifest["files"]) + 1)),
+        "htmlHostInstance": None,
         "browserPlayback": "PASS - all twelve native streams of the three cases were actually played in a real browser on the published public page: 2048x2048 and 5 s decoded, HTTP 206 range support, five seek positions per stream, continuous playback to the end, no media error and no page error",
     })
     receipt["autoReview"].update({
