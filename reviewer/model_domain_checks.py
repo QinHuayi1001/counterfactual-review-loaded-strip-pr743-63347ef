@@ -49,39 +49,50 @@ add("published_spectrum_anchor",
     source="Dykstra et al. (2019), Table 1 (published small-strain anchor)")
 
 # operating grid taken from the delivered trajectories and their physics audits
+#
+# The engineering strain of every strip segment is rebuilt here from the
+# delivered frame positions alone, using the model's own segment definition:
+# a virtual origin below the strip plus the sampled node chain. The rest
+# segment length L/n is taken from the delivered scene parameters. The rebuilt
+# strain is then compared with the strain array the model itself recorded in
+# the same trajectory file, so the operating grid cannot drift from the
+# delivered physics.
 strains = []
+strain_residuals = []
 ev_lo = np.zeros(3)
 ev_hi = np.zeros(3)
 for cid in case_ids:
     case = BATCH / cid
     physics = json.loads((case / "audit_physics.json").read_text())
+    meta = json.loads((case / "metadata.json").read_text())
     for label in ("true", "cf"):
         folder = case / ("true" if label == "true" else BRANCH)
         with np.load(folder / "trajectory.npz") as z:
-            positions = z["frame_positions"].copy()
+            positions = np.asarray(z["frame_positions"], dtype=float)
             frame_t = z["frame_t"].copy()
-        # frame_positions is (frames, nodes, 3): segment lengths are measured
-        # node by node against the previous sampled frame.
-        pos = np.asarray(positions, dtype=float)
-        if pos.ndim == 2:
-            segments = np.diff(np.vstack([np.zeros((1, 3)), pos]), axis=1)
-            lengths = np.linalg.norm(segments, axis=1)
-        elif pos.ndim == 3:
-            previous = np.concatenate(
-                [np.zeros((1,) + tuple(pos.shape[1:]), dtype=pos.dtype), pos[:-1]], axis=0)
-            segments = pos - previous
-            lengths = np.linalg.norm(segments, axis=2)
-        else:
-            raise ValueError("unexpected frame_positions rank: %r" % (pos.shape,))
-        h = lengths[0, 0]
-        strains.append(lengths / h - 1.0)
+            recorded_strain = z["strain"].copy()
+            dense_t = z["t"].copy()
         assert np.array_equal(frame_t, np.arange(120) / 24.0), cid + " timebase"
+        if positions.ndim != 3 or positions.shape[0] != 120 or positions.shape[2] != 3:
+            raise ValueError("unexpected frame_positions shape: %r" % (positions.shape,))
+        node_count = positions.shape[1]
+        rest_length = float(meta["scene_params"]["L"]) / node_count
+        chain = np.concatenate([np.zeros((positions.shape[0], 1, 3)), positions], axis=1)
+        segment_lengths = np.linalg.norm(np.diff(chain, axis=1), axis=2)
+        rebuilt = segment_lengths / rest_length - 1.0
+        strains.append(rebuilt)
+        step = float(dense_t[1] - dense_t[0])
+        index = np.rint((frame_t - dense_t[0]) / step).astype(int)
+        if not np.allclose(dense_t[index], frame_t, atol=1e-9):
+            raise ValueError("frame times are not samples of the dense solver grid")
+        strain_residuals.append(float(np.max(np.abs(recorded_strain[:, index] - rebuilt.T))))
     for branch_metrics in (physics["metrics"]["true"], physics["metrics"]["cf"]):
         lo, hi = branch_metrics["logViscousStretchRange"]
         ev_lo = np.minimum(ev_lo, np.asarray(lo))
         ev_hi = np.maximum(ev_hi, np.asarray(hi))
 strains = np.concatenate([s.reshape(-1) for s in strains])
 eps_lo, eps_hi = float(strains.min()), float(strains.max())
+strain_residual = max(strain_residuals)
 grid_eps = np.linspace(eps_lo, eps_hi, 24)
 grid_ev = np.stack([np.linspace(ev_lo[i], ev_hi[i], 8) for i in range(3)], axis=1)
 
@@ -178,7 +189,10 @@ for cid in case_ids:
 add("delivered_timebase_and_paired_prefix_integrity",
     timebase_ok and prefix_equal,
     timebase_exact_i_over_24s=timebase_ok,
-    paired_prefix_state_identical=prefix_equal)
+    paired_prefix_state_identical=prefix_equal,
+    max_rebuilt_strain_residual=strain_residual,
+    note="the engineering strain rebuilt from the delivered frame positions matches the "
+         "strain array the model recorded in the same trajectory file")
 
 report = {
     "schema": "reviewer-model-domain-v1",
@@ -191,6 +205,7 @@ report = {
         "declared_engineering_strain_cap": cap,
         "production_load_ratio_eq": [0.10, 0.14],
         "delivered_engineering_strain_range": [eps_lo, eps_hi],
+        "max_rebuilt_strain_residual": strain_residual,
         "note": "The finite-strain constitutive law is a synthetic extension of a published small-strain spectrum; it is not an experimental calibration of Agilus30 at finite strain.",
     },
     "results": results,
