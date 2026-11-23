@@ -142,6 +142,7 @@ jobs:
         run: |
           set -euo pipefail
           test -f reviewer/visual/native-semantic-visual.json
+          cp reviewer/visual/native-semantic-visual.json "$BATCH/native-semantic-visual.json"
           python reviewer/assemble_report.py \
             --batch "$BATCH" \
             --visual reviewer/visual/native-semantic-visual.json \
