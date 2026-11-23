@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PR #743 re-render inspection page</title>
+<style>
+body{font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;background:#0b121c;color:#e7eef7;margin:0;padding:28px}
+main{max-width:1700px;margin:0 auto}
+h1{font-size:34px;margin:0 0 10px}
+.notice{background:#3a2410;border:1px solid #b06a1c;border-left:4px solid #e08b2a;padding:12px 16px;border-radius:8px;margin:14px 0 26px}
+.case{border:1px solid #22374d;border-radius:12px;padding:18px;margin:0 0 26px;background:#101a26}
+.facts{color:#9fb4cc;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+figure{margin:0;background:#060c14;border:1px solid #22374d;border-radius:8px;overflow:hidden}
+figcaption{padding:8px 10px;font-size:14px}
+video{width:100%;display:block;aspect-ratio:1;background:#000}
+details{margin-top:14px}
+p{white-space:pre-wrap}
+code{background:#0b121c;padding:2px 6px;border-radius:5px}
+</style></head>
+<body><main>
+<h1>PR #743 · loaded_viscoelastic_strip_creep_reversal</h1>
+<p>Re-render inspection page for the exact reviewed head <code>63347efe67b880f81742980913c5229a421df3eb</code>.</p>
+<div class="notice"><strong>Provisional page, not the validated bundle.</strong> The original shared review host was
+reclaimed by the platform and its media were lost, so the three Development cases were re-rendered from the
+unchanged reviewed commit in a fresh runner. This page exists so every native stream can be played and inspected
+before the official bundle is assembled. No automatic verdict, human acceptance or Gate B/C approval is claimed here.</div>
+
+<article class="case" data-case-id="loaded_viscoelastic_strip_creep_reversal_00000000">
+  <h2>loaded_viscoelastic_strip_creep_reversal_00000000</h2>
+  <p class="facts">L 220 mm · section 40 mm&sup2; · payload 538.022 g · intervention frame 58 · first changed frame 58 · evidence frame 82 · True creep 6.65 mm · CF lift 25.66 mm</p>
+  <div class="grid">
+    <figure><figcaption>True</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000000/true.mp4"></video></figure>
+    <figure><figcaption>Counterfactual</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000000/cf.mp4"></video></figure>
+    <figure><figcaption>Binary mask (0/255)</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000000/mask.mp4"></video></figure>
+    <figure><figcaption>Red mask overlay #FF0000</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000000/overlay.mp4"></video></figure>
+  </div>
+  <details><summary>Standalone prompts</summary><h3>True</h3><p>A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After the initial loading stretch, the strip continues to creep slowly downward while the weight remains suspended under gravity.</p><h3>Counterfactual</h3><p>A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After stretching under the load, the strip reverses its slow creep and gradually lifts the suspended weight despite the continued gravitational load.</p></details>
+</article>
+
+<article class="case" data-case-id="loaded_viscoelastic_strip_creep_reversal_00000001">
+  <h2>loaded_viscoelastic_strip_creep_reversal_00000001</h2>
+  <p class="facts">L 250 mm · section 50 mm&sup2; · payload 672.528 g · intervention frame 58 · first changed frame 58 · evidence frame 81 · True creep 7.82 mm · CF lift 26.04 mm</p>
+  <div class="grid">
+    <figure><figcaption>True</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000001/true.mp4"></video></figure>
+    <figure><figcaption>Counterfactual</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000001/cf.mp4"></video></figure>
+    <figure><figcaption>Binary mask (0/255)</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000001/mask.mp4"></video></figure>
+    <figure><figcaption>Red mask overlay #FF0000</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000001/overlay.mp4"></video></figure>
+  </div>
+  <details><summary>Standalone prompts</summary><h3>True</h3><p>A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After the initial loading stretch, the strip continues to creep slowly downward while the weight remains suspended under gravity.</p><h3>Counterfactual</h3><p>A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After stretching under the load, the strip reverses its slow creep and gradually lifts the suspended weight despite the continued gravitational load.</p></details>
+</article>
+
+<article class="case" data-case-id="loaded_viscoelastic_strip_creep_reversal_00000002">
+  <h2>loaded_viscoelastic_strip_creep_reversal_00000002</h2>
+  <p class="facts">L 280 mm · section 60 mm&sup2; · payload 807.034 g · intervention frame 58 · first changed frame 58 · evidence frame 80 · True creep 8.96 mm · CF lift 26.41 mm</p>
+  <div class="grid">
+    <figure><figcaption>True</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000002/true.mp4"></video></figure>
+    <figure><figcaption>Counterfactual</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000002/cf.mp4"></video></figure>
+    <figure><figcaption>Binary mask (0/255)</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000002/mask.mp4"></video></figure>
+    <figure><figcaption>Red mask overlay #FF0000</figcaption><video controls muted playsinline preload="auto" src="media/loaded_viscoelastic_strip_creep_reversal_00000002/overlay.mp4"></video></figure>
+  </div>
+  <details><summary>Standalone prompts</summary><h3>True</h3><p>A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After the initial loading stretch, the strip continues to creep slowly downward while the weight remains suspended under gravity.</p><h3>Counterfactual</h3><p>A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After stretching under the load, the strip reverses its slow creep and gradually lifts the suspended weight despite the continued gravitational load.</p></details>
+</article>
+</main></body></html>

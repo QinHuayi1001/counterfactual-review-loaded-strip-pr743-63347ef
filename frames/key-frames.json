@@ -1,0 +1,364 @@
+{
+  "frames": [
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "true",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/true-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "true",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/true-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "true",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/true-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "true",
+      "frame": 82,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/true-f082.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "true",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/true-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "cf",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/cf-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "cf",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/cf-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "cf",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/cf-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "cf",
+      "frame": 82,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/cf-f082.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "cf",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/cf-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "mask",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/mask-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "mask",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/mask-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "mask",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/mask-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "mask",
+      "frame": 82,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/mask-f082.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "mask",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/mask-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "overlay",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/overlay-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "overlay",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/overlay-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "overlay",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/overlay-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "overlay",
+      "frame": 82,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/overlay-f082.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "role": "overlay",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000000/overlay-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "true",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/true-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "true",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/true-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "true",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/true-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "true",
+      "frame": 81,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/true-f081.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "true",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/true-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "cf",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/cf-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "cf",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/cf-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "cf",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/cf-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "cf",
+      "frame": 81,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/cf-f081.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "cf",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/cf-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "mask",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/mask-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "mask",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/mask-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "mask",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/mask-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "mask",
+      "frame": 81,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/mask-f081.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "mask",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/mask-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "overlay",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/overlay-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "overlay",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/overlay-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "overlay",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/overlay-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "overlay",
+      "frame": 81,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/overlay-f081.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "role": "overlay",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000001/overlay-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "true",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/true-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "true",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/true-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "true",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/true-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "true",
+      "frame": 80,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/true-f080.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "true",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/true-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "cf",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/cf-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "cf",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/cf-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "cf",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/cf-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "cf",
+      "frame": 80,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/cf-f080.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "cf",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/cf-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "mask",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/mask-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "mask",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/mask-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "mask",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/mask-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "mask",
+      "frame": 80,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/mask-f080.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "mask",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/mask-f119.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "overlay",
+      "frame": 0,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/overlay-f000.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "overlay",
+      "frame": 57,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/overlay-f057.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "overlay",
+      "frame": 58,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/overlay-f058.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "overlay",
+      "frame": 80,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/overlay-f080.png"
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "role": "overlay",
+      "frame": 119,
+      "file": "loaded_viscoelastic_strip_creep_reversal_00000002/overlay-f119.png"
+    }
+  ]
+}
