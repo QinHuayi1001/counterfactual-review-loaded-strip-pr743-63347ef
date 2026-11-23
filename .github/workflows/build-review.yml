@@ -1,0 +1,163 @@
+name: pr743-review-bundle
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "render = re-render and publish the provisional inspection page; bundle = assemble and publish the official validated bundle"
+        required: true
+        default: render
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pr743-review-bundle
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    env:
+      GEN: loaded_viscoelastic_strip_creep_reversal
+      HEAD: 63347efe67b880f81742980913c5229a421df3eb
+      PR: https://github.com/hipo-dev/counterfactual-data/pull/743
+      BATCH: ${{ runner.temp }}/batch
+      MODE: ${{ inputs.mode }}
+    steps:
+      - name: Checkout the private source at the exact reviewed head
+        uses: actions/checkout@v4
+        with:
+          repository: hipo-dev/counterfactual-data
+          ref: ${{ env.HEAD }}
+          token: ${{ secrets.SOURCE_PAT }}
+          path: source
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install the pinned generator dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip wheel
+          pip install -r source/generators/loaded_viscoelastic_strip_creep_reversal/requirements.txt
+          pip check
+
+      - name: Render the three Development cases with runtime provenance
+        run: |
+          set -euo pipefail
+          mkdir -p "$BATCH"
+          cd source
+          python -u .agents/skills/review-counterfactual-generator/scripts/run_with_provenance.py \
+            --generator loaded_viscoelastic_strip_creep_reversal \
+            --case-set development-three-recipes \
+            --artifact-root "$BATCH" \
+            --record "$BATCH/runtime-witness.json" \
+            -- python generators/loaded_viscoelastic_strip_creep_reversal/examples/render_development.py \
+                 --output "$BATCH" --workers 2
+
+      - name: Runtime witness index and independent witness audit
+        run: |
+          set -euo pipefail
+          cd source
+          python .agents/skills/review-counterfactual-generator/scripts/build_runtime_witness_index.py \
+            --witness "$BATCH/runtime-witness.json" \
+            --expected-cases-json "$BATCH/case-manifest.json" \
+            --output "$BATCH/runtime-witness-index.json"
+          python .agents/skills/review-counterfactual-generator/scripts/audit_runtime_witness.py \
+            --witness "$BATCH/runtime-witness.json" \
+            --artifact-root "$BATCH" \
+            --output "$BATCH/native-runtime-audit.json"
+
+      - name: Reviewer independent decoded-media audit
+        run: |
+          set -euo pipefail
+          python reviewer/independent_media_audit.py "$BATCH" "$BATCH/reviewer-independent-media.json"
+
+      - name: Reviewer static scale audit over 100000 seeds
+        run: |
+          set -euo pipefail
+          python reviewer/static_scale_audit.py \
+            source/generators/loaded_viscoelastic_strip_creep_reversal "$BATCH/scale-static.json"
+
+      - name: Production finite-strain controls and reviewer model domain checks
+        run: |
+          set -euo pipefail
+          cd source
+          python generators/loaded_viscoelastic_strip_creep_reversal/examples/finite_strain_controls.py \
+            --output "$BATCH/finite-strain-controls.json"
+          cd ..
+          python reviewer/model_domain_checks.py \
+            "$BATCH" source/generators/loaded_viscoelastic_strip_creep_reversal "$BATCH/model-domain.json"
+
+      - name: Exact-head test suite and dependency check
+        run: |
+          set -euo pipefail
+          cd source
+          set +e
+          python -m pytest generators/loaded_viscoelastic_strip_creep_reversal/tests -q > "$BATCH/pytest-stdout.txt" 2>&1
+          code=$?
+          set -e
+          cat "$BATCH/pytest-stdout.txt"
+          cd ..
+          python reviewer/write_test_report.py "$BATCH" "$code"
+          exit $code
+
+      - name: Publish the provisional inspection page
+        if: inputs.mode == 'render'
+        run: |
+          set -euo pipefail
+          python reviewer/provisional_page.py "$BATCH" "$GITHUB_WORKSPACE/publish"
+          rm -rf index.html evidence review.json bundle-manifest.json stage-validation.json
+          cp -R publish/index.html publish/media .
+          python reviewer/write_media_hashes.py "$BATCH" media-hashes.json
+
+      - name: Assemble and publish the official validated bundle
+        if: inputs.mode == 'bundle'
+        run: |
+          set -euo pipefail
+          test -f reviewer/visual/native-semantic-visual.json
+          python reviewer/assemble_report.py \
+            --batch "$BATCH" \
+            --visual reviewer/visual/native-semantic-visual.json \
+            --head "$HEAD" \
+            --pr "$PR" \
+            --output "$BATCH/review.json"
+          cd source
+          python generators/loaded_viscoelastic_strip_creep_reversal/examples/build_review.py \
+            --batch "$BATCH" \
+            --review "$BATCH/review.json" \
+            --pr "$PR" \
+            --head "$HEAD" \
+            --output "$BATCH/bundle"
+          python generators/loaded_viscoelastic_strip_creep_reversal/examples/validate_review.py \
+            --bundle "$BATCH/bundle"
+          cd ..
+          rm -rf index.html evidence review.json bundle-manifest.json stage-validation.json media
+          cp -R "$BATCH/bundle/." .
+          ls -la
+
+      - name: Commit and publish the site content
+        run: |
+          set -euo pipefail
+          git config user.name "review-bot"
+          git config user.email "review-bot@users.noreply.github.com"
+          git add -A index.html evidence review.json bundle-manifest.json stage-validation.json media media-hashes.json .nojekyll
+          git status --porcelain | head -40
+          if git diff --cached --quiet; then
+            echo "nothing to publish"
+          else
+            git commit -m "Publish PR #743 review bundle rebuilt at ${HEAD} (mode ${MODE})"
+            git push origin HEAD:main
+          fi
+
+      - name: Upload the batch evidence as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr743-batch-${{ inputs.mode }}
+          path: ${{ runner.temp }}/batch
+          retention-days: 30
