@@ -1,0 +1,12 @@
+{
+  "schema_version": "loaded-strip-review-stage-validation-v1",
+  "decision": "PASS",
+  "stage": "Development",
+  "case_count": 3,
+  "video_count": 12,
+  "file_count": 44,
+  "headSha": "63347efe67b880f81742980913c5229a421df3eb",
+  "evidenceIdentity": "86baea094b9e8fd7365d7342793543998b242007c40a448a76a859ad5b27b135",
+  "humanReview": "pending",
+  "scope": "Static HTML structure, identity and referenced-asset hashes only; browser playback and human acceptance are separate."
+}

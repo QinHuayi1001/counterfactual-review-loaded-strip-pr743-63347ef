@@ -1,0 +1,10 @@
+{
+  "schema_version": "counterfactual-runtime-witness-audit-v1",
+  "pass": true,
+  "generator": "loaded_viscoelastic_strip_creep_reversal",
+  "case_set": "development-three-recipes",
+  "commit": "63347efe67b880f81742980913c5229a421df3eb",
+  "artifact_count": 43,
+  "accepted_case_count": 3,
+  "failures": []
+}

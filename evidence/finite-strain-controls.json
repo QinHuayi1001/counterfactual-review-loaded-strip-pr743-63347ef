@@ -1,0 +1,94 @@
+{
+  "generator": "loaded_viscoelastic_strip_creep_reversal",
+  "updatedAt": "2026-11-23T05:44:55.644401+00:00",
+  "scope": "Mathematical controls of the actual finite-strain production law. Synthetic nonlinear extension of published small-strain spectrum, not experimental material validation. Ideal-stress controls are separate from the hanging contact solve.",
+  "productionModule": "/home/runner/work/counterfactual-review-loaded-strip-pr743-63347ef/counterfactual-review-loaded-strip-pr743-63347ef/source/generators/loaded_viscoelastic_strip_creep_reversal/engine/model.py",
+  "productionBinding": true,
+  "sourceSha256": "358e1948bfc13403cf61a6e698a20963218707b5dc789c9f14d66ed3413e4867",
+  "controlCodeSha256": "776c8b3cc3971b49278a65064d3b0872b2ba437409000ea8238e0317ba24e30a",
+  "helpers": {
+    "constitutive": {
+      "module": "finite_strain_model_under_review",
+      "sourceSha256": "784f7f710df84b29a7141155c5773658c99d9eda5913a5b683281eb395d07d11",
+      "calls": 86869
+    },
+    "viscous_rate": {
+      "module": "finite_strain_model_under_review",
+      "sourceSha256": "b082f94462191c06b0d4316eb38de2ac57800dad4ec829879fd43fc459eaad59",
+      "calls": 6701
+    },
+    "constitutive_tangents": {
+      "module": "finite_strain_model_under_review",
+      "sourceSha256": "4050f8fe85de0e49ac628e327ccf96e9cf7e1429c9ae2e2fe8526d48208faa9f",
+      "calls": 6700
+    }
+  },
+  "checks": [
+    {
+      "name": "positive_True_and_negative_selected_CF_dissipation",
+      "passed": true,
+      "minTrueDissipationWperM3": 0.17898655520139958,
+      "maxMiddleCFDissipationWperM3": -193.75934296802305
+    },
+    {
+      "name": "only_middle_internal_flow_changes",
+      "passed": true,
+      "maxUnselectedRateDifference": 0.0
+    },
+    {
+      "name": "branch_switch_preserves_state_stress_and_energy",
+      "passed": true,
+      "maxStressJumpPa": 0.0
+    },
+    {
+      "name": "finite_strain_stored_energy_work_conjugacy",
+      "passed": true,
+      "maxGradientResidualPa": 2.8269005269976333e-05,
+      "finiteDifferenceStep": 2e-06,
+      "conjugateInternalForce": "Q_i=lambda*P_i"
+    },
+    {
+      "name": "analytic_constitutive_tangents",
+      "passed": true,
+      "maxTangentResidualPa": 0.00014353077858686447
+    },
+    {
+      "name": "infinitesimal_limit_recovers_analytic_SLS_creep",
+      "passed": true,
+      "maxRelativeToEquilibriumStrain": 1.6158862460840777e-06,
+      "stressPa": 1.0,
+      "finiteStrainControl": false
+    },
+    {
+      "name": "viscosity_to_infinity_nonlinear_elastic_limit",
+      "passed": true,
+      "relativeStrainDrift": [
+        0.0033291582213230463,
+        3.3324564130116993e-06,
+        3.332460334829759e-09
+      ],
+      "instantaneousElasticStretch": 1.073263398347681
+    },
+    {
+      "name": "finite_strain_constant_stress_reversal_and_energy",
+      "passed": true,
+      "maxEnergyResidualJperM3": 1.2778400559909642e-10,
+      "trueStretchChange": 0.06823076303681064,
+      "cfStretchChange": -0.02065188478371227,
+      "cfNegativeDissipationJperM3": -971.7641397837483
+    },
+    {
+      "name": "production_3D_analytic_Jacobian",
+      "passed": true,
+      "maxScaledEntryError": 6.997695598702452e-08,
+      "maxAbsoluteEntryError": 4.681298901232367e-05
+    },
+    {
+      "name": "reviewed_source_unchanged_during_controls",
+      "passed": true,
+      "sourceSha256": "358e1948bfc13403cf61a6e698a20963218707b5dc789c9f14d66ed3413e4867"
+    }
+  ],
+  "controlsDecision": "PASS",
+  "generatorReviewDecision": null
+}

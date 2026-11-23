@@ -1,0 +1,142 @@
+{
+  "schema_version": "counterfactual-runtime-witness-v1",
+  "status": "success",
+  "invalid_reasons": [],
+  "started_at_utc": "2026-11-23T05:16:48.653591+00:00",
+  "finished_at_utc": "2026-11-23T05:41:03.473713+00:00",
+  "generator": "loaded_viscoelastic_strip_creep_reversal",
+  "case_set": "development-three-recipes",
+  "accepted_cases": [
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000000/metadata.json",
+      "metadata_sha256": "e6892c57f762a0d8b89675e0794e31566f5da166ef710e4b62921c6ae1cb780a",
+      "seed": 0,
+      "profile": {
+        "parameter_source": "explicit-development-recipe",
+        "recipe_index": 0
+      }
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000001/metadata.json",
+      "metadata_sha256": "859b29248cf88973c05d041072a30909fdc3cadf1868abe17a2b97cfcdbc0fac",
+      "seed": 1,
+      "profile": {
+        "parameter_source": "explicit-development-recipe",
+        "recipe_index": 1
+      }
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000002/metadata.json",
+      "metadata_sha256": "ef8a8bddb2255b3228179c160cf6d4e1f4f644bcc0f8368160e3038e833bba4f",
+      "seed": 2,
+      "profile": {
+        "parameter_source": "explicit-development-recipe",
+        "recipe_index": 2
+      }
+    }
+  ],
+  "command_argv": [
+    "python",
+    "generators/loaded_viscoelastic_strip_creep_reversal/examples/render_development.py",
+    "--output",
+    "/home/runner/work/counterfactual-review-loaded-strip-pr743-63347ef/counterfactual-review-loaded-strip-pr743-63347ef/pr743-batch",
+    "--workers",
+    "2"
+  ],
+  "command_shell_escaped": "python generators/loaded_viscoelastic_strip_creep_reversal/examples/render_development.py --output /home/runner/work/counterfactual-review-loaded-strip-pr743-63347ef/counterfactual-review-loaded-strip-pr743-63347ef/pr743-batch --workers 2",
+  "working_directory": "/home/runner/work/counterfactual-review-loaded-strip-pr743-63347ef/counterfactual-review-loaded-strip-pr743-63347ef/source",
+  "exit_code": 0,
+  "repository_before": {
+    "root": "/home/runner/work/counterfactual-review-loaded-strip-pr743-63347ef/counterfactual-review-loaded-strip-pr743-63347ef/source",
+    "commit": "63347efe67b880f81742980913c5229a421df3eb",
+    "worktree_status": null
+  },
+  "repository_after": {
+    "root": "/home/runner/work/counterfactual-review-loaded-strip-pr743-63347ef/counterfactual-review-loaded-strip-pr743-63347ef/source",
+    "commit": "63347efe67b880f81742980913c5229a421df3eb",
+    "worktree_status": null
+  },
+  "dirty_state_reason": null,
+  "runtime": {
+    "python": "3.10.22 (main, Oct  1 2026, 14:31:30) [GCC 11.4.0]",
+    "python_executable": "/opt/hostedtoolcache/Python/3.10.22/x64/bin/python",
+    "operating_system": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+    "machine": "x86_64",
+    "packages": {
+      "numpy": "1.26.4",
+      "imageio-ffmpeg": "0.6.0"
+    },
+    "pip_freeze": [
+      "exceptiongroup==1.3.2",
+      "imageio-ffmpeg==0.6.0",
+      "iniconfig==2.3.1",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.1.0",
+      "pluggy==1.7.0",
+      "pybullet==3.2.7",
+      "pytest==8.3.5",
+      "scipy==1.14.1",
+      "tomli==2.5.0",
+      "typing_extensions==4.16.0"
+    ],
+    "ffmpeg": null,
+    "nvidia_smi": null,
+    "macos_displays": null,
+    "container_image": null,
+    "container_environment": {},
+    "declared_components": {},
+    "nested_component_witnesses": []
+  },
+  "dependency_locks": [],
+  "artifact_root": "/home/runner/work/counterfactual-review-loaded-strip-pr743-63347ef/counterfactual-review-loaded-strip-pr743-63347ef/pr743-batch",
+  "artifact_sha256_before": {},
+  "artifact_sha256": {
+    "case-manifest.json": "13442c935ed55d63ef96d51198879227029b64cf6eb931d5e57fc0c9d4fee37d",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/audit_media.json": "54610c75fb7720468dd272968dee71f28622c953d98cdaa0519d8f32af367a9a",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/audit_physics.json": "2f8190953ead7f16d28f6b177822c99388f1714b26b45f11cabbb9c500856f57",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/mask.mp4": "3e90fec8dd9410b4b0c3ac86492c7660c3acaffc098c37ff80abf29a828f12e2",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/mask_overlay.mp4": "6e5e7d1931650a515e49e9436ff46d37d835a0cc8655f07404c5bb837f249d58",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/prompt.txt": "d25c9fc52034005d66d08a6ec070312c2f381e63ca2b4b1215076fd514a98afa",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/trajectory.npz": "2796e4d5f863dde9164309eb528eb2e8deffc2743c67d5ad4e8a5b8afb809d11",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/video.mp4": "01f61afa61bdbef4e1bfc299bfaa87708a9562fd19564a931a2eec5c3d5baa09",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/metadata.json": "e6892c57f762a0d8b89675e0794e31566f5da166ef710e4b62921c6ae1cb780a",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/render_witness.json": "bcbaab4e0d8582015ec2d3aeff96ca50cab78bbfcf7c278feb580da276f28ce4",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/segmentation_witness.npz": "94a48bb0fc08b6e8ee26d40d60f7d2f5fc3c87a2edbe7e6b21895406d57bdf99",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/simulation.json": "bd5849f8a4c2fda62f77d11f71b80135c7dc91138856fe2d70bbc37a61ae18cf",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/true/prompt.txt": "8c9401a290ca5979dccc78df03c05ee81782f9c11866c430ea6b76049885ea97",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/true/trajectory.npz": "27872023c3f890379453cad0a87f11fcce6bceed222a194813794084e9845e76",
+    "loaded_viscoelastic_strip_creep_reversal_00000000/true/video.mp4": "a698695ff6042e35e918509456273b899433a1975475a99251af5923ce48271f",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/audit_media.json": "c80665bdbd08f57b925a20f5ea5b2cf85e97bcc2cfe571812aa4ac5f99439436",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/audit_physics.json": "8aad79c50ac35dabc9a6821558cfd10b8bd67080c8097397ded2fcf824f7d0e2",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/mask.mp4": "32a22fe1af0e0b66df238cd3cc407030d491d85d55763a8020c45ffec1231a12",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/mask_overlay.mp4": "911755034c923fed4ab3e05734cf3e0572f78e6560a9ac37aa290c16c228ac47",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/prompt.txt": "d25c9fc52034005d66d08a6ec070312c2f381e63ca2b4b1215076fd514a98afa",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/trajectory.npz": "2d88703be20cb8ed621dcbb7aec4d1eba2edf73b602ecd6b03d3e3ca3dd805bb",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/video.mp4": "b8ef6cfaceb9da818f60e8137b2a8bd120389df8dd96e12a782aa78c3ba448a7",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/metadata.json": "859b29248cf88973c05d041072a30909fdc3cadf1868abe17a2b97cfcdbc0fac",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/render_witness.json": "c306e8318c64b971f962e276ac6afaaded0188adf2bc12ebae37d67c2a1723cb",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/segmentation_witness.npz": "0f78b9bf1207f34af8d0009ba8889e8acac1c553e881377db8fdccacafa20a36",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/simulation.json": "ff1d5be7dd82f25c4c5db90729c00202f8f0ba6d9a72afb94ed08c9bf2f9d463",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/true/prompt.txt": "8c9401a290ca5979dccc78df03c05ee81782f9c11866c430ea6b76049885ea97",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/true/trajectory.npz": "2852baccffdb4bd33f5d63f27b7b9144d83c1e7419b9da4b59657625f368b7ea",
+    "loaded_viscoelastic_strip_creep_reversal_00000001/true/video.mp4": "2c6b89cb10d056d4f7dc7c016dcfd5387af9485e448d57dd770734bb201ff766",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/audit_media.json": "43a5740cb8d1d9bc6c421c2a5deec4dbbb8d0dc9d221bd9b75ed9f669f5a0dca",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/audit_physics.json": "0a1dea628f87c57705c55063b8a692e2619c57ae436fe48597a7c4226ba19553",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/mask.mp4": "6235cfb616e925180a1c337e297498f57eed1117fe013e1ac0e587931bdb7ab3",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/mask_overlay.mp4": "1427314fd72b8750b03beb4c62f568208c70e0b48c486ab10b2c2f907a69558d",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/prompt.txt": "d25c9fc52034005d66d08a6ec070312c2f381e63ca2b4b1215076fd514a98afa",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/trajectory.npz": "01a21e4a7d7465f6ef633f5d83da1d8d1ffcecc80840618ec069b0151f42cc8e",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/video.mp4": "e1424b8ebaed38b7ab6c8a53c77b6e18503eed26fe26c852c7af30ca5a2c9227",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/metadata.json": "ef8a8bddb2255b3228179c160cf6d4e1f4f644bcc0f8368160e3038e833bba4f",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/render_witness.json": "461feb6ecd8347ad77eefa5bf26de77b56f005a145aaaab514110fffe013b608",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/segmentation_witness.npz": "519382f482d223bf656b0008bf08f9f5430c82e4b3aa057092f8d6e372ce9ed4",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/simulation.json": "22896f870a24f23bb23197d104781fba74d795abef6f9ca0a8b461f25446a545",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/true/prompt.txt": "8c9401a290ca5979dccc78df03c05ee81782f9c11866c430ea6b76049885ea97",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/true/trajectory.npz": "fac40b5024404b1d6821e1416ce1e57b796180d110a935db75fdb89b4d99cf36",
+    "loaded_viscoelastic_strip_creep_reversal_00000002/true/video.mp4": "6a394597ad1e41bbfe50aa62beceed432728fe4009d08c61e7729fecf09541bf"
+  }
+}

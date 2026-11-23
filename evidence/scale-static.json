@@ -1,0 +1,78 @@
+{
+  "schema": "reviewer-static-scale-audit-v1",
+  "decision": "PASS",
+  "scope": "Static allocation audit only: no case was rendered or simulated here.",
+  "contract_version": "CGC-v1",
+  "profile_version": "loaded-strip-finite-strain-v2",
+  "target_cases": 100000,
+  "audited_seed_count": 100000,
+  "accepted_static": 100000,
+  "audit_samples": 100000,
+  "distinct_profile_ids": 100000,
+  "distinct_effective_signatures": 100000,
+  "profile_space_size": 102270350,
+  "axis_bucket_coverage": {
+    "length": 1.0,
+    "width": 1.0,
+    "load": 1.0,
+    "relaxation": 1.0,
+    "loading_time": 1.0,
+    "onset": 1.0,
+    "azimuth": 1.0,
+    "frame_side": 1.0,
+    "strip_color": 1.0
+  },
+  "axis_bucket_detail": {
+    "length": {
+      "buckets": 19,
+      "covered": 19,
+      "fraction": 1.0
+    },
+    "width": {
+      "buckets": 13,
+      "covered": 13,
+      "fraction": 1.0
+    },
+    "load": {
+      "buckets": 13,
+      "covered": 13,
+      "fraction": 1.0
+    },
+    "relaxation": {
+      "buckets": 13,
+      "covered": 13,
+      "fraction": 1.0
+    },
+    "loading_time": {
+      "buckets": 7,
+      "covered": 7,
+      "fraction": 1.0
+    },
+    "onset": {
+      "buckets": 5,
+      "covered": 5,
+      "fraction": 1.0
+    },
+    "azimuth": {
+      "buckets": 7,
+      "covered": 7,
+      "fraction": 1.0
+    },
+    "frame_side": {
+      "buckets": 2,
+      "covered": 2,
+      "fraction": 1.0
+    },
+    "strip_color": {
+      "buckets": 5,
+      "covered": 5,
+      "fraction": 1.0
+    }
+  },
+  "invalid_parameter_samples": [],
+  "invalid_parameter_sample_count": 0,
+  "source_files": {
+    "src/scaling.py": "cc4a75409835a3aa5c9945aba9a0871b92d43ac7ab61ec3845cebf2e2a48dc72",
+    "engine/spec.py": "e21620ca4fe9dd92e3671c2e98f2d5d55a773e2a4170f6e01a1f4d0ae82d36e9"
+  }
+}

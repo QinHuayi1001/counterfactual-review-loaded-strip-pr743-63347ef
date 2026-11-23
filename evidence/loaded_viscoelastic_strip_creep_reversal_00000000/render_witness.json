@@ -1,0 +1,6191 @@
+{
+  "runtime": {
+    "renderer": "PyBullet TinyRenderer",
+    "role": "real 3D visual replay and depth-tested entity segmentation only",
+    "pybullet_version": "3.2.7",
+    "pybullet_api_version": 202010061,
+    "numpy_version": "1.26.4",
+    "scipy_version": "1.14.1",
+    "backend": "DIRECT / ER_TINY_RENDERER / CPU",
+    "simulator_native_dynamics": false,
+    "native_source_resolution": true,
+    "upscaling": false
+  },
+  "native_frame_shape": [
+    2048,
+    2048,
+    3
+  ],
+  "render": {
+    "width": 2048,
+    "height": 2048,
+    "fps": 24,
+    "n_frames": 120,
+    "renderer": "pybullet-tiny-renderer"
+  },
+  "scenes": {
+    "true": {
+      "runtime": {
+        "renderer": "PyBullet TinyRenderer",
+        "role": "real 3D visual replay and depth-tested entity segmentation only",
+        "pybullet_version": "3.2.7",
+        "pybullet_api_version": 202010061,
+        "numpy_version": "1.26.4",
+        "scipy_version": "1.14.1",
+        "backend": "DIRECT / ER_TINY_RENDERER / CPU",
+        "simulator_native_dynamics": false,
+        "native_source_resolution": true,
+        "upscaling": false
+      },
+      "render_source_resolution": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "position": [
+          -0.01535811766480949,
+          -0.8798659717376244,
+          0.339
+        ],
+        "lookat": [
+          -0.005,
+          0,
+          0.319
+        ],
+        "fov_degrees": 30,
+        "near_m": 0.01,
+        "far_m": 5,
+        "projection": "perspective",
+        "azimuth_parameter_degrees": -5
+      },
+      "geometry": {
+        "L": 0.22,
+        "width": 0.02,
+        "thickness": 0.002,
+        "area": 4e-05,
+        "top_anchor_height_m": 0.45999999999999996,
+        "mirror": false,
+        "payload_assembly_mass_kg": 0.5380224260958206,
+        "fixture_mass_kg": 0.004956946854071774,
+        "sphere_mass_kg": 0.5330654792417489,
+        "sphere_radius_m": 0.018751882810157366,
+        "sphere_density_kg_m3": 19300.0,
+        "sphere_material": "tungsten",
+        "sphere_mesh_longitudes": 96,
+        "sphere_mesh_latitudes": 48,
+        "sphere_mesh_sha256": "95dedffad53c3c6373a4f7b835f784ca9e11beaa33e13dd5f7c3da4b59af14a5",
+        "adapter_length_m": 0.007,
+        "transverse_mapping": "same isochoric stretch^(-1/2) in both branches",
+        "lower_fixture_orientation": "last rod segment tangent; rotational inertia omitted by reduced physical model"
+      },
+      "mask": {
+        "source": "native TinyRenderer visible entity IDs with z-buffer occlusion",
+        "target_entities": [
+          "strip",
+          "lower jaw -1",
+          "lower jaw 1",
+          "connector",
+          "sphere",
+          "moving gauge pointer",
+          "lower fixing screws",
+          "printed gauge bands"
+        ],
+        "target_body_ids": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          26
+        ],
+        "excluded_entities": "upper clamp, fixed frame, platform/jack, ruler, base, ground, every shadow",
+        "include_target_shadow": false
+      },
+      "appearance": {
+        "style": "studio-lit rasterized 3D laboratory apparatus",
+        "physical_detail": "chamfered machined metal, fixing screws, printed gauge bands, 1mm ruler and attached pointer",
+        "ray_tracing": false
+      },
+      "colors": {
+        "stand": [
+          0.1,
+          0.125,
+          0.15,
+          1
+        ],
+        "aluminum": [
+          0.64,
+          0.69,
+          0.74,
+          1
+        ],
+        "ink": [
+          0.82,
+          0.85,
+          0.83,
+          1
+        ],
+        "bolt": [
+          0.3,
+          0.34,
+          0.39,
+          1
+        ],
+        "strip": [
+          0.025,
+          0.24,
+          0.35,
+          1
+        ],
+        "mass": [
+          0.29,
+          0.32,
+          0.36,
+          1
+        ],
+        "board": [
+          0.81,
+          0.83,
+          0.8,
+          1
+        ],
+        "tick": [
+          0.055,
+          0.065,
+          0.07,
+          1
+        ],
+        "ground": [
+          0.25,
+          0.29,
+          0.32,
+          1
+        ]
+      },
+      "objects": {
+        "floor": 0,
+        "studio backdrop": 1,
+        "base": 2,
+        "upright": 3,
+        "top support arm": 4,
+        "clamp carrier": 5,
+        "upper jaw -1": 6,
+        "upper jaw 1": 7,
+        "fixed reference rail": 8,
+        "rail bracket": 9,
+        "rail post": 10,
+        "ruler numerals": 11,
+        "upper fixing screw -0.0068000000000000005": 12,
+        "upper fixing screw 0.0068000000000000005": 13,
+        "lower jaw -1": 14,
+        "lower jaw 1": 15,
+        "lower fixing screw -1": 16,
+        "lower fixing screw 1": 17,
+        "moving gauge pointer": 18,
+        "printed gauge band 1": 19,
+        "printed gauge band 2": 20,
+        "printed gauge band 3": 21,
+        "connector": 22,
+        "sphere": 23,
+        "support platform": 24,
+        "jack housing": 25,
+        "strip": 26,
+        "jack ram": 27
+      },
+      "last_frame_geometry": {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2028612751071452
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17710939229698783
+        ],
+        "sphere_bottom_z_m": 0.15835750948683047,
+        "platform_top_z_m": 0.11835750948684612,
+        "rendered_sphere_platform_gap_m": 0.039999999999984354,
+        "solver_reference_gap_m": 0.039999999999984326,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08435750948684612,
+        "visible_target_pixels": 111919
+      }
+    },
+    "cf": {
+      "runtime": {
+        "renderer": "PyBullet TinyRenderer",
+        "role": "real 3D visual replay and depth-tested entity segmentation only",
+        "pybullet_version": "3.2.7",
+        "pybullet_api_version": 202010061,
+        "numpy_version": "1.26.4",
+        "scipy_version": "1.14.1",
+        "backend": "DIRECT / ER_TINY_RENDERER / CPU",
+        "simulator_native_dynamics": false,
+        "native_source_resolution": true,
+        "upscaling": false
+      },
+      "render_source_resolution": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "position": [
+          -0.01535811766480949,
+          -0.8798659717376244,
+          0.339
+        ],
+        "lookat": [
+          -0.005,
+          0,
+          0.319
+        ],
+        "fov_degrees": 30,
+        "near_m": 0.01,
+        "far_m": 5,
+        "projection": "perspective",
+        "azimuth_parameter_degrees": -5
+      },
+      "geometry": {
+        "L": 0.22,
+        "width": 0.02,
+        "thickness": 0.002,
+        "area": 4e-05,
+        "top_anchor_height_m": 0.45999999999999996,
+        "mirror": false,
+        "payload_assembly_mass_kg": 0.5380224260958206,
+        "fixture_mass_kg": 0.004956946854071774,
+        "sphere_mass_kg": 0.5330654792417489,
+        "sphere_radius_m": 0.018751882810157366,
+        "sphere_density_kg_m3": 19300.0,
+        "sphere_material": "tungsten",
+        "sphere_mesh_longitudes": 96,
+        "sphere_mesh_latitudes": 48,
+        "sphere_mesh_sha256": "95dedffad53c3c6373a4f7b835f784ca9e11beaa33e13dd5f7c3da4b59af14a5",
+        "adapter_length_m": 0.007,
+        "transverse_mapping": "same isochoric stretch^(-1/2) in both branches",
+        "lower_fixture_orientation": "last rod segment tangent; rotational inertia omitted by reduced physical model"
+      },
+      "mask": {
+        "source": "native TinyRenderer visible entity IDs with z-buffer occlusion",
+        "target_entities": [
+          "strip",
+          "lower jaw -1",
+          "lower jaw 1",
+          "connector",
+          "sphere",
+          "moving gauge pointer",
+          "lower fixing screws",
+          "printed gauge bands"
+        ],
+        "target_body_ids": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          26
+        ],
+        "excluded_entities": "upper clamp, fixed frame, platform/jack, ruler, base, ground, every shadow",
+        "include_target_shadow": false
+      },
+      "appearance": {
+        "style": "studio-lit rasterized 3D laboratory apparatus",
+        "physical_detail": "chamfered machined metal, fixing screws, printed gauge bands, 1mm ruler and attached pointer",
+        "ray_tracing": false
+      },
+      "colors": {
+        "stand": [
+          0.1,
+          0.125,
+          0.15,
+          1
+        ],
+        "aluminum": [
+          0.64,
+          0.69,
+          0.74,
+          1
+        ],
+        "ink": [
+          0.82,
+          0.85,
+          0.83,
+          1
+        ],
+        "bolt": [
+          0.3,
+          0.34,
+          0.39,
+          1
+        ],
+        "strip": [
+          0.025,
+          0.24,
+          0.35,
+          1
+        ],
+        "mass": [
+          0.29,
+          0.32,
+          0.36,
+          1
+        ],
+        "board": [
+          0.81,
+          0.83,
+          0.8,
+          1
+        ],
+        "tick": [
+          0.055,
+          0.065,
+          0.07,
+          1
+        ],
+        "ground": [
+          0.25,
+          0.29,
+          0.32,
+          1
+        ]
+      },
+      "objects": {
+        "floor": 0,
+        "studio backdrop": 1,
+        "base": 2,
+        "upright": 3,
+        "top support arm": 4,
+        "clamp carrier": 5,
+        "upper jaw -1": 6,
+        "upper jaw 1": 7,
+        "fixed reference rail": 8,
+        "rail bracket": 9,
+        "rail post": 10,
+        "ruler numerals": 11,
+        "upper fixing screw -0.0068000000000000005": 12,
+        "upper fixing screw 0.0068000000000000005": 13,
+        "lower jaw -1": 14,
+        "lower jaw 1": 15,
+        "lower fixing screw -1": 16,
+        "lower fixing screw 1": 17,
+        "moving gauge pointer": 18,
+        "printed gauge band 1": 19,
+        "printed gauge band 2": 20,
+        "printed gauge band 3": 21,
+        "connector": 22,
+        "sphere": 23,
+        "support platform": 24,
+        "jack housing": 25,
+        "strip": 26,
+        "jack ram": 27
+      },
+      "last_frame_geometry": {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23517522420446504
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20942334139430768
+        ],
+        "sphere_bottom_z_m": 0.19067145858415033,
+        "platform_top_z_m": 0.11835750948684612,
+        "rendered_sphere_platform_gap_m": 0.07231394909730421,
+        "solver_reference_gap_m": 0.07231394909730418,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08435750948684612,
+        "visible_target_pixels": 105650
+      }
+    }
+  },
+  "geometry_per_frame": {
+    "true": [
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2395566889035736
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21380480609341623
+        ],
+        "sphere_bottom_z_m": 0.19505292328325888,
+        "platform_top_z_m": 0.19505292328325885,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16105292328325885,
+        "visible_target_pixels": 104900
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23955626484362239
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21380438203346502
+        ],
+        "sphere_bottom_z_m": 0.19505249922330767,
+        "platform_top_z_m": 0.19505249922330764,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16105249922330764,
+        "visible_target_pixels": 104900
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2395451292710786
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21379324646092124
+        ],
+        "sphere_bottom_z_m": 0.19504136365076388,
+        "platform_top_z_m": 0.19504136365076385,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16104136365076385,
+        "visible_target_pixels": 104933
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2394866857876459
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21373480297748854
+        ],
+        "sphere_bottom_z_m": 0.19498292016733118,
+        "platform_top_z_m": 0.19498292016733115,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16098292016733115,
+        "visible_target_pixels": 104989
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23933285911035534
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21358097630019798
+        ],
+        "sphere_bottom_z_m": 0.19482909349004063,
+        "platform_top_z_m": 0.1948290934900406,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.1608290934900406,
+        "visible_target_pixels": 104985
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23905358083071948
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21330169802056212
+        ],
+        "sphere_bottom_z_m": 0.19454981521040476,
+        "platform_top_z_m": 0.19454981521040474,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16054981521040473,
+        "visible_target_pixels": 105168
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23864193409016582
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21289005128000846
+        ],
+        "sphere_bottom_z_m": 0.1941381684698511,
+        "platform_top_z_m": 0.19413816846985107,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16013816846985107,
+        "visible_target_pixels": 105248
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23809661121945702
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21234472840929966
+        ],
+        "sphere_bottom_z_m": 0.1935928455991423,
+        "platform_top_z_m": 0.19359284559914228,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15959284559914227,
+        "visible_target_pixels": 105398
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23741041563330373
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21165853282314637
+        ],
+        "sphere_bottom_z_m": 0.192906650012989,
+        "platform_top_z_m": 0.19290665001298898,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15890665001298898,
+        "visible_target_pixels": 105428
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2365767919792735
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21082490916911614
+        ],
+        "sphere_bottom_z_m": 0.1920730263589588,
+        "platform_top_z_m": 0.19207302635895876,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15807302635895876,
+        "visible_target_pixels": 105406
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2356002125858814
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20984832977572404
+        ],
+        "sphere_bottom_z_m": 0.19109644696556669,
+        "platform_top_z_m": 0.19109644696556666,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15709644696556666,
+        "visible_target_pixels": 105553
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23449601961196048
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20874413680180312
+        ],
+        "sphere_bottom_z_m": 0.18999225399164577,
+        "platform_top_z_m": 0.18999225399164574,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15599225399164574,
+        "visible_target_pixels": 105889
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23328282055470906
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.2075309377445517
+        ],
+        "sphere_bottom_z_m": 0.18877905493439434,
+        "platform_top_z_m": 0.1887790549343943,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.1547790549343943,
+        "visible_target_pixels": 106417
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23197847181191802
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20622658900176066
+        ],
+        "sphere_bottom_z_m": 0.1874747061916033,
+        "platform_top_z_m": 0.18747470619160328,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15347470619160328,
+        "visible_target_pixels": 105891
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.230602668068297
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20485078525813963
+        ],
+        "sphere_bottom_z_m": 0.18609890244798227,
+        "platform_top_z_m": 0.18609890244798225,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15209890244798224,
+        "visible_target_pixels": 106403
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22918026108917747
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.2034283782790201
+        ],
+        "sphere_bottom_z_m": 0.18467649546886275,
+        "platform_top_z_m": 0.18467649546886272,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15067649546886272,
+        "visible_target_pixels": 106953
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2277404743807137
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20198859157055635
+        ],
+        "sphere_bottom_z_m": 0.183236708760399,
+        "platform_top_z_m": 0.18323670876039896,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14923670876039896,
+        "visible_target_pixels": 107444
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22631342252556325
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20056153971540588
+        ],
+        "sphere_bottom_z_m": 0.18180965690524853,
+        "platform_top_z_m": 0.1818096569052485,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.1478096569052485,
+        "visible_target_pixels": 107491
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22492774828668446
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1991758654765271
+        ],
+        "sphere_bottom_z_m": 0.18042398266636975,
+        "platform_top_z_m": 0.18042398266636972,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14642398266636972,
+        "visible_target_pixels": 107578
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2236104270674968
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19785854425733942
+        ],
+        "sphere_bottom_z_m": 0.17910666144718207,
+        "platform_top_z_m": 0.17910666144718204,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14510666144718204,
+        "visible_target_pixels": 108096
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22238683630671244
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19663495349655508
+        ],
+        "sphere_bottom_z_m": 0.17788307068639772,
+        "platform_top_z_m": 0.1778830706863977,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.1438830706863977,
+        "visible_target_pixels": 108509
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22127938392735888
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19552750111720152
+        ],
+        "sphere_bottom_z_m": 0.17677561830704416,
+        "platform_top_z_m": 0.17677561830704414,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14277561830704413,
+        "visible_target_pixels": 108795
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2203049956919482
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19455311288179084
+        ],
+        "sphere_bottom_z_m": 0.17580123007163348,
+        "platform_top_z_m": 0.17580123007163345,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14180123007163345,
+        "visible_target_pixels": 108276
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21947278797560776
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1937209051654504
+        ],
+        "sphere_bottom_z_m": 0.17496902235529305,
+        "platform_top_z_m": 0.17496902235529302,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14096902235529302,
+        "visible_target_pixels": 108620
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2187825736513701
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19303069084121274
+        ],
+        "sphere_bottom_z_m": 0.1742788080310554,
+        "platform_top_z_m": 0.17427880803105536,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14027880803105536,
+        "visible_target_pixels": 108873
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.218223781684221
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19247189887406363
+        ],
+        "sphere_bottom_z_m": 0.17372001606390627,
+        "platform_top_z_m": 0.17372001606390625,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13972001606390624,
+        "visible_target_pixels": 109035
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21777415082995008
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19202226801979272
+        ],
+        "sphere_bottom_z_m": 0.17327038520963536,
+        "platform_top_z_m": 0.17327038520963534,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13927038520963533,
+        "visible_target_pixels": 109200
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21739813614078948
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19164625333063212
+        ],
+        "sphere_bottom_z_m": 0.17289437052047477,
+        "platform_top_z_m": 0.17285931951376202,
+        "rendered_sphere_platform_gap_m": 3.505100671274963e-05,
+        "solver_reference_gap_m": 3.505100671272188e-05,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13885931951376201,
+        "visible_target_pixels": 109373
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21704982908860074
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19129794627844338
+        ],
+        "sphere_bottom_z_m": 0.17254606346828602,
+        "platform_top_z_m": 0.17195694558496555,
+        "rendered_sphere_platform_gap_m": 0.0005891178833204724,
+        "solver_reference_gap_m": 0.0005891178833204447,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13795694558496555,
+        "visible_target_pixels": 109488
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21669712994955712
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19094524713939975
+        ],
+        "sphere_bottom_z_m": 0.1721933643292424,
+        "platform_top_z_m": 0.16996859786491333,
+        "rendered_sphere_platform_gap_m": 0.0022247664643290643,
+        "solver_reference_gap_m": 0.0022247664643290366,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13596859786491333,
+        "visible_target_pixels": 109573
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21634104171968047
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1905891589095231
+        ],
+        "sphere_bottom_z_m": 0.17183727609936575,
+        "platform_top_z_m": 0.16668040032818188,
+        "rendered_sphere_platform_gap_m": 0.005156875771183872,
+        "solver_reference_gap_m": 0.005156875771183844,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13268040032818187,
+        "visible_target_pixels": 109584
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21599982636058426
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1902479435504269
+        ],
+        "sphere_bottom_z_m": 0.17149606074026955,
+        "platform_top_z_m": 0.16218319949002644,
+        "rendered_sphere_platform_gap_m": 0.00931286125024311,
+        "solver_reference_gap_m": 0.009312861250243082,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.12818319949002643,
+        "visible_target_pixels": 109614
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21568211059762027
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1899302277874629
+        ],
+        "sphere_bottom_z_m": 0.17117834497730555,
+        "platform_top_z_m": 0.15677380430981722,
+        "rendered_sphere_platform_gap_m": 0.014404540667488336,
+        "solver_reference_gap_m": 0.014404540667488308,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.12277380430981721,
+        "visible_target_pixels": 109614
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21537918872237474
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18962730591221738
+        ],
+        "sphere_bottom_z_m": 0.17087542310206003,
+        "platform_top_z_m": 0.15087542310174365,
+        "rendered_sphere_platform_gap_m": 0.020000000000316376,
+        "solver_reference_gap_m": 0.020000000000316348,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.11687542310174365,
+        "visible_target_pixels": 109566
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2150781246090569
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18932624179889954
+        ],
+        "sphere_bottom_z_m": 0.17057435898874218,
+        "platform_top_z_m": 0.14497889965606306,
+        "rendered_sphere_platform_gap_m": 0.02559545933267912,
+        "solver_reference_gap_m": 0.025595459332679094,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.11097889965606306,
+        "visible_target_pixels": 109673
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21477562240441495
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18902373959425758
+        ],
+        "sphere_bottom_z_m": 0.17027185678410023,
+        "platform_top_z_m": 0.13958471803509112,
+        "rendered_sphere_platform_gap_m": 0.030687138749009107,
+        "solver_reference_gap_m": 0.03068713874900908,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.10558471803509112,
+        "visible_target_pixels": 109666
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21447806746387776
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1887261846537204
+        ],
+        "sphere_bottom_z_m": 0.16997430184356305,
+        "platform_top_z_m": 0.13513117761611762,
+        "rendered_sphere_platform_gap_m": 0.03484312422744543,
+        "solver_reference_gap_m": 0.0348431242274454,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.10113117761611762,
+        "visible_target_pixels": 109654
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21419178537837535
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.188439902568218
+        ],
+        "sphere_bottom_z_m": 0.16968801975806064,
+        "platform_top_z_m": 0.1319127862246249,
+        "rendered_sphere_platform_gap_m": 0.03777523353343573,
+        "solver_reference_gap_m": 0.037775233533435704,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0979127862246249,
+        "visible_target_pixels": 109704
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21391635761685404
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18816447480669668
+        ],
+        "sphere_bottom_z_m": 0.16941259199653932,
+        "platform_top_z_m": 0.13000170988266527,
+        "rendered_sphere_platform_gap_m": 0.03941088211387406,
+        "solver_reference_gap_m": 0.03941088211387403,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09600170988266526,
+        "visible_target_pixels": 109745
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21364684481368498
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18789496200352762
+        ],
+        "sphere_bottom_z_m": 0.16914307919337027,
+        "platform_top_z_m": 0.12917813020204102,
+        "rendered_sphere_platform_gap_m": 0.03996494899132924,
+        "solver_reference_gap_m": 0.03996494899132921,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09517813020204102,
+        "visible_target_pixels": 109756
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21337995927369846
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1876280764635411
+        ],
+        "sphere_bottom_z_m": 0.16887619365338374,
+        "platform_top_z_m": 0.12887619365350297,
+        "rendered_sphere_platform_gap_m": 0.03999999999988077,
+        "solver_reference_gap_m": 0.03999999999988074,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09487619365350297,
+        "visible_target_pixels": 109789
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2131167336011249
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18736485079096754
+        ],
+        "sphere_bottom_z_m": 0.16861296798081019,
+        "platform_top_z_m": 0.12861296798097385,
+        "rendered_sphere_platform_gap_m": 0.03999999999983633,
+        "solver_reference_gap_m": 0.039999999999836305,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09461296798097385,
+        "visible_target_pixels": 109902
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21286003400227438
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18710815119211702
+        ],
+        "sphere_bottom_z_m": 0.16835626838195966,
+        "platform_top_z_m": 0.1283562683820578,
+        "rendered_sphere_platform_gap_m": 0.039999999999901864,
+        "solver_reference_gap_m": 0.039999999999901836,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0943562683820578,
+        "visible_target_pixels": 109922
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2126109736622278
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18685909085207045
+        ],
+        "sphere_bottom_z_m": 0.1681072080419131,
+        "platform_top_z_m": 0.1281072080419348,
+        "rendered_sphere_platform_gap_m": 0.0399999999999783,
+        "solver_reference_gap_m": 0.039999999999978275,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09410720804193479,
+        "visible_target_pixels": 109987
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21236816808739525
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1866162852772379
+        ],
+        "sphere_bottom_z_m": 0.16786440246708054,
+        "platform_top_z_m": 0.12786440246709443,
+        "rendered_sphere_platform_gap_m": 0.0399999999999861,
+        "solver_reference_gap_m": 0.039999999999986074,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09386440246709443,
+        "visible_target_pixels": 110072
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21212972827686816
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1863778454667108
+        ],
+        "sphere_bottom_z_m": 0.16762596265655344,
+        "platform_top_z_m": 0.12762596265661355,
+        "rendered_sphere_platform_gap_m": 0.03999999999993989,
+        "solver_reference_gap_m": 0.03999999999993986,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09362596265661355,
+        "visible_target_pixels": 110182
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21189517059893467
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1861432877887773
+        ],
+        "sphere_bottom_z_m": 0.16739140497861996,
+        "platform_top_z_m": 0.1273914049787155,
+        "rendered_sphere_platform_gap_m": 0.039999999999904445,
+        "solver_reference_gap_m": 0.03999999999990442,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09339140497871551,
+        "visible_target_pixels": 110278
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2116653541842006
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18591347137404324
+        ],
+        "sphere_bottom_z_m": 0.16716158856388588,
+        "platform_top_z_m": 0.1271615885639721,
+        "rendered_sphere_platform_gap_m": 0.03999999999991377,
+        "solver_reference_gap_m": 0.03999999999991374,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09316158856397211,
+        "visible_target_pixels": 110354
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.211441097684029
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18568921487387163
+        ],
+        "sphere_bottom_z_m": 0.16693733206371428,
+        "platform_top_z_m": 0.12693733206376803,
+        "rendered_sphere_platform_gap_m": 0.039999999999946245,
+        "solver_reference_gap_m": 0.03999999999994622,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09293733206376803,
+        "visible_target_pixels": 110414
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21122225082647453
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18547036801631717
+        ],
+        "sphere_bottom_z_m": 0.1667184852061598,
+        "platform_top_z_m": 0.12671848520619647,
+        "rendered_sphere_platform_gap_m": 0.03999999999996334,
+        "solver_reference_gap_m": 0.039999999999963315,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09271848520619647,
+        "visible_target_pixels": 110483
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21100801049368845
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18525612768353109
+        ],
+        "sphere_bottom_z_m": 0.16650424487337373,
+        "platform_top_z_m": 0.1265042448734198,
+        "rendered_sphere_platform_gap_m": 0.039999999999953934,
+        "solver_reference_gap_m": 0.039999999999953906,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0925042448734198,
+        "visible_target_pixels": 110567
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2107977956583968
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18504591284823943
+        ],
+        "sphere_bottom_z_m": 0.16629403003808207,
+        "platform_top_z_m": 0.1262940300381454,
+        "rendered_sphere_platform_gap_m": 0.03999999999993667,
+        "solver_reference_gap_m": 0.03999999999993664,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0922940300381454,
+        "visible_target_pixels": 110705
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21059164525251553
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18483976244235817
+        ],
+        "sphere_bottom_z_m": 0.1660878796322008,
+        "platform_top_z_m": 0.12608787963226822,
+        "rendered_sphere_platform_gap_m": 0.03999999999993259,
+        "solver_reference_gap_m": 0.03999999999993256,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09208787963226822,
+        "visible_target_pixels": 110807
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21038988611169718
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18463800330153982
+        ],
+        "sphere_bottom_z_m": 0.16588612049138246,
+        "platform_top_z_m": 0.12588612049143946,
+        "rendered_sphere_platform_gap_m": 0.039999999999943,
+        "solver_reference_gap_m": 0.03999999999994297,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09188612049143946,
+        "visible_target_pixels": 110851
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21019261689263652
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18444073408247916
+        ],
+        "sphere_bottom_z_m": 0.1656888512723218,
+        "platform_top_z_m": 0.12568885127236748,
+        "rendered_sphere_platform_gap_m": 0.03999999999995432,
+        "solver_reference_gap_m": 0.039999999999954294,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09168885127236748,
+        "visible_target_pixels": 110926
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2099995730393071
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18424769022914975
+        ],
+        "sphere_bottom_z_m": 0.1654958074189924,
+        "platform_top_z_m": 0.12549580741903635,
+        "rendered_sphere_platform_gap_m": 0.03999999999995604,
+        "solver_reference_gap_m": 0.039999999999956015,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09149580741903635,
+        "visible_target_pixels": 111012
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2098103929705758
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18405851016041844
+        ],
+        "sphere_bottom_z_m": 0.16530662735026108,
+        "platform_top_z_m": 0.1253066273503106,
+        "rendered_sphere_platform_gap_m": 0.03999999999995049,
+        "solver_reference_gap_m": 0.039999999999950464,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09130662735031059,
+        "visible_target_pixels": 111042
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2096249038670045
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18387302105684714
+        ],
+        "sphere_bottom_z_m": 0.16512113824668978,
+        "platform_top_z_m": 0.12512113824674334,
+        "rendered_sphere_platform_gap_m": 0.03999999999994644,
+        "solver_reference_gap_m": 0.03999999999994641,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09112113824674334,
+        "visible_target_pixels": 111064
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20944313971491385
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1836912569047565
+        ],
+        "sphere_bottom_z_m": 0.16493937409459913,
+        "platform_top_z_m": 0.12493937409463732,
+        "rendered_sphere_platform_gap_m": 0.039999999999961816,
+        "solver_reference_gap_m": 0.03999999999996179,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09093937409463732,
+        "visible_target_pixels": 111101
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20926515310790322
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18351327029774586
+        ],
+        "sphere_bottom_z_m": 0.1647613874875885,
+        "platform_top_z_m": 0.12476138748762552,
+        "rendered_sphere_platform_gap_m": 0.03999999999996298,
+        "solver_reference_gap_m": 0.039999999999962954,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09076138748762552,
+        "visible_target_pixels": 110627
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20909086664726517
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1833389838371078
+        ],
+        "sphere_bottom_z_m": 0.16458710102695046,
+        "platform_top_z_m": 0.12458710102699619,
+        "rendered_sphere_platform_gap_m": 0.03999999999995427,
+        "solver_reference_gap_m": 0.03999999999995424,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09058710102699619,
+        "visible_target_pixels": 110295
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2089200979327797
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18316821512262235
+        ],
+        "sphere_bottom_z_m": 0.164416332312465,
+        "platform_top_z_m": 0.12441633231251706,
+        "rendered_sphere_platform_gap_m": 0.03999999999994794,
+        "solver_reference_gap_m": 0.03999999999994791,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09041633231251706,
+        "visible_target_pixels": 110268
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20875268228786514
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18300079947770778
+        ],
+        "sphere_bottom_z_m": 0.16424891666755043,
+        "platform_top_z_m": 0.12424891666759982,
+        "rendered_sphere_platform_gap_m": 0.0399999999999506,
+        "solver_reference_gap_m": 0.039999999999950575,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09024891666759982,
+        "visible_target_pixels": 110426
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20858854421224388
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18283666140208651
+        ],
+        "sphere_bottom_z_m": 0.16408477859192916,
+        "platform_top_z_m": 0.12408477859197123,
+        "rendered_sphere_platform_gap_m": 0.03999999999995793,
+        "solver_reference_gap_m": 0.0399999999999579,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09008477859197123,
+        "visible_target_pixels": 110463
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20842766281834674
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18267578000818938
+        ],
+        "sphere_bottom_z_m": 0.16392389719803202,
+        "platform_top_z_m": 0.1239238971980697,
+        "rendered_sphere_platform_gap_m": 0.039999999999962316,
+        "solver_reference_gap_m": 0.03999999999996229,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0899238971980697,
+        "visible_target_pixels": 110485
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2082699962120345
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18251811340187715
+        ],
+        "sphere_bottom_z_m": 0.1637662305917198,
+        "platform_top_z_m": 0.12376623059175865,
+        "rendered_sphere_platform_gap_m": 0.03999999999996115,
+        "solver_reference_gap_m": 0.03999999999996112,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08976623059175864,
+        "visible_target_pixels": 110599
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20811545059114922
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18236356778099186
+        ],
+        "sphere_bottom_z_m": 0.1636116849708345,
+        "platform_top_z_m": 0.1236116849708764,
+        "rendered_sphere_platform_gap_m": 0.0399999999999581,
+        "solver_reference_gap_m": 0.03999999999995807,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0896116849708764,
+        "visible_target_pixels": 110623
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20796391092383748
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18221202811368012
+        ],
+        "sphere_bottom_z_m": 0.16346014530352276,
+        "platform_top_z_m": 0.12346014530356522,
+        "rendered_sphere_platform_gap_m": 0.03999999999995754,
+        "solver_reference_gap_m": 0.039999999999957514,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08946014530356522,
+        "visible_target_pixels": 110656
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20781528518194697
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1820634023717896
+        ],
+        "sphere_bottom_z_m": 0.16331151956163226,
+        "platform_top_z_m": 0.12331151956167227,
+        "rendered_sphere_platform_gap_m": 0.039999999999959984,
+        "solver_reference_gap_m": 0.039999999999959956,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08931151956167227,
+        "visible_target_pixels": 110775
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20766951511548304
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18191763230532568
+        ],
+        "sphere_bottom_z_m": 0.16316574949516832,
+        "platform_top_z_m": 0.12316574949520528,
+        "rendered_sphere_platform_gap_m": 0.03999999999996304,
+        "solver_reference_gap_m": 0.03999999999996301,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08916574949520528,
+        "visible_target_pixels": 110788
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2075265529067707
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18177467009661333
+        ],
+        "sphere_bottom_z_m": 0.16302278728645597,
+        "platform_top_z_m": 0.12302278728649171,
+        "rendered_sphere_platform_gap_m": 0.03999999999996426,
+        "solver_reference_gap_m": 0.03999999999996423,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08902278728649171,
+        "visible_target_pixels": 110754
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20738633632303277
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1816344535128754
+        ],
+        "sphere_bottom_z_m": 0.16288257070271805,
+        "platform_top_z_m": 0.12288257070275424,
+        "rendered_sphere_platform_gap_m": 0.039999999999963815,
+        "solver_reference_gap_m": 0.03999999999996379,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08888257070275424,
+        "visible_target_pixels": 110889
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20724878682736353
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18149690401720617
+        ],
+        "sphere_bottom_z_m": 0.1627450212070488,
+        "platform_top_z_m": 0.1227450212070855,
+        "rendered_sphere_platform_gap_m": 0.039999999999963315,
+        "solver_reference_gap_m": 0.03999999999996329,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0887450212070855,
+        "visible_target_pixels": 110941
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20711382568923292
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18136194287907556
+        ],
+        "sphere_bottom_z_m": 0.1626100600689182,
+        "platform_top_z_m": 0.12261006006895422,
+        "rendered_sphere_platform_gap_m": 0.03999999999996398,
+        "solver_reference_gap_m": 0.03999999999996395,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08861006006895422,
+        "visible_target_pixels": 111003
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20698138719786308
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18122950438770571
+        ],
+        "sphere_bottom_z_m": 0.16247762157754836,
+        "platform_top_z_m": 0.12247762157758282,
+        "rendered_sphere_platform_gap_m": 0.039999999999965535,
+        "solver_reference_gap_m": 0.03999999999996551,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08847762157758282,
+        "visible_target_pixels": 111035
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20685141702921522
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18109953421905786
+        ],
+        "sphere_bottom_z_m": 0.1623476514089005,
+        "platform_top_z_m": 0.12234765140893364,
+        "rendered_sphere_platform_gap_m": 0.03999999999996687,
+        "solver_reference_gap_m": 0.03999999999996684,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08834765140893364,
+        "visible_target_pixels": 111012
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20672386165515266
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1809719788449953
+        ],
+        "sphere_bottom_z_m": 0.16222009603483795,
+        "platform_top_z_m": 0.12222009603487047,
+        "rendered_sphere_platform_gap_m": 0.03999999999996748,
+        "solver_reference_gap_m": 0.03999999999996745,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08822009603487047,
+        "visible_target_pixels": 111113
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2065986615872133
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18084677877705593
+        ],
+        "sphere_bottom_z_m": 0.16209489596689858,
+        "platform_top_z_m": 0.1220948959669311,
+        "rendered_sphere_platform_gap_m": 0.03999999999996748,
+        "solver_reference_gap_m": 0.03999999999996745,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0880948959669311,
+        "visible_target_pixels": 111092
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20647575379802974
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18072387098787238
+        ],
+        "sphere_bottom_z_m": 0.16197198817771502,
+        "platform_top_z_m": 0.12197198817774726,
+        "rendered_sphere_platform_gap_m": 0.039999999999967756,
+        "solver_reference_gap_m": 0.03999999999996773,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08797198817774726,
+        "visible_target_pixels": 111193
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2063550782664862
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18060319545632883
+        ],
+        "sphere_bottom_z_m": 0.16185131264617147,
+        "platform_top_z_m": 0.12185131264620294,
+        "rendered_sphere_platform_gap_m": 0.03999999999996853,
+        "solver_reference_gap_m": 0.039999999999968505,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08785131264620294,
+        "visible_target_pixels": 111214
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20623658111326804
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18048469830311067
+        ],
+        "sphere_bottom_z_m": 0.16173281549295332,
+        "platform_top_z_m": 0.12173281549298379,
+        "rendered_sphere_platform_gap_m": 0.03999999999996953,
+        "solver_reference_gap_m": 0.039999999999969504,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08773281549298378,
+        "visible_target_pixels": 111288
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2061202122783709
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18036832946821355
+        ],
+        "sphere_bottom_z_m": 0.1616164466580562,
+        "platform_top_z_m": 0.12161644665808588,
+        "rendered_sphere_platform_gap_m": 0.03999999999997031,
+        "solver_reference_gap_m": 0.03999999999997028,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08761644665808588,
+        "visible_target_pixels": 111305
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20600592153043817
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1802540387202808
+        ],
+        "sphere_bottom_z_m": 0.16150215591012346,
+        "platform_top_z_m": 0.1215021559101527,
+        "rendered_sphere_platform_gap_m": 0.03999999999997075,
+        "solver_reference_gap_m": 0.039999999999970726,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0875021559101527,
+        "visible_target_pixels": 111369
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20589365708725588
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18014177427709852
+        ],
+        "sphere_bottom_z_m": 0.16138989146694116,
+        "platform_top_z_m": 0.12138989146697007,
+        "rendered_sphere_platform_gap_m": 0.039999999999971086,
+        "solver_reference_gap_m": 0.03999999999997106,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08738989146697007,
+        "visible_target_pixels": 111375
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2057833673730139
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18003148456285653
+        ],
+        "sphere_bottom_z_m": 0.16127960175269918,
+        "platform_top_z_m": 0.12127960175272759,
+        "rendered_sphere_platform_gap_m": 0.039999999999971586,
+        "solver_reference_gap_m": 0.03999999999997156,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08727960175272759,
+        "visible_target_pixels": 111441
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2056750032827967
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17992312047263934
+        ],
+        "sphere_bottom_z_m": 0.16117123766248198,
+        "platform_top_z_m": 0.12117123766250978,
+        "rendered_sphere_platform_gap_m": 0.0399999999999722,
+        "solver_reference_gap_m": 0.03999999999997217,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08717123766250978,
+        "visible_target_pixels": 111423
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20556851861005726
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1798166357998999
+        ],
+        "sphere_bottom_z_m": 0.16106475298974254,
+        "platform_top_z_m": 0.12106475298976974,
+        "rendered_sphere_platform_gap_m": 0.03999999999997281,
+        "solver_reference_gap_m": 0.03999999999997278,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08706475298976973,
+        "visible_target_pixels": 111521
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20546386873469896
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1797119859245416
+        ],
+        "sphere_bottom_z_m": 0.16096010311438425,
+        "platform_top_z_m": 0.12096010311441094,
+        "rendered_sphere_platform_gap_m": 0.03999999999997331,
+        "solver_reference_gap_m": 0.03999999999997328,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08696010311441094,
+        "visible_target_pixels": 111502
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20536100930236317
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1796091264922058
+        ],
+        "sphere_bottom_z_m": 0.16085724368204846,
+        "platform_top_z_m": 0.12085724368207476,
+        "rendered_sphere_platform_gap_m": 0.039999999999973695,
+        "solver_reference_gap_m": 0.03999999999997367,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08685724368207476,
+        "visible_target_pixels": 111606
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20525989612883577
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1795080133186784
+        ],
+        "sphere_bottom_z_m": 0.16075613050852106,
+        "platform_top_z_m": 0.12075613050854692,
+        "rendered_sphere_platform_gap_m": 0.03999999999997414,
+        "solver_reference_gap_m": 0.03999999999997411,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08675613050854691,
+        "visible_target_pixels": 111650
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20516048603575177
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1794086032255944
+        ],
+        "sphere_bottom_z_m": 0.16065672041543705,
+        "platform_top_z_m": 0.12065672041546235,
+        "rendered_sphere_platform_gap_m": 0.039999999999974695,
+        "solver_reference_gap_m": 0.03999999999997467,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08665672041546235,
+        "visible_target_pixels": 111676
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2050627375231111
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17931085471295374
+        ],
+        "sphere_bottom_z_m": 0.1605589719027964,
+        "platform_top_z_m": 0.12055897190282114,
+        "rendered_sphere_platform_gap_m": 0.03999999999997525,
+        "solver_reference_gap_m": 0.03999999999997522,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08655897190282114,
+        "visible_target_pixels": 111728
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20496661065967536
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.179214727849518
+        ],
+        "sphere_bottom_z_m": 0.16046284503936065,
+        "platform_top_z_m": 0.12046284503938495,
+        "rendered_sphere_platform_gap_m": 0.039999999999975694,
+        "solver_reference_gap_m": 0.039999999999975666,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08646284503938495,
+        "visible_target_pixels": 111713
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2048720664976077
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17912018368745034
+        ],
+        "sphere_bottom_z_m": 0.16036830087729298,
+        "platform_top_z_m": 0.1203683008773169,
+        "rendered_sphere_platform_gap_m": 0.03999999999997608,
+        "solver_reference_gap_m": 0.039999999999976055,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0863683008773169,
+        "visible_target_pixels": 111751
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.204779066681255
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17902718387109764
+        ],
+        "sphere_bottom_z_m": 0.1602753010609403,
+        "platform_top_z_m": 0.12027530106096382,
+        "rendered_sphere_platform_gap_m": 0.03999999999997647,
+        "solver_reference_gap_m": 0.03999999999997644,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08627530106096382,
+        "visible_target_pixels": 111720
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2046875735408361
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17893569073067875
+        ],
+        "sphere_bottom_z_m": 0.1601838079205214,
+        "platform_top_z_m": 0.12018380792054459,
+        "rendered_sphere_platform_gap_m": 0.039999999999976804,
+        "solver_reference_gap_m": 0.039999999999976776,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08618380792054459,
+        "visible_target_pixels": 111783
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20459755041734373
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17884566760718637
+        ],
+        "sphere_bottom_z_m": 0.16009378479702902,
+        "platform_top_z_m": 0.12009378479705177,
+        "rendered_sphere_platform_gap_m": 0.03999999999997725,
+        "solver_reference_gap_m": 0.03999999999997722,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08609378479705176,
+        "visible_target_pixels": 111809
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20450896182015843
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17875707901000107
+        ],
+        "sphere_bottom_z_m": 0.1600051961998437,
+        "platform_top_z_m": 0.12000519619986591,
+        "rendered_sphere_platform_gap_m": 0.0399999999999778,
+        "solver_reference_gap_m": 0.039999999999977776,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08600519619986591,
+        "visible_target_pixels": 111754
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20442177329414313
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17866989048398577
+        ],
+        "sphere_bottom_z_m": 0.1599180076738284,
+        "platform_top_z_m": 0.11991800767385016,
+        "rendered_sphere_platform_gap_m": 0.03999999999997825,
+        "solver_reference_gap_m": 0.03999999999997822,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08591800767385016,
+        "visible_target_pixels": 111795
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20433595118469106
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1785840683745337
+        ],
+        "sphere_bottom_z_m": 0.15983218556437634,
+        "platform_top_z_m": 0.11983218556439787,
+        "rendered_sphere_platform_gap_m": 0.03999999999997847,
+        "solver_reference_gap_m": 0.03999999999997844,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08583218556439787,
+        "visible_target_pixels": 111815
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2042514625315111
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17849957972135375
+        ],
+        "sphere_bottom_z_m": 0.1597476969111964,
+        "platform_top_z_m": 0.11974769691121775,
+        "rendered_sphere_platform_gap_m": 0.039999999999978636,
+        "solver_reference_gap_m": 0.03999999999997861,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08574769691121775,
+        "visible_target_pixels": 111816
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20416827513350144
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17841639232334408
+        ],
+        "sphere_bottom_z_m": 0.15966450951318673,
+        "platform_top_z_m": 0.11966450951320765,
+        "rendered_sphere_platform_gap_m": 0.03999999999997908,
+        "solver_reference_gap_m": 0.03999999999997905,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08566450951320764,
+        "visible_target_pixels": 111805
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20408635765348254
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17833447484332518
+        ],
+        "sphere_bottom_z_m": 0.15958259203316782,
+        "platform_top_z_m": 0.11958259203318825,
+        "rendered_sphere_platform_gap_m": 0.03999999999997958,
+        "solver_reference_gap_m": 0.03999999999997955,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08558259203318824,
+        "visible_target_pixels": 111770
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20400567963257604
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17825379682241868
+        ],
+        "sphere_bottom_z_m": 0.15950191401226133,
+        "platform_top_z_m": 0.11950191401228136,
+        "rendered_sphere_platform_gap_m": 0.03999999999997997,
+        "solver_reference_gap_m": 0.03999999999997994,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08550191401228135,
+        "visible_target_pixels": 111830
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20392621140771539
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17817432859755802
+        ],
+        "sphere_bottom_z_m": 0.15942244578740067,
+        "platform_top_z_m": 0.11942244578742031,
+        "rendered_sphere_platform_gap_m": 0.03999999999998036,
+        "solver_reference_gap_m": 0.03999999999998033,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08542244578742031,
+        "visible_target_pixels": 111834
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20384792401959606
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1780960412094387
+        ],
+        "sphere_bottom_z_m": 0.15934415839928134,
+        "platform_top_z_m": 0.11934415839930082,
+        "rendered_sphere_platform_gap_m": 0.03999999999998052,
+        "solver_reference_gap_m": 0.039999999999980496,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08534415839930082,
+        "visible_target_pixels": 111778
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2037707891824998
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17801890637234244
+        ],
+        "sphere_bottom_z_m": 0.15926702356218508,
+        "platform_top_z_m": 0.11926702356220434,
+        "rendered_sphere_platform_gap_m": 0.039999999999980745,
+        "solver_reference_gap_m": 0.03999999999998072,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08526702356220434,
+        "visible_target_pixels": 111846
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2036947793087991
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17794289649864173
+        ],
+        "sphere_bottom_z_m": 0.15919101368848437,
+        "platform_top_z_m": 0.11919101368850335,
+        "rendered_sphere_platform_gap_m": 0.03999999999998102,
+        "solver_reference_gap_m": 0.039999999999980995,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08519101368850335,
+        "visible_target_pixels": 111852
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20361986753196443
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17786798472180707
+        ],
+        "sphere_bottom_z_m": 0.1591161019116497,
+        "platform_top_z_m": 0.11911610191166824,
+        "rendered_sphere_platform_gap_m": 0.03999999999998147,
+        "solver_reference_gap_m": 0.03999999999998144,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08511610191166824,
+        "visible_target_pixels": 111798
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2035460276900563
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17779414487989895
+        ],
+        "sphere_bottom_z_m": 0.1590422620697416,
+        "platform_top_z_m": 0.11904226206975968,
+        "rendered_sphere_platform_gap_m": 0.03999999999998191,
+        "solver_reference_gap_m": 0.03999999999998188,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08504226206975968,
+        "visible_target_pixels": 111864
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2034732342803432
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17772135147018583
+        ],
+        "sphere_bottom_z_m": 0.15896946866002848,
+        "platform_top_z_m": 0.1189694686600464,
+        "rendered_sphere_platform_gap_m": 0.03999999999998208,
+        "solver_reference_gap_m": 0.03999999999998205,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0849694686600464,
+        "visible_target_pixels": 111855
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2034014624201807
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17764957961002334
+        ],
+        "sphere_bottom_z_m": 0.15889769679986598,
+        "platform_top_z_m": 0.11889769679988374,
+        "rendered_sphere_platform_gap_m": 0.039999999999982244,
+        "solver_reference_gap_m": 0.039999999999982216,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08489769679988374,
+        "visible_target_pixels": 111853
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20333068783361058
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17757880502345322
+        ],
+        "sphere_bottom_z_m": 0.15882692221329586,
+        "platform_top_z_m": 0.11882692221331334,
+        "rendered_sphere_platform_gap_m": 0.03999999999998252,
+        "solver_reference_gap_m": 0.039999999999982494,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08482692221331334,
+        "visible_target_pixels": 111886
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20326088685372157
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1775090040435642
+        ],
+        "sphere_bottom_z_m": 0.15875712123340685,
+        "platform_top_z_m": 0.118757121233424,
+        "rendered_sphere_platform_gap_m": 0.039999999999982855,
+        "solver_reference_gap_m": 0.03999999999998283,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.084757121233424,
+        "visible_target_pixels": 111877
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20319203641927952
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17744015360912216
+        ],
+        "sphere_bottom_z_m": 0.1586882707989648,
+        "platform_top_z_m": 0.11868827079898162,
+        "rendered_sphere_platform_gap_m": 0.03999999999998319,
+        "solver_reference_gap_m": 0.03999999999998316,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08468827079898161,
+        "visible_target_pixels": 111929
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20312411405612069
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17737223124596332
+        ],
+        "sphere_bottom_z_m": 0.15862034843580597,
+        "platform_top_z_m": 0.11862034843582256,
+        "rendered_sphere_platform_gap_m": 0.03999999999998341,
+        "solver_reference_gap_m": 0.03999999999998338,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08462034843582256,
+        "visible_target_pixels": 111866
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20305709785122034
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17730521504106297
+        ],
+        "sphere_bottom_z_m": 0.15855333223090562,
+        "platform_top_z_m": 0.11855333223092199,
+        "rendered_sphere_platform_gap_m": 0.03999999999998363,
+        "solver_reference_gap_m": 0.039999999999983604,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08455333223092198,
+        "visible_target_pixels": 111894
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2029909664322801
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17723908362212273
+        ],
+        "sphere_bottom_z_m": 0.15848720081196538,
+        "platform_top_z_m": 0.11848720081198152,
+        "rendered_sphere_platform_gap_m": 0.039999999999983854,
+        "solver_reference_gap_m": 0.039999999999983826,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08448720081198152,
+        "visible_target_pixels": 111926
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2029256989571313
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17717381614697394
+        ],
+        "sphere_bottom_z_m": 0.1584219333368166,
+        "platform_top_z_m": 0.11842193333683235,
+        "rendered_sphere_platform_gap_m": 0.03999999999998424,
+        "solver_reference_gap_m": 0.039999999999984215,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08442193333683234,
+        "visible_target_pixels": 111851
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2028612751071452
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.17710939229698783
+        ],
+        "sphere_bottom_z_m": 0.15835750948683047,
+        "platform_top_z_m": 0.11835750948684612,
+        "rendered_sphere_platform_gap_m": 0.039999999999984354,
+        "solver_reference_gap_m": 0.039999999999984326,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08435750948684612,
+        "visible_target_pixels": 111919
+      }
+    ],
+    "cf": [
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2395566889035736
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21380480609341623
+        ],
+        "sphere_bottom_z_m": 0.19505292328325888,
+        "platform_top_z_m": 0.19505292328325885,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16105292328325885,
+        "visible_target_pixels": 104900
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23955626484362239
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21380438203346502
+        ],
+        "sphere_bottom_z_m": 0.19505249922330767,
+        "platform_top_z_m": 0.19505249922330764,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16105249922330764,
+        "visible_target_pixels": 104900
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2395451292710786
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21379324646092124
+        ],
+        "sphere_bottom_z_m": 0.19504136365076388,
+        "platform_top_z_m": 0.19504136365076385,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16104136365076385,
+        "visible_target_pixels": 104933
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2394866857876459
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21373480297748854
+        ],
+        "sphere_bottom_z_m": 0.19498292016733118,
+        "platform_top_z_m": 0.19498292016733115,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16098292016733115,
+        "visible_target_pixels": 104989
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23933285911035534
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21358097630019798
+        ],
+        "sphere_bottom_z_m": 0.19482909349004063,
+        "platform_top_z_m": 0.1948290934900406,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.1608290934900406,
+        "visible_target_pixels": 104985
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23905358083071948
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21330169802056212
+        ],
+        "sphere_bottom_z_m": 0.19454981521040476,
+        "platform_top_z_m": 0.19454981521040474,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16054981521040473,
+        "visible_target_pixels": 105168
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23864193409016582
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21289005128000846
+        ],
+        "sphere_bottom_z_m": 0.1941381684698511,
+        "platform_top_z_m": 0.19413816846985107,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.16013816846985107,
+        "visible_target_pixels": 105248
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23809661121945702
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21234472840929966
+        ],
+        "sphere_bottom_z_m": 0.1935928455991423,
+        "platform_top_z_m": 0.19359284559914228,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15959284559914227,
+        "visible_target_pixels": 105398
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23741041563330373
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21165853282314637
+        ],
+        "sphere_bottom_z_m": 0.192906650012989,
+        "platform_top_z_m": 0.19290665001298898,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15890665001298898,
+        "visible_target_pixels": 105428
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2365767919792735
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.21082490916911614
+        ],
+        "sphere_bottom_z_m": 0.1920730263589588,
+        "platform_top_z_m": 0.19207302635895876,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15807302635895876,
+        "visible_target_pixels": 105406
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2356002125858814
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20984832977572404
+        ],
+        "sphere_bottom_z_m": 0.19109644696556669,
+        "platform_top_z_m": 0.19109644696556666,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15709644696556666,
+        "visible_target_pixels": 105553
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23449601961196048
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20874413680180312
+        ],
+        "sphere_bottom_z_m": 0.18999225399164577,
+        "platform_top_z_m": 0.18999225399164574,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15599225399164574,
+        "visible_target_pixels": 105889
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23328282055470906
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.2075309377445517
+        ],
+        "sphere_bottom_z_m": 0.18877905493439434,
+        "platform_top_z_m": 0.1887790549343943,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.1547790549343943,
+        "visible_target_pixels": 106417
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23197847181191802
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20622658900176066
+        ],
+        "sphere_bottom_z_m": 0.1874747061916033,
+        "platform_top_z_m": 0.18747470619160328,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15347470619160328,
+        "visible_target_pixels": 105891
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.230602668068297
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20485078525813963
+        ],
+        "sphere_bottom_z_m": 0.18609890244798227,
+        "platform_top_z_m": 0.18609890244798225,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15209890244798224,
+        "visible_target_pixels": 106403
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22918026108917747
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.2034283782790201
+        ],
+        "sphere_bottom_z_m": 0.18467649546886275,
+        "platform_top_z_m": 0.18467649546886272,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.15067649546886272,
+        "visible_target_pixels": 106953
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2277404743807137
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20198859157055635
+        ],
+        "sphere_bottom_z_m": 0.183236708760399,
+        "platform_top_z_m": 0.18323670876039896,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14923670876039896,
+        "visible_target_pixels": 107444
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22631342252556325
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20056153971540588
+        ],
+        "sphere_bottom_z_m": 0.18180965690524853,
+        "platform_top_z_m": 0.1818096569052485,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.1478096569052485,
+        "visible_target_pixels": 107491
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22492774828668446
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1991758654765271
+        ],
+        "sphere_bottom_z_m": 0.18042398266636975,
+        "platform_top_z_m": 0.18042398266636972,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14642398266636972,
+        "visible_target_pixels": 107578
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2236104270674968
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19785854425733942
+        ],
+        "sphere_bottom_z_m": 0.17910666144718207,
+        "platform_top_z_m": 0.17910666144718204,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14510666144718204,
+        "visible_target_pixels": 108096
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22238683630671244
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19663495349655508
+        ],
+        "sphere_bottom_z_m": 0.17788307068639772,
+        "platform_top_z_m": 0.1778830706863977,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.1438830706863977,
+        "visible_target_pixels": 108509
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22127938392735888
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19552750111720152
+        ],
+        "sphere_bottom_z_m": 0.17677561830704416,
+        "platform_top_z_m": 0.17677561830704414,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14277561830704413,
+        "visible_target_pixels": 108795
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2203049956919482
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19455311288179084
+        ],
+        "sphere_bottom_z_m": 0.17580123007163348,
+        "platform_top_z_m": 0.17580123007163345,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14180123007163345,
+        "visible_target_pixels": 108276
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21947278797560776
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1937209051654504
+        ],
+        "sphere_bottom_z_m": 0.17496902235529305,
+        "platform_top_z_m": 0.17496902235529302,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14096902235529302,
+        "visible_target_pixels": 108620
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2187825736513701
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19303069084121274
+        ],
+        "sphere_bottom_z_m": 0.1742788080310554,
+        "platform_top_z_m": 0.17427880803105536,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.14027880803105536,
+        "visible_target_pixels": 108873
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.218223781684221
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19247189887406363
+        ],
+        "sphere_bottom_z_m": 0.17372001606390627,
+        "platform_top_z_m": 0.17372001606390625,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13972001606390624,
+        "visible_target_pixels": 109035
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21777415082995008
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19202226801979272
+        ],
+        "sphere_bottom_z_m": 0.17327038520963536,
+        "platform_top_z_m": 0.17327038520963534,
+        "rendered_sphere_platform_gap_m": 2.7755575615628914e-17,
+        "solver_reference_gap_m": 0.0,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13927038520963533,
+        "visible_target_pixels": 109200
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21739813614078948
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19164625333063212
+        ],
+        "sphere_bottom_z_m": 0.17289437052047477,
+        "platform_top_z_m": 0.17285931951376202,
+        "rendered_sphere_platform_gap_m": 3.505100671274963e-05,
+        "solver_reference_gap_m": 3.505100671272188e-05,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13885931951376201,
+        "visible_target_pixels": 109373
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21704982908860074
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19129794627844338
+        ],
+        "sphere_bottom_z_m": 0.17254606346828602,
+        "platform_top_z_m": 0.17195694558496555,
+        "rendered_sphere_platform_gap_m": 0.0005891178833204724,
+        "solver_reference_gap_m": 0.0005891178833204447,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13795694558496555,
+        "visible_target_pixels": 109488
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21669712994955712
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19094524713939975
+        ],
+        "sphere_bottom_z_m": 0.1721933643292424,
+        "platform_top_z_m": 0.16996859786491333,
+        "rendered_sphere_platform_gap_m": 0.0022247664643290643,
+        "solver_reference_gap_m": 0.0022247664643290366,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13596859786491333,
+        "visible_target_pixels": 109573
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21634104171968047
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1905891589095231
+        ],
+        "sphere_bottom_z_m": 0.17183727609936575,
+        "platform_top_z_m": 0.16668040032818188,
+        "rendered_sphere_platform_gap_m": 0.005156875771183872,
+        "solver_reference_gap_m": 0.005156875771183844,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.13268040032818187,
+        "visible_target_pixels": 109584
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21599982636058426
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1902479435504269
+        ],
+        "sphere_bottom_z_m": 0.17149606074026955,
+        "platform_top_z_m": 0.16218319949002644,
+        "rendered_sphere_platform_gap_m": 0.00931286125024311,
+        "solver_reference_gap_m": 0.009312861250243082,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.12818319949002643,
+        "visible_target_pixels": 109614
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21568211059762027
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1899302277874629
+        ],
+        "sphere_bottom_z_m": 0.17117834497730555,
+        "platform_top_z_m": 0.15677380430981722,
+        "rendered_sphere_platform_gap_m": 0.014404540667488336,
+        "solver_reference_gap_m": 0.014404540667488308,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.12277380430981721,
+        "visible_target_pixels": 109614
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21537918872237474
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18962730591221738
+        ],
+        "sphere_bottom_z_m": 0.17087542310206003,
+        "platform_top_z_m": 0.15087542310174365,
+        "rendered_sphere_platform_gap_m": 0.020000000000316376,
+        "solver_reference_gap_m": 0.020000000000316348,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.11687542310174365,
+        "visible_target_pixels": 109566
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2150781246090569
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18932624179889954
+        ],
+        "sphere_bottom_z_m": 0.17057435898874218,
+        "platform_top_z_m": 0.14497889965606306,
+        "rendered_sphere_platform_gap_m": 0.02559545933267912,
+        "solver_reference_gap_m": 0.025595459332679094,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.11097889965606306,
+        "visible_target_pixels": 109673
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21477562240441495
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18902373959425758
+        ],
+        "sphere_bottom_z_m": 0.17027185678410023,
+        "platform_top_z_m": 0.13958471803509112,
+        "rendered_sphere_platform_gap_m": 0.030687138749009107,
+        "solver_reference_gap_m": 0.03068713874900908,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.10558471803509112,
+        "visible_target_pixels": 109666
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21447806746387776
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1887261846537204
+        ],
+        "sphere_bottom_z_m": 0.16997430184356305,
+        "platform_top_z_m": 0.13513117761611762,
+        "rendered_sphere_platform_gap_m": 0.03484312422744543,
+        "solver_reference_gap_m": 0.0348431242274454,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.10113117761611762,
+        "visible_target_pixels": 109654
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21419178537837535
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.188439902568218
+        ],
+        "sphere_bottom_z_m": 0.16968801975806064,
+        "platform_top_z_m": 0.1319127862246249,
+        "rendered_sphere_platform_gap_m": 0.03777523353343573,
+        "solver_reference_gap_m": 0.037775233533435704,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0979127862246249,
+        "visible_target_pixels": 109704
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21391635761685404
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18816447480669668
+        ],
+        "sphere_bottom_z_m": 0.16941259199653932,
+        "platform_top_z_m": 0.13000170988266527,
+        "rendered_sphere_platform_gap_m": 0.03941088211387406,
+        "solver_reference_gap_m": 0.03941088211387403,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09600170988266526,
+        "visible_target_pixels": 109745
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21364684481368498
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18789496200352762
+        ],
+        "sphere_bottom_z_m": 0.16914307919337027,
+        "platform_top_z_m": 0.12917813020204102,
+        "rendered_sphere_platform_gap_m": 0.03996494899132924,
+        "solver_reference_gap_m": 0.03996494899132921,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09517813020204102,
+        "visible_target_pixels": 109756
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21337995927369846
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1876280764635411
+        ],
+        "sphere_bottom_z_m": 0.16887619365338374,
+        "platform_top_z_m": 0.12887619365350297,
+        "rendered_sphere_platform_gap_m": 0.03999999999988077,
+        "solver_reference_gap_m": 0.03999999999988074,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09487619365350297,
+        "visible_target_pixels": 109789
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2131167336011249
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18736485079096754
+        ],
+        "sphere_bottom_z_m": 0.16861296798081019,
+        "platform_top_z_m": 0.12861296798097385,
+        "rendered_sphere_platform_gap_m": 0.03999999999983633,
+        "solver_reference_gap_m": 0.039999999999836305,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09461296798097385,
+        "visible_target_pixels": 109902
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21286003400227438
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18710815119211702
+        ],
+        "sphere_bottom_z_m": 0.16835626838195966,
+        "platform_top_z_m": 0.1283562683820578,
+        "rendered_sphere_platform_gap_m": 0.039999999999901864,
+        "solver_reference_gap_m": 0.039999999999901836,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0943562683820578,
+        "visible_target_pixels": 109922
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2126109736622278
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18685909085207045
+        ],
+        "sphere_bottom_z_m": 0.1681072080419131,
+        "platform_top_z_m": 0.1281072080419348,
+        "rendered_sphere_platform_gap_m": 0.0399999999999783,
+        "solver_reference_gap_m": 0.039999999999978275,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09410720804193479,
+        "visible_target_pixels": 109987
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21236816808739525
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1866162852772379
+        ],
+        "sphere_bottom_z_m": 0.16786440246708054,
+        "platform_top_z_m": 0.12786440246709443,
+        "rendered_sphere_platform_gap_m": 0.0399999999999861,
+        "solver_reference_gap_m": 0.039999999999986074,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09386440246709443,
+        "visible_target_pixels": 110072
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21212972827686816
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1863778454667108
+        ],
+        "sphere_bottom_z_m": 0.16762596265655344,
+        "platform_top_z_m": 0.12762596265661355,
+        "rendered_sphere_platform_gap_m": 0.03999999999993989,
+        "solver_reference_gap_m": 0.03999999999993986,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09362596265661355,
+        "visible_target_pixels": 110182
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21189517059893467
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1861432877887773
+        ],
+        "sphere_bottom_z_m": 0.16739140497861996,
+        "platform_top_z_m": 0.1273914049787155,
+        "rendered_sphere_platform_gap_m": 0.039999999999904445,
+        "solver_reference_gap_m": 0.03999999999990442,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09339140497871551,
+        "visible_target_pixels": 110278
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2116653541842006
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18591347137404324
+        ],
+        "sphere_bottom_z_m": 0.16716158856388588,
+        "platform_top_z_m": 0.1271615885639721,
+        "rendered_sphere_platform_gap_m": 0.03999999999991377,
+        "solver_reference_gap_m": 0.03999999999991374,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09316158856397211,
+        "visible_target_pixels": 110354
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.211441097684029
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18568921487387163
+        ],
+        "sphere_bottom_z_m": 0.16693733206371428,
+        "platform_top_z_m": 0.12693733206376803,
+        "rendered_sphere_platform_gap_m": 0.039999999999946245,
+        "solver_reference_gap_m": 0.03999999999994622,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09293733206376803,
+        "visible_target_pixels": 110414
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21122225082647453
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18547036801631717
+        ],
+        "sphere_bottom_z_m": 0.1667184852061598,
+        "platform_top_z_m": 0.12671848520619647,
+        "rendered_sphere_platform_gap_m": 0.03999999999996334,
+        "solver_reference_gap_m": 0.039999999999963315,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09271848520619647,
+        "visible_target_pixels": 110483
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21100801049368845
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18525612768353109
+        ],
+        "sphere_bottom_z_m": 0.16650424487337373,
+        "platform_top_z_m": 0.1265042448734198,
+        "rendered_sphere_platform_gap_m": 0.039999999999953934,
+        "solver_reference_gap_m": 0.039999999999953906,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0925042448734198,
+        "visible_target_pixels": 110567
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2107977956583968
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18504591284823943
+        ],
+        "sphere_bottom_z_m": 0.16629403003808207,
+        "platform_top_z_m": 0.1262940300381454,
+        "rendered_sphere_platform_gap_m": 0.03999999999993667,
+        "solver_reference_gap_m": 0.03999999999993664,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0922940300381454,
+        "visible_target_pixels": 110705
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21059164525251553
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18483976244235817
+        ],
+        "sphere_bottom_z_m": 0.1660878796322008,
+        "platform_top_z_m": 0.12608787963226822,
+        "rendered_sphere_platform_gap_m": 0.03999999999993259,
+        "solver_reference_gap_m": 0.03999999999993256,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09208787963226822,
+        "visible_target_pixels": 110807
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21038988611169718
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18463800330153982
+        ],
+        "sphere_bottom_z_m": 0.16588612049138246,
+        "platform_top_z_m": 0.12588612049143946,
+        "rendered_sphere_platform_gap_m": 0.039999999999943,
+        "solver_reference_gap_m": 0.03999999999994297,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09188612049143946,
+        "visible_target_pixels": 110851
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21019261689263652
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18444073408247916
+        ],
+        "sphere_bottom_z_m": 0.1656888512723218,
+        "platform_top_z_m": 0.12568885127236748,
+        "rendered_sphere_platform_gap_m": 0.03999999999995432,
+        "solver_reference_gap_m": 0.039999999999954294,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09168885127236748,
+        "visible_target_pixels": 110926
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2099995730393071
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18424769022914975
+        ],
+        "sphere_bottom_z_m": 0.1654958074189924,
+        "platform_top_z_m": 0.12549580741903635,
+        "rendered_sphere_platform_gap_m": 0.03999999999995604,
+        "solver_reference_gap_m": 0.039999999999956015,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09149580741903635,
+        "visible_target_pixels": 111012
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2098103929705758
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18405851016041844
+        ],
+        "sphere_bottom_z_m": 0.16530662735026108,
+        "platform_top_z_m": 0.1253066273503106,
+        "rendered_sphere_platform_gap_m": 0.03999999999995049,
+        "solver_reference_gap_m": 0.039999999999950464,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09130662735031059,
+        "visible_target_pixels": 111042
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2096249038670045
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18387302105684714
+        ],
+        "sphere_bottom_z_m": 0.16512113824668978,
+        "platform_top_z_m": 0.12512113824674334,
+        "rendered_sphere_platform_gap_m": 0.03999999999994644,
+        "solver_reference_gap_m": 0.03999999999994641,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09112113824674334,
+        "visible_target_pixels": 111064
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2094459325146275
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18369404970447015
+        ],
+        "sphere_bottom_z_m": 0.1649421668943128,
+        "platform_top_z_m": 0.12493937409463732,
+        "rendered_sphere_platform_gap_m": 0.040002792799675474,
+        "solver_reference_gap_m": 0.040002792799675446,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09093937409463732,
+        "visible_target_pixels": 111114
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2093719308746263
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18362004806446894
+        ],
+        "sphere_bottom_z_m": 0.16486816525431158,
+        "platform_top_z_m": 0.12476138748762552,
+        "rendered_sphere_platform_gap_m": 0.04010677776668606,
+        "solver_reference_gap_m": 0.04010677776668603,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09076138748762552,
+        "visible_target_pixels": 110824
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2095180318451001
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18376614903494273
+        ],
+        "sphere_bottom_z_m": 0.16501426622478538,
+        "platform_top_z_m": 0.12458710102699619,
+        "rendered_sphere_platform_gap_m": 0.04042716519778919,
+        "solver_reference_gap_m": 0.04042716519778916,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09058710102699619,
+        "visible_target_pixels": 111174
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.20979635547793574
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18404447266777837
+        ],
+        "sphere_bottom_z_m": 0.16529258985762102,
+        "platform_top_z_m": 0.12441633231251706,
+        "rendered_sphere_platform_gap_m": 0.04087625754510396,
+        "solver_reference_gap_m": 0.04087625754510393,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09041633231251706,
+        "visible_target_pixels": 111079
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21003605726029898
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1842841744501416
+        ],
+        "sphere_bottom_z_m": 0.16553229163998426,
+        "platform_top_z_m": 0.12424891666759982,
+        "rendered_sphere_platform_gap_m": 0.041283374972384435,
+        "solver_reference_gap_m": 0.04128337497238441,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09024891666759982,
+        "visible_target_pixels": 110975
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21016599958615706
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1844141167759997
+        ],
+        "sphere_bottom_z_m": 0.16566223396584234,
+        "platform_top_z_m": 0.12408477859197123,
+        "rendered_sphere_platform_gap_m": 0.041577455373871114,
+        "solver_reference_gap_m": 0.041577455373871086,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.09008477859197123,
+        "visible_target_pixels": 110933
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21025422544499775
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1845023426348404
+        ],
+        "sphere_bottom_z_m": 0.16575045982468303,
+        "platform_top_z_m": 0.1239238971980697,
+        "rendered_sphere_platform_gap_m": 0.04182656262661333,
+        "solver_reference_gap_m": 0.0418265626266133,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0899238971980697,
+        "visible_target_pixels": 110923
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21040112560410626
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1846492427939489
+        ],
+        "sphere_bottom_z_m": 0.16589735998379154,
+        "platform_top_z_m": 0.12376623059175865,
+        "rendered_sphere_platform_gap_m": 0.042131129392032896,
+        "solver_reference_gap_m": 0.04213112939203287,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08976623059175864,
+        "visible_target_pixels": 110849
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21062998118101794
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18487809837086058
+        ],
+        "sphere_bottom_z_m": 0.16612621556070323,
+        "platform_top_z_m": 0.1236116849708764,
+        "rendered_sphere_platform_gap_m": 0.04251453058982682,
+        "solver_reference_gap_m": 0.04251453058982679,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0896116849708764,
+        "visible_target_pixels": 110768
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21088362120585194
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18513173839569458
+        ],
+        "sphere_bottom_z_m": 0.16637985558553722,
+        "platform_top_z_m": 0.12346014530356522,
+        "rendered_sphere_platform_gap_m": 0.042919710281972,
+        "solver_reference_gap_m": 0.04291971028197197,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08946014530356522,
+        "visible_target_pixels": 110678
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21110218923827126
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1853503064281139
+        ],
+        "sphere_bottom_z_m": 0.16659842361795654,
+        "platform_top_z_m": 0.12331151956167227,
+        "rendered_sphere_platform_gap_m": 0.04328690405628427,
+        "solver_reference_gap_m": 0.04328690405628424,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08931151956167227,
+        "visible_target_pixels": 110598
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21128330823527974
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18553142542512238
+        ],
+        "sphere_bottom_z_m": 0.16677954261496503,
+        "platform_top_z_m": 0.12316574949520528,
+        "rendered_sphere_platform_gap_m": 0.04361379311975974,
+        "solver_reference_gap_m": 0.043613793119759714,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08916574949520528,
+        "visible_target_pixels": 110554
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21146921951991013
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18571733670975277
+        ],
+        "sphere_bottom_z_m": 0.1669654538995954,
+        "platform_top_z_m": 0.12302278728649171,
+        "rendered_sphere_platform_gap_m": 0.0439426666131037,
+        "solver_reference_gap_m": 0.04394266661310367,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08902278728649171,
+        "visible_target_pixels": 110400
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21169283191162758
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18594094910147022
+        ],
+        "sphere_bottom_z_m": 0.16718906629131286,
+        "platform_top_z_m": 0.12288257070275424,
+        "rendered_sphere_platform_gap_m": 0.04430649558855862,
+        "solver_reference_gap_m": 0.04430649558855859,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08888257070275424,
+        "visible_target_pixels": 110319
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21194739848763453
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18619551567747716
+        ],
+        "sphere_bottom_z_m": 0.1674436328673198,
+        "platform_top_z_m": 0.1227450212070855,
+        "rendered_sphere_platform_gap_m": 0.04469861166023431,
+        "solver_reference_gap_m": 0.04469861166023428,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0887450212070855,
+        "visible_target_pixels": 110278
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.212203928707029
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18645204589687164
+        ],
+        "sphere_bottom_z_m": 0.1677001630867143,
+        "platform_top_z_m": 0.12261006006895422,
+        "rendered_sphere_platform_gap_m": 0.045090103017760064,
+        "solver_reference_gap_m": 0.045090103017760036,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08861006006895422,
+        "visible_target_pixels": 110228
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21244634032170898
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18669445751155161
+        ],
+        "sphere_bottom_z_m": 0.16794257470139426,
+        "platform_top_z_m": 0.12247762157758282,
+        "rendered_sphere_platform_gap_m": 0.045464953123811436,
+        "solver_reference_gap_m": 0.04546495312381141,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08847762157758282,
+        "visible_target_pixels": 110141
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21268439390219443
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18693251109203707
+        ],
+        "sphere_bottom_z_m": 0.1681806282818797,
+        "platform_top_z_m": 0.12234765140893364,
+        "rendered_sphere_platform_gap_m": 0.045832976872946074,
+        "solver_reference_gap_m": 0.045832976872946046,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08834765140893364,
+        "visible_target_pixels": 110045
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2129371991752097
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18718531636505234
+        ],
+        "sphere_bottom_z_m": 0.16843343355489498,
+        "platform_top_z_m": 0.12222009603487047,
+        "rendered_sphere_platform_gap_m": 0.04621333752002452,
+        "solver_reference_gap_m": 0.04621333752002449,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08822009603487047,
+        "visible_target_pixels": 109946
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2132116390946347
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18745975628447734
+        ],
+        "sphere_bottom_z_m": 0.16870787347431998,
+        "platform_top_z_m": 0.1220948959669311,
+        "rendered_sphere_platform_gap_m": 0.04661297750738888,
+        "solver_reference_gap_m": 0.04661297750738885,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0880948959669311,
+        "visible_target_pixels": 109856
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21349884557943286
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1877469627692755
+        ],
+        "sphere_bottom_z_m": 0.16899507995911814,
+        "platform_top_z_m": 0.12197198817774726,
+        "rendered_sphere_platform_gap_m": 0.047023091781370874,
+        "solver_reference_gap_m": 0.047023091781370846,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08797198817774726,
+        "visible_target_pixels": 109755
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21378756520907655
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18803568239891919
+        ],
+        "sphere_bottom_z_m": 0.16928379958876183,
+        "platform_top_z_m": 0.12185131264620294,
+        "rendered_sphere_platform_gap_m": 0.04743248694255889,
+        "solver_reference_gap_m": 0.04743248694255886,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08785131264620294,
+        "visible_target_pixels": 109704
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21407643759363312
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18832455478347576
+        ],
+        "sphere_bottom_z_m": 0.1695726719733184,
+        "platform_top_z_m": 0.12173281549298379,
+        "rendered_sphere_platform_gap_m": 0.04783985648033462,
+        "solver_reference_gap_m": 0.04783985648033459,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08773281549298378,
+        "visible_target_pixels": 109715
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21437298396736212
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18862110115720476
+        ],
+        "sphere_bottom_z_m": 0.1698692183470474,
+        "platform_top_z_m": 0.12161644665808588,
+        "rendered_sphere_platform_gap_m": 0.04825277168896153,
+        "solver_reference_gap_m": 0.0482527716889615,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08761644665808588,
+        "visible_target_pixels": 109717
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21468380796902714
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.18893192515886978
+        ],
+        "sphere_bottom_z_m": 0.17018004234871242,
+        "platform_top_z_m": 0.1215021559101527,
+        "rendered_sphere_platform_gap_m": 0.04867788643855972,
+        "solver_reference_gap_m": 0.04867788643855969,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0875021559101527,
+        "visible_target_pixels": 109608
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21500831605765416
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1892564332474968
+        ],
+        "sphere_bottom_z_m": 0.17050455043733945,
+        "platform_top_z_m": 0.12138989146697007,
+        "rendered_sphere_platform_gap_m": 0.049114658970369374,
+        "solver_reference_gap_m": 0.049114658970369346,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08738989146697007,
+        "visible_target_pixels": 109651
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21534146924512826
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1895895864349709
+        ],
+        "sphere_bottom_z_m": 0.17083770362481354,
+        "platform_top_z_m": 0.12127960175272759,
+        "rendered_sphere_platform_gap_m": 0.04955810187208595,
+        "solver_reference_gap_m": 0.049558101872085925,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08727960175272759,
+        "visible_target_pixels": 109634
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21568038575338846
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1899285029432311
+        ],
+        "sphere_bottom_z_m": 0.17117662013307375,
+        "platform_top_z_m": 0.12117123766250978,
+        "rendered_sphere_platform_gap_m": 0.050005382470563964,
+        "solver_reference_gap_m": 0.050005382470563936,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08717123766250978,
+        "visible_target_pixels": 109619
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21602699564266958
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19027511283251222
+        ],
+        "sphere_bottom_z_m": 0.17152323002235487,
+        "platform_top_z_m": 0.12106475298976974,
+        "rendered_sphere_platform_gap_m": 0.05045847703258513,
+        "solver_reference_gap_m": 0.0504584770325851,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08706475298976973,
+        "visible_target_pixels": 109608
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2163850358471761
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19063315303701875
+        ],
+        "sphere_bottom_z_m": 0.1718812702268614,
+        "platform_top_z_m": 0.12096010311441094,
+        "rendered_sphere_platform_gap_m": 0.050921167112450455,
+        "solver_reference_gap_m": 0.05092116711245043,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08696010311441094,
+        "visible_target_pixels": 109554
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2167559684729107
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19100408566275334
+        ],
+        "sphere_bottom_z_m": 0.172252202852596,
+        "platform_top_z_m": 0.12085724368207476,
+        "rendered_sphere_platform_gap_m": 0.051394959170521226,
+        "solver_reference_gap_m": 0.0513949591705212,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08685724368207476,
+        "visible_target_pixels": 109485
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2171383383473075
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19138645553715014
+        ],
+        "sphere_bottom_z_m": 0.17263457272699279,
+        "platform_top_z_m": 0.12075613050854692,
+        "rendered_sphere_platform_gap_m": 0.05187844221844587,
+        "solver_reference_gap_m": 0.05187844221844584,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08675613050854691,
+        "visible_target_pixels": 109463
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21753034463441318
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1917784618242558
+        ],
+        "sphere_bottom_z_m": 0.17302657901409846,
+        "platform_top_z_m": 0.12065672041546235,
+        "rendered_sphere_platform_gap_m": 0.052369858598636104,
+        "solver_reference_gap_m": 0.052369858598636077,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08665672041546235,
+        "visible_target_pixels": 109292
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21793210778286407
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1921802249727067
+        ],
+        "sphere_bottom_z_m": 0.17342834216254935,
+        "platform_top_z_m": 0.12055897190282114,
+        "rendered_sphere_platform_gap_m": 0.05286937025972821,
+        "solver_reference_gap_m": 0.05286937025972818,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08655897190282114,
+        "visible_target_pixels": 109097
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21834533731094097
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1925934545007836
+        ],
+        "sphere_bottom_z_m": 0.17384157169062625,
+        "platform_top_z_m": 0.12046284503938495,
+        "rendered_sphere_platform_gap_m": 0.0533787266512413,
+        "solver_reference_gap_m": 0.05337872665124127,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08646284503938495,
+        "visible_target_pixels": 108987
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21877142334625926
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1930195405361019
+        ],
+        "sphere_bottom_z_m": 0.17426765772594455,
+        "platform_top_z_m": 0.1203683008773169,
+        "rendered_sphere_platform_gap_m": 0.05389935684862765,
+        "solver_reference_gap_m": 0.05389935684862762,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0863683008773169,
+        "visible_target_pixels": 108876
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21921037166981194
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19345848885965458
+        ],
+        "sphere_bottom_z_m": 0.17470660604949723,
+        "platform_top_z_m": 0.12027530106096382,
+        "rendered_sphere_platform_gap_m": 0.05443130498853341,
+        "solver_reference_gap_m": 0.05443130498853338,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08627530106096382,
+        "visible_target_pixels": 108701
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.21966149022570305
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1939096074155457
+        ],
+        "sphere_bottom_z_m": 0.17515772460538834,
+        "platform_top_z_m": 0.12018380792054459,
+        "rendered_sphere_platform_gap_m": 0.05497391668484375,
+        "solver_reference_gap_m": 0.05497391668484372,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08618380792054459,
+        "visible_target_pixels": 108540
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22012464595830022
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19437276314814286
+        ],
+        "sphere_bottom_z_m": 0.1756208803379855,
+        "platform_top_z_m": 0.12009378479705177,
+        "rendered_sphere_platform_gap_m": 0.05552709554093374,
+        "solver_reference_gap_m": 0.05552709554093371,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08609378479705176,
+        "visible_target_pixels": 108373
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2206006063817782
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19484872357162084
+        ],
+        "sphere_bottom_z_m": 0.17609684076146348,
+        "platform_top_z_m": 0.12000519619986591,
+        "rendered_sphere_platform_gap_m": 0.05609164456159757,
+        "solver_reference_gap_m": 0.05609164456159754,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08600519619986591,
+        "visible_target_pixels": 108199
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22109033710401163
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19533845429385427
+        ],
+        "sphere_bottom_z_m": 0.1765865714836969,
+        "platform_top_z_m": 0.11991800767385016,
+        "rendered_sphere_platform_gap_m": 0.05666856380984675,
+        "solver_reference_gap_m": 0.05666856380984672,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08591800767385016,
+        "visible_target_pixels": 108358
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2215942783395941
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19584239552943675
+        ],
+        "sphere_bottom_z_m": 0.1770905127192794,
+        "platform_top_z_m": 0.11983218556439787,
+        "rendered_sphere_platform_gap_m": 0.05725832715488152,
+        "solver_reference_gap_m": 0.057258327154881494,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08583218556439787,
+        "visible_target_pixels": 108754
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22211238533098537
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.196360502520828
+        ],
+        "sphere_bottom_z_m": 0.17760861971067066,
+        "platform_top_z_m": 0.11974769691121775,
+        "rendered_sphere_platform_gap_m": 0.0578609227994529,
+        "solver_reference_gap_m": 0.057860922799452874,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08574769691121775,
+        "visible_target_pixels": 108635
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2226446926306167
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19689280982045934
+        ],
+        "sphere_bottom_z_m": 0.17814092701030199,
+        "platform_top_z_m": 0.11966450951320765,
+        "rendered_sphere_platform_gap_m": 0.05847641749709434,
+        "solver_reference_gap_m": 0.05847641749709431,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08566450951320764,
+        "visible_target_pixels": 108432
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22319165493348847
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1974397721233311
+        ],
+        "sphere_bottom_z_m": 0.17868788931317375,
+        "platform_top_z_m": 0.11958259203318825,
+        "rendered_sphere_platform_gap_m": 0.05910529727998551,
+        "solver_reference_gap_m": 0.05910529727998548,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08558259203318824,
+        "visible_target_pixels": 108199
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.223753950151206
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19800206734104864
+        ],
+        "sphere_bottom_z_m": 0.17925018453089128,
+        "platform_top_z_m": 0.11950191401228136,
+        "rendered_sphere_platform_gap_m": 0.059748270518609925,
+        "solver_reference_gap_m": 0.0597482705186099,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08550191401228135,
+        "visible_target_pixels": 108002
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22433209845159247
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.1985802156414351
+        ],
+        "sphere_bottom_z_m": 0.17982833283127775,
+        "platform_top_z_m": 0.11942244578742031,
+        "rendered_sphere_platform_gap_m": 0.06040588704385744,
+        "solver_reference_gap_m": 0.06040588704385741,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08542244578742031,
+        "visible_target_pixels": 107804
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22492636383450254
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19917448102434518
+        ],
+        "sphere_bottom_z_m": 0.18042259821418782,
+        "platform_top_z_m": 0.11934415839930082,
+        "rendered_sphere_platform_gap_m": 0.061078439814887,
+        "solver_reference_gap_m": 0.061078439814886976,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08534415839930082,
+        "visible_target_pixels": 107576
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22553697500558864
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.19978509219543128
+        ],
+        "sphere_bottom_z_m": 0.18103320938527392,
+        "platform_top_z_m": 0.11926702356220434,
+        "rendered_sphere_platform_gap_m": 0.061766185823069586,
+        "solver_reference_gap_m": 0.06176618582306956,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08526702356220434,
+        "visible_target_pixels": 107496
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2261643387003276
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20041245589017023
+        ],
+        "sphere_bottom_z_m": 0.18166057308001288,
+        "platform_top_z_m": 0.11919101368850335,
+        "rendered_sphere_platform_gap_m": 0.06246955939150953,
+        "solver_reference_gap_m": 0.0624695593915095,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08519101368850335,
+        "visible_target_pixels": 107538
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2268090092141542
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20105712640399684
+        ],
+        "sphere_bottom_z_m": 0.18230524359383948,
+        "platform_top_z_m": 0.11911610191166824,
+        "rendered_sphere_platform_gap_m": 0.06318914168217124,
+        "solver_reference_gap_m": 0.06318914168217121,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08511610191166824,
+        "visible_target_pixels": 107489
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22747151047966083
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20171962766950347
+        ],
+        "sphere_bottom_z_m": 0.1829677448593461,
+        "platform_top_z_m": 0.11904226206975968,
+        "rendered_sphere_platform_gap_m": 0.06392548278958643,
+        "solver_reference_gap_m": 0.0639254827895864,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08504226206975968,
+        "visible_target_pixels": 107430
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22815224906583792
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20240036625568056
+        ],
+        "sphere_bottom_z_m": 0.1836484834455232,
+        "platform_top_z_m": 0.1189694686600464,
+        "rendered_sphere_platform_gap_m": 0.0646790147854768,
+        "solver_reference_gap_m": 0.06467901478547677,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.0849694686600464,
+        "visible_target_pixels": 107356
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22885159384169704
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20309971103153968
+        ],
+        "sphere_bottom_z_m": 0.18434782822138232,
+        "platform_top_z_m": 0.11889769679988374,
+        "rendered_sphere_platform_gap_m": 0.06545013142149858,
+        "solver_reference_gap_m": 0.06545013142149855,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08489769679988374,
+        "visible_target_pixels": 107096
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.22956998920592978
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.2038181063957724
+        ],
+        "sphere_bottom_z_m": 0.18506622358561506,
+        "platform_top_z_m": 0.11882692221331334,
+        "rendered_sphere_platform_gap_m": 0.06623930137230172,
+        "solver_reference_gap_m": 0.06623930137230169,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08482692221331334,
+        "visible_target_pixels": 106843
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23030796340676085
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.2045560805966035
+        ],
+        "sphere_bottom_z_m": 0.18580419778644613,
+        "platform_top_z_m": 0.118757121233424,
+        "rendered_sphere_platform_gap_m": 0.06704707655302214,
+        "solver_reference_gap_m": 0.06704707655302211,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.084757121233424,
+        "visible_target_pixels": 106592
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23106604880329976
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.2053141659931424
+        ],
+        "sphere_bottom_z_m": 0.18656228318298504,
+        "platform_top_z_m": 0.11868827079898162,
+        "rendered_sphere_platform_gap_m": 0.06787401238400342,
+        "solver_reference_gap_m": 0.0678740123840034,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08468827079898161,
+        "visible_target_pixels": 106232
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23184472889283703
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20609284608267966
+        ],
+        "sphere_bottom_z_m": 0.1873409632725223,
+        "platform_top_z_m": 0.11862034843582256,
+        "rendered_sphere_platform_gap_m": 0.06872061483669975,
+        "solver_reference_gap_m": 0.06872061483669972,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08462034843582256,
+        "visible_target_pixels": 105990
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2326444672799468
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20689258446978945
+        ],
+        "sphere_bottom_z_m": 0.1881407016596321,
+        "platform_top_z_m": 0.11855333223092199,
+        "rendered_sphere_platform_gap_m": 0.0695873694287101,
+        "solver_reference_gap_m": 0.06958736942871008,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08455333223092198,
+        "visible_target_pixels": 106590
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23346576381947234
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20771388100931498
+        ],
+        "sphere_bottom_z_m": 0.18896199819915763,
+        "platform_top_z_m": 0.11848720081198152,
+        "rendered_sphere_platform_gap_m": 0.0704747973871761,
+        "solver_reference_gap_m": 0.07047479738717607,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08448720081198152,
+        "visible_target_pixels": 106330
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.2343091644231185
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20855728161296114
+        ],
+        "sphere_bottom_z_m": 0.18980539880280378,
+        "platform_top_z_m": 0.11842193333683235,
+        "rendered_sphere_platform_gap_m": 0.07138346546597144,
+        "solver_reference_gap_m": 0.07138346546597141,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08442193333683234,
+        "visible_target_pixels": 105979
+      },
+      {
+        "strip_end_world_m": [
+          0.0,
+          0.0,
+          0.23517522420446504
+        ],
+        "end_tangent_world": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "sphere_center_world_m": [
+          0.0,
+          0.0,
+          0.20942334139430768
+        ],
+        "sphere_bottom_z_m": 0.19067145858415033,
+        "platform_top_z_m": 0.11835750948684612,
+        "rendered_sphere_platform_gap_m": 0.07231394909730421,
+        "solver_reference_gap_m": 0.07231394909730418,
+        "finite_attachment_gap_correction_m": 2.7755575615628914e-17,
+        "platform_housing_clearance_m": 0.08435750948684612,
+        "visible_target_pixels": 105650
+      }
+    ]
+  },
+  "wall_time_s": 665.944334043
+}

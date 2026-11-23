@@ -1,0 +1,33 @@
+{
+  "schema_version": "counterfactual-runtime-witness-index-v1",
+  "pass": true,
+  "witness_count": 1,
+  "case_count": 3,
+  "witnesses": {
+    "d83f9f63bd9d5c4c47f35679dfe5204ee6ae7c6c061f62a536e5b5344656a15e": {
+      "path": "runtime-witness.json",
+      "sha256": "d83f9f63bd9d5c4c47f35679dfe5204ee6ae7c6c061f62a536e5b5344656a15e",
+      "generator": "loaded_viscoelastic_strip_creep_reversal",
+      "case_set": "development-three-recipes",
+      "source_commit": "63347efe67b880f81742980913c5229a421df3eb"
+    }
+  },
+  "cases": {
+    "loaded_viscoelastic_strip_creep_reversal_00000000": {
+      "witness_id": "d83f9f63bd9d5c4c47f35679dfe5204ee6ae7c6c061f62a536e5b5344656a15e",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000000/metadata.json",
+      "metadata_sha256": "e6892c57f762a0d8b89675e0794e31566f5da166ef710e4b62921c6ae1cb780a"
+    },
+    "loaded_viscoelastic_strip_creep_reversal_00000001": {
+      "witness_id": "d83f9f63bd9d5c4c47f35679dfe5204ee6ae7c6c061f62a536e5b5344656a15e",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000001/metadata.json",
+      "metadata_sha256": "859b29248cf88973c05d041072a30909fdc3cadf1868abe17a2b97cfcdbc0fac"
+    },
+    "loaded_viscoelastic_strip_creep_reversal_00000002": {
+      "witness_id": "d83f9f63bd9d5c4c47f35679dfe5204ee6ae7c6c061f62a536e5b5344656a15e",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000002/metadata.json",
+      "metadata_sha256": "ef8a8bddb2255b3228179c160cf6d4e1f4f644bcc0f8368160e3038e833bba4f"
+    }
+  },
+  "failures": []
+}

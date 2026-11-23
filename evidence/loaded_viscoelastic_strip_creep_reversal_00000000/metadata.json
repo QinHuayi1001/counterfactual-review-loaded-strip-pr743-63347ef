@@ -1,0 +1,221 @@
+{
+  "task_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+  "seed": 0,
+  "category": "loaded_viscoelastic_strip",
+  "phenomenon": "loaded_viscoelastic_strip_creep",
+  "violation_type": "creep_reversal",
+  "stage": "Development",
+  "humanReview": "pending",
+  "render": {
+    "width": 2048,
+    "height": 2048,
+    "fps": 24,
+    "n_frames": 120,
+    "renderer": "pybullet-tiny-renderer",
+    "frames": 120
+  },
+  "scene_params": {
+    "L": 0.22,
+    "width": 0.02,
+    "thickness": 0.002,
+    "A": 4e-05,
+    "eq": 0.14,
+    "payload_mass": 0.5380224260958206,
+    "rho": 1150,
+    "gravity": 9.81,
+    "tau_middle_scale": 0.9,
+    "load_time": 1.1,
+    "onset": 2.4,
+    "camera_azimuth": -5,
+    "mirror": false,
+    "strip_color": [
+      0.025,
+      0.24,
+      0.35,
+      1
+    ],
+    "material_model": "synthetic-finite-strain-multiplicative-neo-hookean-extension-of-published-spectrum"
+  },
+  "phenomenon_data": {
+    "scene_params": {
+      "L": 0.22,
+      "width": 0.02,
+      "thickness": 0.002,
+      "A": 4e-05,
+      "eq": 0.14,
+      "payload_mass": 0.5380224260958206,
+      "rho": 1150,
+      "gravity": 9.81,
+      "tau_middle_scale": 0.9,
+      "load_time": 1.1,
+      "onset": 2.4,
+      "camera_azimuth": -5,
+      "mirror": false,
+      "strip_color": [
+        0.025,
+        0.24,
+        0.35,
+        1
+      ],
+      "material_model": "synthetic-finite-strain-multiplicative-neo-hookean-extension-of-published-spectrum"
+    }
+  },
+  "profile": {
+    "parameter_source": "explicit-development-recipe",
+    "recipe_index": 0
+  },
+  "paths": {
+    "true": {
+      "video": "true/video.mp4",
+      "trajectory": "true/trajectory.npz",
+      "prompt": "true/prompt.txt"
+    },
+    "counterfactual": {
+      "video": "counterfactual_creep_reversal/video.mp4",
+      "trajectory": "counterfactual_creep_reversal/trajectory.npz",
+      "prompt": "counterfactual_creep_reversal/prompt.txt",
+      "mask": "counterfactual_creep_reversal/mask.mp4",
+      "mask_overlay": "counterfactual_creep_reversal/mask_overlay.mp4"
+    }
+  },
+  "reproducibility": {
+    "inputs": {
+      "simulation.json": "bd5849f8a4c2fda62f77d11f71b80135c7dc91138856fe2d70bbc37a61ae18cf",
+      "true/trajectory.npz": "27872023c3f890379453cad0a87f11fcce6bceed222a194813794084e9845e76",
+      "counterfactual_creep_reversal/trajectory.npz": "2796e4d5f863dde9164309eb528eb2e8deffc2743c67d5ad4e8a5b8afb809d11"
+    }
+  },
+  "descriptions": {
+    "true": "A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After the initial loading stretch, the strip continues to creep slowly downward while the weight remains suspended under gravity.",
+    "counterfactual": "A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After stretching under the load, the strip reverses its slow creep and gradually lifts the suspended weight despite the continued gravitational load."
+  },
+  "intervention_frame": 58,
+  "first_changed_frame": 58,
+  "mask_start_frame": 58,
+  "evidence_frame": 82,
+  "event_time_s": 2.4,
+  "frame_time_definition": "frame i samples the physical state at i/24 seconds; stream lasts 5s; last sampled state is 119/24s",
+  "visible_motion": {
+    "true": {
+      "displacement_from_intervention_m": 0.006654117855428687,
+      "first_to_last_m": 0.036695413796428406,
+      "reference_position_m": 0.2504846070374261,
+      "last_position_m": 0.2571387248928548
+    },
+    "cf": {
+      "displacement_from_intervention_m": -0.025659831241891168,
+      "first_to_last_m": 0.00438146469910855,
+      "reference_position_m": 0.2504846070374261,
+      "last_position_m": 0.22482477579553492
+    },
+    "last_frame_time_s": 4.958333333333333
+  },
+  "generation": {
+    "git": {
+      "commit": "63347efe67b880f81742980913c5229a421df3eb",
+      "branch": "",
+      "dirty": false,
+      "tracked": true,
+      "source_sha256": "854501c31323404a28d1b3a2d4db9c2ff48ca25d1a6935a361f0507ea38b61a6",
+      "files": {
+        "DESIGN.md": "a5c409c8f273456de11b9bba634f9872f7aa99bf39b95fb1071d5b185d47611b",
+        "README.md": "94492d486f05ddb0a4adc77dea5a5b67cbb78a210ac9cea3ad554f6e04a03351",
+        "assets/review-template.html": "523de2c890ef4a46ad5fbd4a6d7a86925c515d3882b4a7e9c3f10fd6a3104ab1",
+        "engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "engine/media.py": "42dc61c56496a9e966e37345fb92da7410c26a1d6c7735bf424a1f62a69b90a7",
+        "engine/model.py": "358e1948bfc13403cf61a6e698a20963218707b5dc789c9f14d66ed3413e4867",
+        "engine/pipeline.py": "ebe6d94d09fd826e0b7c698cb909e0a1d9d15ce9463d296fc3102332179d8607",
+        "engine/render.py": "8f51cb7b96d62022d7d920f2cb8cc910316325f2d8cca87e46f741887a2498f8",
+        "engine/spec.py": "e21620ca4fe9dd92e3671c2e98f2d5d55a773e2a4170f6e01a1f4d0ae82d36e9",
+        "examples/audit_physics.py": "0e0876775a55310d514d7d97725d65a6673fc3c949840451c6a2d63c21f30589",
+        "examples/audit_rendered_diversity.py": "0a9c52f97706f66f990e43f5d6e1eb0d20b1ed09ec71d539394e2b32261941b8",
+        "examples/build_review.py": "3d4fe0533120d1decc64264d0b04897ca7f3a402fbadb5ad1a7495f3d932d8df",
+        "examples/compare.py": "6ddc7c2735312eeb1040aa72691fc4ebf6495bc624dde0457e149721dcbf128e",
+        "examples/constitutive_controls.py": "2286c9730e7e511a24e44733bd509a65d1a5db2a38de23074ae711eebceb1c5f",
+        "examples/development-recipes.json": "85b7d7536d18e608c82b0df609524a8d77338cbc0ce2ac126267942710f92e02",
+        "examples/finite_strain_controls.py": "776c8b3cc3971b49278a65064d3b0872b2ba437409000ea8238e0317ba24e30a",
+        "examples/generate.py": "0bcf74d57777bec0e476071faffe9e2775f6d52b9422eae894c4fbbb18df81e2",
+        "examples/render_development.py": "ddc5922657db9c71155f3026dc867c3cf83c315ba1dcb2a2e50d32fb383b6787",
+        "examples/reproduce.py": "180e180b5debffad84c0ff05e89adbff77f93c08cad89f56940cc4494dd325f9",
+        "examples/test_integrity.py": "bb5c605153c3ad44f75c6e0779f6a02c5267d43e1b53f0880a7237e5a66c0ae9",
+        "examples/validate_review.py": "bcf06c885ac630e54d8f8fe647f94032608c1f4eeba3dd55a880ea530c22d085",
+        "requirements.txt": "28cd57850b12c1e3da2baa7466adb51cfad644005854f7bdb9c472a630ce1dd2",
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/phenomenon.py": "be764b6e2131afb3a2d5385d2ce469224e4bbe22c597dabb5e60184e7c79286f",
+        "src/scaling.py": "cc4a75409835a3aa5c9945aba9a0871b92d43ac7ab61ec3845cebf2e2a48dc72",
+        "src/violation.py": "345b2b502fde7761ce56640378dde8d5e888af735768f0aa0c877071cea159e5",
+        "tests/test_contact_release.py": "6263c3180227550abf358340fabeca862aed057c502dcd73000a8656d25bc1b4",
+        "tests/test_renderer_geometry.py": "15f3b5d74b3e1355efa580b730caff0243d063a1d693240ec1686cc25184a836"
+      }
+    },
+    "startedAt": "2026-11-23T05:16:49.395666+00:00",
+    "completedAt": "2026-11-23T05:28:59.382780+00:00",
+    "python": "3.10.22 (main, Oct  1 2026, 14:31:30) [GCC 11.4.0]",
+    "executable": "/opt/hostedtoolcache/Python/3.10.22/x64/bin/python",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.14.1",
+      "pybullet": "3.2.7",
+      "Pillow": "11.1.0",
+      "imageio-ffmpeg": "0.6.0"
+    }
+  },
+  "operator": {
+    "changed_parameter": "middle Maxwell branch mobility sign",
+    "true_after": [
+      1,
+      1,
+      1
+    ],
+    "cf_after": [
+      1,
+      -1,
+      1
+    ],
+    "state_continuity_at_event": true,
+    "counterfactual_energy_source": "negative middle-branch dissipation; explicitly accounted anomalous power"
+  },
+  "physical_model": {
+    "type": "custom central-force 3D discrete generalized-Maxwell rod; 16 segments",
+    "renderer_role": "visual replay only; no PyBullet dynamics",
+    "initial_history": "self-weight equilibrium with relaxed internal branches; payload initially fully supported by position-controlled unilateral platform",
+    "constitutive_scope": "energy-consistent multiplicative Neo-Hookean Maxwell axial reduction; engineering strain capped at 20%; synthetic nonlinear extension, not calibrated Agilus behavior",
+    "spectrum": "Agilus30 published relaxation anchor; synthetic middle-tau variants 0.9-1.1 of 0.97s; not three measured materials",
+    "limitations": [
+      "Published small-strain spectrum supplies only tangent parameters; the finite-strain extension is synthetic and not experimentally calibrated.",
+      "Finite assembly represented by a point mass at lower rod node; general bending, clamp stress concentrations and rigid-payload rotational inertia are outside the validated domain.",
+      "Negative viscosity is unstable outside the bounded five-second evidence window; no saturation or clipping."
+    ]
+  },
+  "mask": {
+    "targets": [
+      "viscoelastic_strip",
+      "lower_clamp",
+      "weight_connector",
+      "spherical_weight",
+      "moving_gauge_pointer",
+      "printed_gauge_bands",
+      "lower_fixing_screws"
+    ],
+    "excluded": [
+      "upper_clamp",
+      "fixed_frame",
+      "support_platform",
+      "ruler",
+      "floor",
+      "shadows"
+    ],
+    "definition": "depth-tested native 3D entity segmentation of affected moving target surfaces, zero until the first decoded True/CF visual difference",
+    "overlay_color": "#FF0000",
+    "overlay_alpha": 0.65,
+    "codec": "lossless YUV444 H264, explicit BT.709",
+    "inside_RGB_rounding_tolerance": 3,
+    "outside_exact": true
+  },
+  "audit": {
+    "physics": "audit_physics.json",
+    "media": "audit_media.json",
+    "render": "render_witness.json",
+    "trajectory": "simulation.json"
+  }
+}

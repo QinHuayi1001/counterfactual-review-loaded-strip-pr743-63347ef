@@ -1,0 +1,1 @@
+A polymer strip hangs from a fixed upper clamp and holds a spherical weight at its lower end. A supporting platform lowers smoothly and separates from the weight. After stretching under the load, the strip reverses its slow creep and gradually lifts the suspended weight despite the continued gravitational load.

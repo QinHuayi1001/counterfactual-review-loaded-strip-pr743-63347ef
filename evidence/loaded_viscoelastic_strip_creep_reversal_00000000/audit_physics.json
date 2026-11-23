@@ -1,0 +1,586 @@
+{
+  "status": "PASS",
+  "pass": true,
+  "scope": "independent-trajectory-audit",
+  "checks": {
+    "parameter_match_L": {
+      "passed": true,
+      "detail": {
+        "provided": 0.22,
+        "recorded": 0.22
+      }
+    },
+    "parameter_match_A": {
+      "passed": true,
+      "detail": {
+        "provided": 4e-05,
+        "recorded": 4e-05
+      }
+    },
+    "parameter_match_eq": {
+      "passed": true,
+      "detail": {
+        "provided": 0.14,
+        "recorded": 0.14
+      }
+    },
+    "parameter_match_payload_mass": {
+      "passed": true,
+      "detail": {
+        "provided": 0.5380224260958206,
+        "recorded": 0.5380224260958206
+      }
+    },
+    "parameter_match_rho": {
+      "passed": true,
+      "detail": {
+        "provided": 1150,
+        "recorded": 1150
+      }
+    },
+    "parameter_match_load_time": {
+      "passed": true,
+      "detail": {
+        "provided": 1.1,
+        "recorded": 1.1
+      }
+    },
+    "parameter_match_onset": {
+      "passed": true,
+      "detail": {
+        "provided": 2.4,
+        "recorded": 2.4
+      }
+    },
+    "earth_gravity": {
+      "passed": true
+    },
+    "central_force_audit_scope": {
+      "passed": true,
+      "detail": "Nonzero bending requires a separate independent bending-force audit."
+    },
+    "source_hash_format": {
+      "passed": true
+    },
+    "model_source_hash_binding": {
+      "passed": true,
+      "detail": {
+        "recorded": "358e1948bfc13403cf61a6e698a20963218707b5dc789c9f14d66ed3413e4867",
+        "expected": "358e1948bfc13403cf61a6e698a20963218707b5dc789c9f14d66ed3413e4867"
+      }
+    },
+    "true_required_arrays": {
+      "passed": true,
+      "detail": []
+    },
+    "true_internal_state_measure_schema": {
+      "passed": true,
+      "detail": {
+        "expected": "log_viscous_stretch",
+        "recorded": "log_viscous_stretch"
+      }
+    },
+    "true_constitutive_model_schema": {
+      "passed": true,
+      "detail": {
+        "expected": "multiplicative_neo_hookean_maxwell",
+        "recorded": "multiplicative_neo_hookean_maxwell"
+      }
+    },
+    "true_array_shapes": {
+      "passed": true,
+      "detail": {}
+    },
+    "true_finite_numeric_arrays": {
+      "passed": true
+    },
+    "true_dense_timebase": {
+      "passed": true
+    },
+    "true_video_timebase_1_to_1": {
+      "passed": true
+    },
+    "cf_required_arrays": {
+      "passed": true,
+      "detail": []
+    },
+    "cf_internal_state_measure_schema": {
+      "passed": true,
+      "detail": {
+        "expected": "log_viscous_stretch",
+        "recorded": "log_viscous_stretch"
+      }
+    },
+    "cf_constitutive_model_schema": {
+      "passed": true,
+      "detail": {
+        "expected": "multiplicative_neo_hookean_maxwell",
+        "recorded": "multiplicative_neo_hookean_maxwell"
+      }
+    },
+    "cf_array_shapes": {
+      "passed": true,
+      "detail": {}
+    },
+    "cf_finite_numeric_arrays": {
+      "passed": true
+    },
+    "cf_dense_timebase": {
+      "passed": true
+    },
+    "cf_video_timebase_1_to_1": {
+      "passed": true
+    },
+    "branch_shared_time_and_constants": {
+      "passed": true
+    },
+    "exact_common_state_prefix": {
+      "passed": true
+    },
+    "exact_recorded_frame_state_prefix": {
+      "passed": true
+    },
+    "published_elastic_spectrum": {
+      "passed": true
+    },
+    "material_time_constants": {
+      "passed": true
+    },
+    "selected_tau_profile": {
+      "passed": true
+    },
+    "recorded_tau_parameters": {
+      "passed": true
+    },
+    "distributed_and_payload_mass": {
+      "passed": true
+    },
+    "strip_mass_parameter": {
+      "passed": true
+    },
+    "contact_event_schema": {
+      "passed": true
+    },
+    "release_record_consistency": {
+      "passed": true
+    },
+    "completed_release_before_intervention": {
+      "passed": true
+    },
+    "impact_event_count": {
+      "passed": true
+    },
+    "enough_smooth_samples": {
+      "passed": true
+    },
+    "true_positive_segment_lengths": {
+      "passed": true
+    },
+    "true_finite_reconstructed_constitutive_state": {
+      "passed": true
+    },
+    "true_energy_stress_and_internal_force_conjugacy": {
+      "passed": true,
+      "detail": {
+        "maxNominalStressDerivativeResidualPa": 2.3283064365386963e-10,
+        "maxInternalForceDerivativeResidualPa": 2.531805876060389e-10,
+        "sampledStates": 34
+      }
+    },
+    "true_recorded_constitutive_geometry": {
+      "passed": true,
+      "detail": {
+        "strain": 0.0,
+        "branchStressPa": 2.1827872842550278e-10,
+        "tensionN": 1.2434497875801753e-14,
+        "branchDissipationW": 1.3010426069826053e-16,
+        "kineticEnergyJ": 2.710505431213761e-20,
+        "storedEnergyJ": 2.0816681711721685e-16,
+        "gravityEnergyJ": 4.440892098500626e-16,
+        "totalEnergyJ": 4.440892098500626e-16
+      }
+    },
+    "true_recorded_energy_components": {
+      "passed": true
+    },
+    "true_recorded_dissipation": {
+      "passed": true
+    },
+    "true_no_compression_and_strain_domain": {
+      "passed": true
+    },
+    "true_positive_tensile_force": {
+      "passed": true
+    },
+    "true_independent_newton_fd": {
+      "passed": true,
+      "detail": {
+        "maxResidualN": 1.3242427710493873e-06,
+        "toleranceN": 7.278000000000002e-05
+      }
+    },
+    "true_position_velocity_consistency": {
+      "passed": true,
+      "detail": 1.332637195833146e-07
+    },
+    "true_unique_internal_flow_law_fd": {
+      "passed": true,
+      "detail": {
+        "maxScaledResidual": 7.331408963251462e-08,
+        "expectedSignsAfterEvent": [
+          1,
+          1,
+          1
+        ],
+        "internalStateMeasure": "log_viscous_stretch",
+        "drivingForce": "Q=lambda*Pi"
+      }
+    },
+    "true_payload_interface_includes_half_element_inertia": {
+      "passed": true,
+      "detail": 1.3242427708086944e-06
+    },
+    "true_contact_mode_matches_events": {
+      "passed": true
+    },
+    "true_normal_is_nonnegative": {
+      "passed": true
+    },
+    "true_normal_zero_when_detached": {
+      "passed": true
+    },
+    "true_no_platform_penetration": {
+      "passed": true
+    },
+    "true_active_contact_position_and_velocity": {
+      "passed": true
+    },
+    "true_released_and_stays_detached": {
+      "passed": true
+    },
+    "true_sustained_creep_direction": {
+      "passed": true
+    },
+    "true_recorded_frame_geometry": {
+      "passed": true
+    },
+    "true_recorded_frame_platform": {
+      "passed": true
+    },
+    "true_recorded_frame_creep_direction": {
+      "passed": true
+    },
+    "true_positive_unmodified_branch_dissipation": {
+      "passed": true
+    },
+    "true_all_viscous_branches_passive": {
+      "passed": true
+    },
+    "true_independent_split_energy_balance": {
+      "passed": true,
+      "detail": {
+        "maxBoundaryResidualJ": 3.885617327892277e-09,
+        "toleranceJ": 1.2224298233641412e-06
+      }
+    },
+    "true_energy_quadrature_resolved": {
+      "passed": true,
+      "detail": 8.155614820715964e-09
+    },
+    "cf_positive_segment_lengths": {
+      "passed": true
+    },
+    "cf_finite_reconstructed_constitutive_state": {
+      "passed": true
+    },
+    "cf_energy_stress_and_internal_force_conjugacy": {
+      "passed": true,
+      "detail": {
+        "maxNominalStressDerivativeResidualPa": 3.2014213502407074e-10,
+        "maxInternalForceDerivativeResidualPa": 2.1827872842550278e-10,
+        "sampledStates": 34
+      }
+    },
+    "cf_recorded_constitutive_geometry": {
+      "passed": true,
+      "detail": {
+        "strain": 0.0,
+        "branchStressPa": 2.1827872842550278e-10,
+        "tensionN": 1.2434497875801753e-14,
+        "branchDissipationW": 1.3877787807814457e-16,
+        "kineticEnergyJ": 2.710505431213761e-20,
+        "storedEnergyJ": 4.85722573273506e-16,
+        "gravityEnergyJ": 4.440892098500626e-16,
+        "totalEnergyJ": 6.661338147750939e-16
+      }
+    },
+    "cf_recorded_energy_components": {
+      "passed": true
+    },
+    "cf_recorded_dissipation": {
+      "passed": true
+    },
+    "cf_no_compression_and_strain_domain": {
+      "passed": true
+    },
+    "cf_positive_tensile_force": {
+      "passed": true
+    },
+    "cf_independent_newton_fd": {
+      "passed": true,
+      "detail": {
+        "maxResidualN": 9.738515564405859e-06,
+        "toleranceN": 7.278000000000002e-05
+      }
+    },
+    "cf_position_velocity_consistency": {
+      "passed": true,
+      "detail": 7.351839433462036e-07
+    },
+    "cf_unique_internal_flow_law_fd": {
+      "passed": true,
+      "detail": {
+        "maxScaledResidual": 1.2456905050528544e-07,
+        "expectedSignsAfterEvent": [
+          1,
+          -1,
+          1
+        ],
+        "internalStateMeasure": "log_viscous_stretch",
+        "drivingForce": "Q=lambda*Pi"
+      }
+    },
+    "cf_payload_interface_includes_half_element_inertia": {
+      "passed": true,
+      "detail": 9.738515564600148e-06
+    },
+    "cf_contact_mode_matches_events": {
+      "passed": true
+    },
+    "cf_normal_is_nonnegative": {
+      "passed": true
+    },
+    "cf_normal_zero_when_detached": {
+      "passed": true
+    },
+    "cf_no_platform_penetration": {
+      "passed": true
+    },
+    "cf_active_contact_position_and_velocity": {
+      "passed": true
+    },
+    "cf_released_and_stays_detached": {
+      "passed": true
+    },
+    "cf_sustained_creep_direction": {
+      "passed": true
+    },
+    "cf_recorded_frame_geometry": {
+      "passed": true
+    },
+    "cf_recorded_frame_platform": {
+      "passed": true
+    },
+    "cf_recorded_frame_creep_direction": {
+      "passed": true
+    },
+    "cf_positive_unmodified_branch_dissipation": {
+      "passed": true
+    },
+    "cf_middle_branch_negative_power": {
+      "passed": true
+    },
+    "cf_independent_split_energy_balance": {
+      "passed": true,
+      "detail": {
+        "maxBoundaryResidualJ": 2.1682388967603217e-08,
+        "toleranceJ": 2.756654437971877e-06
+      }
+    },
+    "cf_energy_quadrature_resolved": {
+      "passed": true,
+      "detail": 2.992548104201332e-08
+    }
+  },
+  "metrics": {
+    "common": {
+      "sourceModelSha256": "358e1948bfc13403cf61a6e698a20963218707b5dc789c9f14d66ed3413e4867",
+      "denseDtS": 0.0010416666666666667,
+      "physicalDurationS": 5.0,
+      "videoFrames": 120,
+      "fps": 24,
+      "videoDurationS": 5.0,
+      "videoLastTimestampS": 4.958333333333333,
+      "payloadMassKg": 0.5380224260958206,
+      "lastHalfElementMassKg": 0.00031625000000000007,
+      "movingNodalMassKg": 0.5478261760958206,
+      "fixedTopHalfElementMassKg": 0.00031625000000000007,
+      "lastReleaseS": 1.1000000007518278,
+      "newtonToleranceN": 7.278000000000002e-05,
+      "smoothSamples": 4743,
+      "excludedDiscontinuityMarginS": 0.01,
+      "constitutiveModel": "multiplicative_neo_hookean_maxwell",
+      "internalStateMeasure": "log_viscous_stretch",
+      "stressMeasure": "first_Piola_Kirchhoff_axial_nominal",
+      "referenceVolumeM3": 8.8e-06,
+      "declaredMaxEngineeringStrain": 0.2
+    },
+    "true": {
+      "maxStretch": 1.1716421222820645,
+      "minStretch": 1.0001256195223307,
+      "elasticBranchStretchRange": [
+        0.9999999999995709,
+        1.1334535275440722
+      ],
+      "logViscousStretchRange": [
+        0.0001256116330894435,
+        0.15812459617444977
+      ],
+      "maxEnergyNominalStressDerivativeResidualPa": 2.3283064365386963e-10,
+      "maxEnergyInternalDerivativeResidualPa": 2.531805876060389e-10,
+      "maxStrain": 0.17164212228206455,
+      "minStrain": 0.00012561952233069995,
+      "minTensionN": 0.0031024124696582525,
+      "maxTensionN": 5.402231705506711,
+      "maxNewtonFDResidualN": 1.3242427710493873e-06,
+      "maxPositionVelocityResidualMps": 1.332637195833146e-07,
+      "maxInternalFlowScaledResidual": 7.331408963251462e-08,
+      "payloadInterfaceUpwardForceRangeN": [
+        -3.577758011727439e-11,
+        5.305759357355584
+      ],
+      "maxPayloadMaResidualN": 1.3242427708086944e-06,
+      "minGapM": 0.0,
+      "minGapAfterReleaseAndOneFrameM": 0.0001661507215954261,
+      "minNormalN": 0.0,
+      "minPostVelocityMps": 0.0015166703147878498,
+      "maxPostVelocityMps": 0.0039471382785791756,
+      "trueHoldMinVelocityMps": 0.0015166703147878498,
+      "recordedFrameDirectionFraction": 1.0,
+      "recordedDirectionFrameCount": 56,
+      "endDisplacementSinceInterventionM": 0.006717717885473318,
+      "lastVideoFrameDisplacementSinceInterventionM": 0.006654117855428687,
+      "postMiddleDissipationIntegralJ": 0.006098496721957803,
+      "cfAnomalousEnergySupplyJ": 0.0,
+      "maxMiddleAnomalousPowerW": 0.0,
+      "signedBranchDissipationIntegralJ": [
+        0.00717266043231108,
+        0.03974353593183863,
+        0.010352324583631296
+      ],
+      "platformWorkJ": -0.04497446138863309,
+      "energyBalanceBoundaryResidualsJ": [
+        -3.885617327892277e-09,
+        -6.391775719816195e-10,
+        -4.196026859304425e-11
+      ],
+      "energyQuadratureEstimatedErrorJ": 8.155614820715964e-09,
+      "impactChecks": [],
+      "recordedArrayResiduals": {
+        "strain": 0.0,
+        "branchStressPa": 2.1827872842550278e-10,
+        "tensionN": 1.2434497875801753e-14,
+        "branchDissipationW": 1.3010426069826053e-16,
+        "kineticEnergyJ": 2.710505431213761e-20,
+        "storedEnergyJ": 2.0816681711721685e-16,
+        "gravityEnergyJ": 4.440892098500626e-16,
+        "totalEnergyJ": 4.440892098500626e-16
+      }
+    },
+    "cf": {
+      "maxStretch": 1.141661730568054,
+      "minStretch": 1.0001256195223307,
+      "elasticBranchStretchRange": [
+        0.9941813842291511,
+        1.1566303890121628
+      ],
+      "logViscousStretchRange": [
+        -0.12912297324213212,
+        0.13214263970492232
+      ],
+      "maxEnergyNominalStressDerivativeResidualPa": 3.2014213502407074e-10,
+      "maxEnergyInternalDerivativeResidualPa": 2.1827872842550278e-10,
+      "maxStrain": 0.1416617305680541,
+      "minStrain": 0.00012561952233069995,
+      "minTensionN": 0.0031024124696582525,
+      "maxTensionN": 5.449662174108038,
+      "maxNewtonFDResidualN": 9.738515564405859e-06,
+      "maxPositionVelocityResidualMps": 7.351839433462036e-07,
+      "maxInternalFlowScaledResidual": 1.2456905050528544e-07,
+      "payloadInterfaceUpwardForceRangeN": [
+        -3.577758011727439e-11,
+        5.352790276179442
+      ],
+      "maxPayloadMaResidualN": 9.738515564600148e-06,
+      "minGapM": 0.0,
+      "minGapAfterReleaseAndOneFrameM": 0.0001661507215954261,
+      "minNormalN": 0.0,
+      "minPostVelocityMps": -0.021624697322682806,
+      "maxPostVelocityMps": -0.0019744642298977206,
+      "trueHoldMinVelocityMps": null,
+      "recordedFrameDirectionFraction": 1.0,
+      "recordedDirectionFrameCount": 56,
+      "endDisplacementSinceInterventionM": -0.026549086718317655,
+      "lastVideoFrameDisplacementSinceInterventionM": -0.025659831241891168,
+      "postMiddleDissipationIntegralJ": -0.16043135167041214,
+      "cfAnomalousEnergySupplyJ": 0.16043135167041214,
+      "maxMiddleAnomalousPowerW": 0.21105696894064443,
+      "signedBranchDissipationIntegralJ": [
+        0.010548943910868193,
+        -0.12678631246053138,
+        0.006065647617393368
+      ],
+      "platformWorkJ": -0.04497446138863309,
+      "energyBalanceBoundaryResidualsJ": [
+        -3.885617327892277e-09,
+        -6.391775719816195e-10,
+        -2.1682388967603217e-08
+      ],
+      "energyQuadratureEstimatedErrorJ": 2.992548104201332e-08,
+      "impactChecks": [],
+      "recordedArrayResiduals": {
+        "strain": 0.0,
+        "branchStressPa": 2.1827872842550278e-10,
+        "tensionN": 1.2434497875801753e-14,
+        "branchDissipationW": 1.3877787807814457e-16,
+        "kineticEnergyJ": 2.710505431213761e-20,
+        "storedEnergyJ": 4.85722573273506e-16,
+        "gravityEnergyJ": 4.440892098500626e-16,
+        "totalEnergyJ": 6.661338147750939e-16
+      }
+    }
+  },
+  "failures": [],
+  "caseDirectory": "/home/runner/work/counterfactual-review-loaded-strip-pr743-63347ef/counterfactual-review-loaded-strip-pr743-63347ef/pr743-batch.pending/loaded_viscoelastic_strip_creep_reversal_00000000",
+  "updatedAt": "2026-11-23T05:17:12.720675+00:00",
+  "thresholds": {
+    "geometry_m": 5e-08,
+    "contact_force_N": 2e-06,
+    "contact_velocity_m_s": 2e-06,
+    "strain_cap": 0.2,
+    "strain_roundoff": 1e-08,
+    "material_fd_strain": 2e-07,
+    "energy_conjugacy_Pa": 1e-06,
+    "newton_abs_N": 2e-05,
+    "newton_relative_payload_weight": 1e-05,
+    "position_velocity_m_s": 5e-06,
+    "energy_abs_J": 2e-07,
+    "energy_relative_exchange": 1e-05,
+    "discontinuity_exclusion_s": 0.01,
+    "recorded_energy_J": 1e-09
+  },
+  "thresholdRationale": {
+    "geometry": "50 nm contact/geometry tolerance is far below visible scale and accommodates event/root and float64 interpolation roundoff.",
+    "newton": "20 microN plus 10 ppm of payload weight is a force-residual bound on dense finite differences, not an assertion that tension equals mg.",
+    "material": "2e-7 dimensionless residual in tau*zdot - q*Q/Ei, where z is log viscous stretch and Q=lambda*Pi; derivative stencils exclude at least 10 ms around discontinuities.",
+    "conjugacy": "Independent complex-step energy derivatives must equal nominal stress and minus the internal driving force within 1 microPa; this checks the thermodynamic pairings, not experimental validity.",
+    "energy": "200 nJ plus 10 ppm of integrated energy exchanges; discontinuous mobility and contact phases are integrated separately, with explicit impact jumps. A coarsened-grid estimate must also resolve this tolerance.",
+    "strain": "20% engineering strain is the declared finite-strain sampling cap, not a measured Agilus calibration range or proof of continuum/material accuracy."
+  },
+  "auditSourceSha256": "0e0876775a55310d514d7d97725d65a6673fc3c949840451c6a2d63c21f30589",
+  "evidenceHashes": {
+    "simulation.json": "bd5849f8a4c2fda62f77d11f71b80135c7dc91138856fe2d70bbc37a61ae18cf",
+    "true/trajectory.npz": "27872023c3f890379453cad0a87f11fcce6bceed222a194813794084e9845e76",
+    "counterfactual_creep_reversal/trajectory.npz": "2796e4d5f863dde9164309eb528eb2e8deffc2743c67d5ad4e8a5b8afb809d11"
+  }
+}

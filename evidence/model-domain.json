@@ -1,0 +1,119 @@
+{
+  "schema": "reviewer-model-domain-v1",
+  "decision": "PASS",
+  "complete": true,
+  "model": "multiplicative_neo_hookean_maxwell",
+  "modelSha256": "358e1948bfc13403cf61a6e698a20963218707b5dc789c9f14d66ed3413e4867",
+  "production_model_source_sha256": "358e1948bfc13403cf61a6e698a20963218707b5dc789c9f14d66ed3413e4867",
+  "physical_domain": {
+    "declared_engineering_strain_cap": 0.2,
+    "production_load_ratio_eq": [
+      0.1,
+      0.14
+    ],
+    "delivered_engineering_strain_range": [
+      0.00012561952256073816,
+      0.17135197721303985
+    ],
+    "max_rebuilt_strain_residual": 0.0,
+    "note": "The finite-strain constitutive law is a synthetic extension of a published small-strain spectrum; it is not an experimental calibration of Agilus30 at finite strain."
+  },
+  "results": [
+    {
+      "name": "published_spectrum_anchor",
+      "audit": "PASS",
+      "instantaneous_modulus_Pa": 3250000.0,
+      "weights": [
+        0.45,
+        0.26,
+        0.1
+      ],
+      "relaxation_times_s": [
+        0.047,
+        0.97,
+        18.0
+      ],
+      "source": "Dykstra et al. (2019), Table 1 (published small-strain anchor)"
+    },
+    {
+      "name": "infinitesimal_tangent_consistency",
+      "audit": "PASS",
+      "measured_tangent_Pa": [
+        3249999.9935,
+        3249999.935000002,
+        3249999.35000013
+      ],
+      "expected_tangent_Pa": 3250000.0,
+      "note": "dP/dlambda at vanishing strain equals the instantaneous modulus of the published spectrum"
+    },
+    {
+      "name": "stored_energy_is_conjugate_to_nominal_stress",
+      "audit": "PASS",
+      "max_relative_residual": 7.082761346052634e-08,
+      "samples": 96,
+      "note": "numerical dU/dlambda matches the nominal stress produced by the same call"
+    },
+    {
+      "name": "stored_energy_non_negative_and_finite",
+      "audit": "PASS",
+      "min_energy_J_per_m3": 49.76927631684835,
+      "max_energy_J_per_m3": 129695.39355633671,
+      "grid_points": 192
+    },
+    {
+      "name": "positive_tangent_over_delivered_operating_range",
+      "audit": "PASS",
+      "min_tangent_Pa": 2380617.150555906,
+      "max_tangent_Pa": 3311813.4519776846,
+      "operating_strain_range": [
+        0.00012561952256073816,
+        0.17135197721303985
+      ]
+    },
+    {
+      "name": "counterfactual_changes_only_the_middle_internal_flow",
+      "audit": "PASS",
+      "true_rates": [
+        0.6216314385136935,
+        -0.03168846799965582,
+        -0.005365865079569828
+      ],
+      "counterfactual_rates": [
+        0.6216314385136935,
+        0.03168846799965582,
+        -0.005365865079569828
+      ]
+    },
+    {
+      "name": "true_dissipates_and_counterfactual_supplies_energy_in_the_middle_branch_only",
+      "audit": "PASS",
+      "true_branch_power_W_per_m3": [
+        26561.93279714966,
+        823.0589277640153,
+        168.43617210505948
+      ],
+      "counterfactual_branch_power_W_per_m3": [
+        26561.93279714966,
+        -823.0589277640153,
+        168.43617210505948
+      ],
+      "note": "the declared single violation: s * epsilon_v_dot < 0 in the middle branch"
+    },
+    {
+      "name": "delivered_engineering_strain_inside_declared_sampling_domain",
+      "audit": "PASS",
+      "delivered_max_engineering_strain": 0.17135197721303985,
+      "declared_engineering_strain_cap": 0.2,
+      "note": "the 20 percent cap is a numerical sampling boundary, not a validated material limit"
+    },
+    {
+      "name": "delivered_timebase_and_paired_prefix_integrity",
+      "audit": "PASS",
+      "timebase_exact_i_over_24s": true,
+      "paired_prefix_state_identical": true,
+      "max_rebuilt_strain_residual": 0.0,
+      "note": "the engineering strain rebuilt from the delivered frame positions matches the strain array the model recorded in the same trajectory file"
+    }
+  ],
+  "check_count": 9
+}

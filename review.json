@@ -1,0 +1,370 @@
+{
+  "schema": "counterfactual-generator-review-report-v1",
+  "decision": "PASS",
+  "checks": {
+    "runtime_witness_success_and_clean_source": true,
+    "runtime_witness_audit": true,
+    "static_scale_audit_100k": true,
+    "finite_strain_controls": true,
+    "model_domain_checks": true,
+    "independent_decoded_media_audit": true,
+    "case_media_audit_00": true,
+    "case_physics_audit_00": true,
+    "case_media_audit_01": true,
+    "case_physics_audit_01": true,
+    "case_media_audit_02": true,
+    "case_physics_audit_02": true,
+    "all_pass": true
+  },
+  "failures": [],
+  "generator": "loaded_viscoelastic_strip_creep_reversal",
+  "stage": "Development",
+  "reviewed_head": "63347efe67b880f81742980913c5229a421df3eb",
+  "source_commit": "63347efe67b880f81742980913c5229a421df3eb",
+  "pr_url": "https://github.com/hipo-dev/counterfactual-data/pull/743",
+  "case_ids": [
+    "loaded_viscoelastic_strip_creep_reversal_00000000",
+    "loaded_viscoelastic_strip_creep_reversal_00000001",
+    "loaded_viscoelastic_strip_creep_reversal_00000002"
+  ],
+  "artifacts": [
+    {
+      "path": "case-manifest.json",
+      "sha256": "13442c935ed55d63ef96d51198879227029b64cf6eb931d5e57fc0c9d4fee37d",
+      "bytes": 1320
+    },
+    {
+      "path": "runtime-witness-index.json",
+      "sha256": "8db1c42cccb73ce22bc19b88474068150a8cd0f1c449f4a063521de766cad053",
+      "bytes": 1566
+    },
+    {
+      "path": "runtime-witness.json",
+      "sha256": "d83f9f63bd9d5c4c47f35679dfe5204ee6ae7c6c061f62a536e5b5344656a15e",
+      "bytes": 10398
+    },
+    {
+      "path": "native-runtime-audit.json",
+      "sha256": "82a5c5de9c8a1a6062c973ca68ab7189c361ef61fc7ce504a97c914556b9c404",
+      "bytes": 310
+    },
+    {
+      "path": "scale-static.json",
+      "sha256": "586517d76c9ec7a52da12d04f4465fb78e5eacd46d513df38aee9b10b015372f",
+      "bytes": 1783
+    },
+    {
+      "path": "finite-strain-controls.json",
+      "sha256": "1d27b71baea65c7c798981f320cb9ff90a8d87586310f84f245088cb280f009f",
+      "bytes": 3505
+    },
+    {
+      "path": "model-domain.json",
+      "sha256": "76a6e668e41bccb94b7269a70c8c4ce9a12623c949f987c48b902757d069e3d8",
+      "bytes": 3835
+    },
+    {
+      "path": "reviewer-independent-media.json",
+      "sha256": "e6a675176cf59c095adf66bcc2e49f3beba0a603d5d1053d55974f42efc88690",
+      "bytes": 14426
+    },
+    {
+      "path": "native-semantic-visual.json",
+      "sha256": "75945dc75a876bcadd17882dbbebec75f884ccf1f6f833acca614b204dfe92d9",
+      "bytes": 13718
+    },
+    {
+      "path": "browser-playback-audit.json",
+      "sha256": "a6ecbf483f285eac230837dbe87ffef4189158886ed41986eeef0d684118050d",
+      "bytes": 14746
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/true/video.mp4",
+      "sha256": "a698695ff6042e35e918509456273b899433a1975475a99251af5923ce48271f",
+      "bytes": 3912125
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/video.mp4",
+      "sha256": "01f61afa61bdbef4e1bfc299bfaa87708a9562fd19564a931a2eec5c3d5baa09",
+      "bytes": 3893847
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/mask.mp4",
+      "sha256": "3e90fec8dd9410b4b0c3ac86492c7660c3acaffc098c37ff80abf29a828f12e2",
+      "bytes": 176220
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/mask_overlay.mp4",
+      "sha256": "6e5e7d1931650a515e49e9436ff46d37d835a0cc8655f07404c5bb837f249d58",
+      "bytes": 3705253
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/metadata.json",
+      "sha256": "e6892c57f762a0d8b89675e0794e31566f5da166ef710e4b62921c6ae1cb780a",
+      "bytes": 9757
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/audit_media.json",
+      "sha256": "54610c75fb7720468dd272968dee71f28622c953d98cdaa0519d8f32af367a9a",
+      "bytes": 4191
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/audit_physics.json",
+      "sha256": "2f8190953ead7f16d28f6b177822c99388f1714b26b45f11cabbb9c500856f57",
+      "bytes": 18140
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/render_witness.json",
+      "sha256": "bcbaab4e0d8582015ec2d3aeff96ca50cab78bbfcf7c278feb580da276f28ce4",
+      "bytes": 178256
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/true/prompt.txt",
+      "sha256": "8c9401a290ca5979dccc78df03c05ee81782f9c11866c430ea6b76049885ea97",
+      "bytes": 293
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/prompt.txt",
+      "sha256": "d25c9fc52034005d66d08a6ec070312c2f381e63ca2b4b1215076fd514a98afa",
+      "bytes": 313
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/true/video.mp4",
+      "sha256": "2c6b89cb10d056d4f7dc7c016dcfd5387af9485e448d57dd770734bb201ff766",
+      "bytes": 4689606
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/video.mp4",
+      "sha256": "b8ef6cfaceb9da818f60e8137b2a8bd120389df8dd96e12a782aa78c3ba448a7",
+      "bytes": 4669773
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/mask.mp4",
+      "sha256": "32a22fe1af0e0b66df238cd3cc407030d491d85d55763a8020c45ffec1231a12",
+      "bytes": 182664
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/mask_overlay.mp4",
+      "sha256": "911755034c923fed4ab3e05734cf3e0572f78e6560a9ac37aa290c16c228ac47",
+      "bytes": 4428200
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/metadata.json",
+      "sha256": "859b29248cf88973c05d041072a30909fdc3cadf1868abe17a2b97cfcdbc0fac",
+      "bytes": 9748
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/audit_media.json",
+      "sha256": "c80665bdbd08f57b925a20f5ea5b2cf85e97bcc2cfe571812aa4ac5f99439436",
+      "bytes": 4191
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/audit_physics.json",
+      "sha256": "8aad79c50ac35dabc9a6821558cfd10b8bd67080c8097397ded2fcf824f7d0e2",
+      "bytes": 17975
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/render_witness.json",
+      "sha256": "c306e8318c64b971f962e276ac6afaaded0188adf2bc12ebae37d67c2a1723cb",
+      "bytes": 172782
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/true/prompt.txt",
+      "sha256": "8c9401a290ca5979dccc78df03c05ee81782f9c11866c430ea6b76049885ea97",
+      "bytes": 293
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/prompt.txt",
+      "sha256": "d25c9fc52034005d66d08a6ec070312c2f381e63ca2b4b1215076fd514a98afa",
+      "bytes": 313
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/true/video.mp4",
+      "sha256": "6a394597ad1e41bbfe50aa62beceed432728fe4009d08c61e7729fecf09541bf",
+      "bytes": 4570346
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/video.mp4",
+      "sha256": "e1424b8ebaed38b7ab6c8a53c77b6e18503eed26fe26c852c7af30ca5a2c9227",
+      "bytes": 4558460
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/mask.mp4",
+      "sha256": "6235cfb616e925180a1c337e297498f57eed1117fe013e1ac0e587931bdb7ab3",
+      "bytes": 189632
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/mask_overlay.mp4",
+      "sha256": "1427314fd72b8750b03beb4c62f568208c70e0b48c486ab10b2c2f907a69558d",
+      "bytes": 4365493
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/metadata.json",
+      "sha256": "ef8a8bddb2255b3228179c160cf6d4e1f4f644bcc0f8368160e3038e833bba4f",
+      "bytes": 9751
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/audit_media.json",
+      "sha256": "43a5740cb8d1d9bc6c421c2a5deec4dbbb8d0dc9d221bd9b75ed9f669f5a0dca",
+      "bytes": 4191
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/audit_physics.json",
+      "sha256": "0a1dea628f87c57705c55063b8a692e2619c57ae436fe48597a7c4226ba19553",
+      "bytes": 18188
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/render_witness.json",
+      "sha256": "461feb6ecd8347ad77eefa5bf26de77b56f005a145aaaab514110fffe013b608",
+      "bytes": 178103
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/true/prompt.txt",
+      "sha256": "8c9401a290ca5979dccc78df03c05ee81782f9c11866c430ea6b76049885ea97",
+      "bytes": 293
+    },
+    {
+      "path": "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/prompt.txt",
+      "sha256": "d25c9fc52034005d66d08a6ec070312c2f381e63ca2b4b1215076fd514a98afa",
+      "bytes": 313
+    }
+  ],
+  "case_manifest_path": "case-manifest.json",
+  "runtime_witness_index": "runtime-witness-index.json",
+  "evidence_identity": {
+    "sha256": "86baea094b9e8fd7365d7342793543998b242007c40a448a76a859ad5b27b135",
+    "case_manifest_sha256": "13442c935ed55d63ef96d51198879227029b64cf6eb931d5e57fc0c9d4fee37d",
+    "runtime_witness_index_sha256": "8db1c42cccb73ce22bc19b88474068150a8cd0f1c449f4a063521de766cad053"
+  },
+  "scale_audit": {
+    "decision": "PASS",
+    "target_cases": 100000,
+    "audited_seed_count": 100000,
+    "report_path": "scale-static.json",
+    "scope": "Static allocation audit only: no case was rendered or simulated here."
+  },
+  "constitutive_model_validation": {
+    "model": "multiplicative_neo_hookean_maxwell",
+    "controls_decision": "PASS",
+    "domain_decision": "PASS",
+    "summary": "The finite-strain constitutive law is a synthetic multiplicative Neo-Hookean extension of a published small-strain relaxation spectrum. Its tangent, stored energy conjugacy, energy positivity and single-branch mobility reversal were re-checked at this head; it is not an experimentally calibrated material law.",
+    "report_path": "finite-strain-controls.json",
+    "domain_report_path": "model-domain.json"
+  },
+  "cases": [
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000000/metadata.json",
+      "media": {
+        "true": "loaded_viscoelastic_strip_creep_reversal_00000000/true/video.mp4",
+        "cf": "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/video.mp4",
+        "mask": "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/mask.mp4",
+        "overlay": "loaded_viscoelastic_strip_creep_reversal_00000000/counterfactual_creep_reversal/mask_overlay.mp4"
+      },
+      "audit_path": "loaded_viscoelastic_strip_creep_reversal_00000000/audit_media.json",
+      "physics_audit_path": "loaded_viscoelastic_strip_creep_reversal_00000000/audit_physics.json",
+      "selection_reason": "Declared Development recipe: 220 mm strip, 40 mm2 section, 538.022 g load, 0.873 s middle relaxation time. The relaxation-time variant is synthetic; geometry and gravity load reach the solver and the renderer.",
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 6.66 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 25.66 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 109,634 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ]
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000001/metadata.json",
+      "media": {
+        "true": "loaded_viscoelastic_strip_creep_reversal_00000001/true/video.mp4",
+        "cf": "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/video.mp4",
+        "mask": "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/mask.mp4",
+        "overlay": "loaded_viscoelastic_strip_creep_reversal_00000001/counterfactual_creep_reversal/mask_overlay.mp4"
+      },
+      "audit_path": "loaded_viscoelastic_strip_creep_reversal_00000001/audit_media.json",
+      "physics_audit_path": "loaded_viscoelastic_strip_creep_reversal_00000001/audit_physics.json",
+      "selection_reason": "Declared Development recipe: 250 mm strip, 50 mm2 section, 672.528 g load, 0.970 s middle relaxation time. The relaxation-time variant is synthetic; geometry and gravity load reach the solver and the renderer.",
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 7.82 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 26.04 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 150,652 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ]
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "metadata_path": "loaded_viscoelastic_strip_creep_reversal_00000002/metadata.json",
+      "media": {
+        "true": "loaded_viscoelastic_strip_creep_reversal_00000002/true/video.mp4",
+        "cf": "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/video.mp4",
+        "mask": "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/mask.mp4",
+        "overlay": "loaded_viscoelastic_strip_creep_reversal_00000002/counterfactual_creep_reversal/mask_overlay.mp4"
+      },
+      "audit_path": "loaded_viscoelastic_strip_creep_reversal_00000002/audit_media.json",
+      "physics_audit_path": "loaded_viscoelastic_strip_creep_reversal_00000002/audit_physics.json",
+      "selection_reason": "Declared Development recipe: 280 mm strip, 60 mm2 section, 807.034 g load, 1.067 s middle relaxation time. The relaxation-time variant is synthetic; geometry and gravity load reach the solver and the renderer.",
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 8.96 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 26.41 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 195,804 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ]
+    }
+  ],
+  "visual_inspection": {
+    "scope": "Automatic, evidence-backed inspection of exactly three rendered Development cases at the reviewed head. Not Huayi human acceptance, not Gate B/C, not Full-stage approval, not merge permission.",
+    "observer": "Reviewer agent: real Chrome playback of every native stream of every case on the published public page, plus inspection of the extracted key frames of every stream. This is not Huayi human acceptance.",
+    "human_review": "pending",
+    "cases": [
+      "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "loaded_viscoelastic_strip_creep_reversal_00000002"
+    ],
+    "browser_playback_artifact": "browser-playback-audit.json"
+  },
+  "independent_media_audit": {
+    "status": "PASS",
+    "scope": "reviewer-independent-media-audit-v1",
+    "cases": [
+      {
+        "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+        "status": "PASS",
+        "true_creep_after_onset_mm": 6.655,
+        "cf_lift_after_onset_mm": -25.659,
+        "mask_start_frame": 58,
+        "first_changed_frame": 58
+      },
+      {
+        "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+        "status": "PASS",
+        "true_creep_after_onset_mm": 7.824,
+        "cf_lift_after_onset_mm": -26.04,
+        "mask_start_frame": 58,
+        "first_changed_frame": 58
+      },
+      {
+        "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+        "status": "PASS",
+        "true_creep_after_onset_mm": 8.96,
+        "cf_lift_after_onset_mm": -26.406,
+        "mask_start_frame": 58,
+        "first_changed_frame": 58
+      }
+    ]
+  },
+  "notes": [
+    "This bundle was re-rendered at the exact reviewed head in a fresh public CI runner after the original shared review host was reclaimed by the platform and its media were lost. The generator source, the reviewed commit and the audit procedures are unchanged; the delivered bytes differ from the lost original only by the encoding timestamp of the container mux.",
+    "Human acceptance of this head remains pending."
+  ]
+}
