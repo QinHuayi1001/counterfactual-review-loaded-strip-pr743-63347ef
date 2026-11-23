@@ -82,8 +82,8 @@
   "manifestHashExclusion": "bundle-manifest.json cannot hash itself; all other bundle files are bound below.",
   "files": {
     "evidence/browser-playback-audit.json": {
-      "sha256": "a6ecbf483f285eac230837dbe87ffef4189158886ed41986eeef0d684118050d",
-      "bytes": 14746
+      "sha256": "740cd85f588f1d723cd19c07486b41bfd114a4b0313edd495adfc71583078916",
+      "bytes": 15244
     },
     "evidence/case-manifest.json": {
       "sha256": "13442c935ed55d63ef96d51198879227029b64cf6eb931d5e57fc0c9d4fee37d",
@@ -242,11 +242,11 @@
       "bytes": 1783
     },
     "index.html": {
-      "sha256": "b792bd1ab2f382cd016bfe6eb92f7a3420f6280a1d7dec3ac019bc48c7ff7d00",
+      "sha256": "47dd20975baa62fdc28fe296d44258ae6c217e6cb032554e170171096bb1da11",
       "bytes": 89594
     },
     "review.json": {
-      "sha256": "3eb72112e9cccfb317436fb36081384b0da588983ccc7293e69da8fe73213bc1",
+      "sha256": "110cbb805ebf9bd3dabcc09367d6da5f0bb4b5407ffd8bac6f6be28208387087",
       "bytes": 22384
     },
     "stage-validation.json": {
