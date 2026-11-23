@@ -4,12 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "render = re-render and publish the provisional inspection page; bundle = assemble and publish the official validated bundle"
+        description: "render = re-render and publish the provisional page; frames = extract key frames from an existing render; bundle = assemble and publish the official validated bundle"
         required: true
         default: render
+      artifact_run_id:
+        description: "run id of the render run whose batch artifact should be reused (frames and bundle modes)"
+        required: false
+        default: ''
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: pr743-review-bundle
@@ -27,6 +32,7 @@ jobs:
       MODE: ${{ inputs.mode }}
     steps:
       - name: Checkout the private source at the exact reviewed head
+        if: inputs.mode == 'render'
         uses: actions/checkout@v4
         with:
           repository: hipo-dev/counterfactual-data
@@ -48,6 +54,7 @@ jobs:
           pip check
 
       - name: Render the three Development cases with runtime provenance
+        if: inputs.mode == 'render'
         run: |
           set -euo pipefail
           mkdir -p "$BATCH"
@@ -60,7 +67,20 @@ jobs:
             -- python generators/loaded_viscoelastic_strip_creep_reversal/examples/render_development.py \
                  --output "$BATCH" --workers 2
 
+      - name: Restore the rendered batch from the earlier render run
+        if: inputs.mode != 'render'
+        run: |
+          set -euo pipefail
+          test -n "${{ inputs.artifact_run_id }}" || (echo "artifact_run_id is required for this mode" && exit 1)
+          mkdir -p "$BATCH"
+          gh run download "${{ inputs.artifact_run_id }}" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name "pr743-batch-render" \
+            --dir "$BATCH"
+          ls "$BATCH"
+
       - name: Runtime witness index and independent witness audit
+        if: inputs.mode == 'render'
         run: |
           set -euo pipefail
           cd source
@@ -74,17 +94,20 @@ jobs:
             --output "$BATCH/native-runtime-audit.json"
 
       - name: Reviewer independent decoded-media audit
+        if: inputs.mode == 'render'
         run: |
           set -euo pipefail
           python reviewer/independent_media_audit.py "$BATCH" "$BATCH/reviewer-independent-media.json"
 
       - name: Reviewer static scale audit over 100000 seeds
+        if: inputs.mode == 'render'
         run: |
           set -euo pipefail
           python reviewer/static_scale_audit.py \
             source/generators/loaded_viscoelastic_strip_creep_reversal "$BATCH/scale-static.json"
 
       - name: Production finite-strain controls and reviewer model domain checks
+        if: inputs.mode == 'render'
         run: |
           set -euo pipefail
           cd source
@@ -95,6 +118,7 @@ jobs:
             "$BATCH" source/generators/loaded_viscoelastic_strip_creep_reversal "$BATCH/model-domain.json"
 
       - name: Exact-head test suite and dependency check
+        if: inputs.mode == 'render'
         run: |
           set -euo pipefail
           cd source
@@ -107,13 +131,14 @@ jobs:
           python reviewer/write_test_report.py "$BATCH" "$code"
           exit $code
 
-      - name: Publish the provisional inspection page
-        if: inputs.mode == 'render'
+      - name: Publish the provisional inspection page and the key frames
+        if: inputs.mode == 'render' || inputs.mode == 'frames'
         run: |
           set -euo pipefail
           python reviewer/provisional_page.py "$BATCH" "$GITHUB_WORKSPACE/publish"
-          rm -rf index.html evidence review.json bundle-manifest.json stage-validation.json
-          cp -R publish/index.html publish/media .
+          python reviewer/extract_key_frames.py "$BATCH" "$GITHUB_WORKSPACE/publish/frames"
+          rm -rf index.html evidence review.json bundle-manifest.json stage-validation.json frames
+          cp -R publish/index.html publish/media publish/frames .
           python reviewer/write_media_hashes.py "$BATCH" media-hashes.json
 
       - name: Assemble and publish the official validated bundle
@@ -146,7 +171,7 @@ jobs:
           set -euo pipefail
           git config user.name "review-bot"
           git config user.email "review-bot@users.noreply.github.com"
-          git add -A index.html evidence review.json bundle-manifest.json stage-validation.json media media-hashes.json .nojekyll
+          git add -A index.html evidence review.json bundle-manifest.json stage-validation.json media frames media-hashes.json .nojekyll
           git status --porcelain | head -40
           if git diff --cached --quiet; then
             echo "nothing to publish"
@@ -156,8 +181,9 @@ jobs:
           fi
 
       - name: Upload the batch evidence as an artifact
+        if: inputs.mode == 'render'
         uses: actions/upload-artifact@v4
         with:
-          name: pr743-batch-${{ inputs.mode }}
+          name: pr743-batch-render
           path: ${{ github.workspace }}/../pr743-batch
           retention-days: 30
