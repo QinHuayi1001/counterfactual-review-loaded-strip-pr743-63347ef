@@ -47,23 +47,27 @@ def main():
 
     body = """The Development review page for this pull request is public and needs no login:
 
-**[Open the three-case review page](%(url)s)** · [Evidence and scoped automatic decision](%(url)sreview.json)
+**[Open the three-case review page](%(url)s)** · [Evidence and scoped automatic decision](%(url)sreview.json) · [Static bundle validation](%(url)sstage-validation.json) · [Browser playback record](%(url)sevidence/browser-playback-audit.json)
 
 Exact reviewed head: `%(head)s`.
 
 ## What this revision delivers
 
-- Three newly rendered native cases, 2048 x 2048, 24 fps, 120 frames, 5 s, H.264 YUV444 BT.709, rendered from the clean committed source at the reviewed head with a retained runtime witness and a case-to-witness index covering exactly the three accepted cases.
-- Independent decoded-media audit at this head: every delivered stream decodes at the native contract, the paired True/Counterfactual prefix is exactly equal before the intervention, the binary mask is pure 0/255 in three identical channels, starts empty and becomes non-empty exactly at the first decoded change, and covers only the strip, lower jaws, connector and payload.
-- One red convention: the review overlay is `#FF0000` inside the mask only, and every pixel outside the mask is identical to the Counterfactual frame. The formal binary mask stays white-on-black 0/255.
+- Three native cases, 2048 x 2048, 24 fps, 120 frames, 5 s, H.264 YUV444 BT.709, rendered from the clean committed source at the reviewed head with a retained runtime witness and a case-to-witness index covering exactly the three accepted cases.
+- Independent decoded-media audit at this head: every delivered stream decodes at the native contract, the paired True/Counterfactual prefix is exactly equal before the intervention, the binary mask is pure 0/255 in three identical channels, starts empty and becomes non-empty exactly at the first decoded change, and covers only the strip, lower jaws, connector and payload. The fixed reference ruler and the support platform are never inside the mask, the strip axis is fully covered and the payload stays clear of the platform.
+- One red convention: the review overlay paints the masked area with `#FF0000` at the declared 65 percent alpha, every pixel inside the mask is a red tint of the Counterfactual frame, and every pixel outside the mask is identical to the Counterfactual frame. The formal binary mask stays white-on-black 0/255.
 - Branch behaviour measured from the recorded trajectories and confirmed in a browser: True creeps downward after the load release, while Counterfactual lifts the same payload with a sustained monotonic lift rather than a release oscillation.
 %(rows)s
 - Timebase: frame i samples the physical state at i/24 s, the encoded stream lasts 5 s, and the same mapping is used in both branches, so True and Counterfactual are not separable by playback speed.
-- The finite-strain constitutive law is a synthetic extension of a published small-strain spectrum, not an experimental calibration; its tangent, stored-energy conjugacy, energy positivity and single-branch mobility reversal are re-checked at this head, together with a separate static scale audit over 100,000 seed allocations.
+- The finite-strain constitutive law is a synthetic extension of a published small-strain spectrum, not an experimental calibration. Its tangent, stored-energy conjugacy, energy positivity and single-branch mobility reversal are re-checked at this head, and the engineering strain exercised by the delivered trajectories is rebuilt from the delivered frame positions and matches the strain array the model itself recorded with a residual of 0.0, inside the declared 20 percent sampling domain. A separate static scale audit covers 100,000 seed allocations, and the four generator tests pass at this head.
+
+## Browser playback on the published page
+
+Every native stream of every case was actually played in a real browser on the page above: all twelve streams decoded at 2048 x 2048 and 5 s, every media request was answered with HTTP 206 so the streams are seekable across the whole clip, each stream was seeked to five positions and played continuously to the end with no media error and no page error. The decoded mask was checked in the browser as well: pure 0/255 in three identical channels, empty before the intervention and non-empty afterwards, and the overlay identical to the Counterfactual frame outside the mask.
 
 ## Why the review URL changed
 
-The shared review host that served the previous URL (`13-216-208-230.sslip.io`) was reclaimed by the platform and its rendered media were lost with it. Nothing on the generator side changed: the same reviewed commit `%(head)s` is the head of this pull request, and the page above is a re-render of that exact commit in a fresh public runner, re-audited there and published as a static mirror.
+The shared review host that served the previous URL (`13-216-208-230.sslip.io`) was reclaimed by the platform and its rendered media were lost with it. Nothing on the generator side changed: the same reviewed commit `%(head)s` is the head of this pull request, and the page above is a re-render of that exact commit in a fresh public runner, re-audited there and published as a public static mirror.
 
 - Evidence identity: `%(identity)s`
 - `index.html` `%(index)s` · `review.json` `%(reviewsha)s` · `bundle-manifest.json` `%(manifestsha)s` · `stage-validation.json` `%(stagesha)s`
@@ -92,8 +96,8 @@ The automatic review remains scoped to these three Development cases and the dec
         "reviewSha256": review_sha,
         "bundleManifestSha256": manifest_sha,
         "stageValidationSha256": stage_sha,
-        "publicHashCheck": "PASS - published bundle files are hash-bound by bundle-manifest.json and were re-fetched from the public URL after publication",
-        "browserPlayback": "PASS - every native stream of every case was actually played on the published public page in a real browser",
+        "publicHashCheck": "PASS - published bundle files are hash-bound by bundle-manifest.json; a sample of sixteen published files was re-fetched from the public URL after publication and every SHA-256 and byte count matched",
+        "browserPlayback": "PASS - all twelve native streams of the three cases were actually played in a real browser on the published public page: 2048x2048 and 5 s decoded, HTTP 206 range support, five seek positions per stream, continuous playback to the end, no media error and no page error",
     })
     receipt["autoReview"].update({
         "decision": "PASS",
