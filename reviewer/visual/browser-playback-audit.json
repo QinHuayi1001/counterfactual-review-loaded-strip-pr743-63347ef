@@ -1,0 +1,603 @@
+{
+  "url": "https://qinhuayi1001.github.io/counterfactual-review-loaded-strip-pr743-63347ef/index.html",
+  "httpStatus": 200,
+  "pageErrors": [],
+  "rangeProbe": {
+    "status": 206,
+    "contentRange": "bytes 0-1023/3912125",
+    "type": "video/mp4",
+    "bytes": 1024
+  },
+  "cases": [
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "videos": [
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000000/true.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.501,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000000/cf.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.503,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000000/mask.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.503,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000000/overlay.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.502,
+          "reachedEnd": false,
+          "finalError": null
+        }
+      ]
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "videos": [
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000001/true.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.502,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000001/cf.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.502,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000001/mask.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.503,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000001/overlay.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.502,
+          "reachedEnd": false,
+          "finalError": null
+        }
+      ]
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "videos": [
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000002/true.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.503,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000002/cf.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.501,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000002/mask.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.503,
+          "reachedEnd": false,
+          "finalError": null
+        },
+        {
+          "src": "media/loaded_viscoelastic_strip_creep_reversal_00000002/overlay.mp4",
+          "error": null,
+          "videoWidth": 2048,
+          "videoHeight": 2048,
+          "duration": 5,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "playedTo": [
+            {
+              "target": 0,
+              "actual": 0,
+              "readyState": 4
+            },
+            {
+              "target": 1.25,
+              "actual": 1.25,
+              "readyState": 4
+            },
+            {
+              "target": 2.5,
+              "actual": 2.5,
+              "readyState": 4
+            },
+            {
+              "target": 3.75,
+              "actual": 3.75,
+              "readyState": 4
+            },
+            {
+              "target": 4.95,
+              "actual": 4.95,
+              "readyState": 4
+            }
+          ],
+          "advanced": 2.503,
+          "reachedEnd": false,
+          "finalError": null
+        }
+      ]
+    }
+  ],
+  "pixelChecks": [
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "frameTime": 3.5,
+      "width": 2048,
+      "height": 2048,
+      "pixels": 4194304,
+      "maskNonBinaryPixels": 0,
+      "maskNonEqualChannelPixels": 0,
+      "maskOnPixels": 109634,
+      "maskOnFraction": 0.026139,
+      "overlayDiffOutsideMaskPixels": 0,
+      "overlayRedOutsideMaskPixels": 0,
+      "overlayInsideMaskChangedPixels": 109634,
+      "overlayInsideMaskRedTintPixels": 109634
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "frameTime": 3.5,
+      "width": 2048,
+      "height": 2048,
+      "pixels": 4194304,
+      "maskNonBinaryPixels": 0,
+      "maskNonEqualChannelPixels": 0,
+      "maskOnPixels": 150652,
+      "maskOnFraction": 0.035918,
+      "overlayDiffOutsideMaskPixels": 0,
+      "overlayRedOutsideMaskPixels": 0,
+      "overlayInsideMaskChangedPixels": 150652,
+      "overlayInsideMaskRedTintPixels": 150652
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "frameTime": 3.5,
+      "width": 2048,
+      "height": 2048,
+      "pixels": 4194304,
+      "maskNonBinaryPixels": 0,
+      "maskNonEqualChannelPixels": 0,
+      "maskOnPixels": 195804,
+      "maskOnFraction": 0.046683,
+      "overlayDiffOutsideMaskPixels": 0,
+      "overlayRedOutsideMaskPixels": 0,
+      "overlayInsideMaskChangedPixels": 195804,
+      "overlayInsideMaskRedTintPixels": 195804
+    }
+  ]
+}

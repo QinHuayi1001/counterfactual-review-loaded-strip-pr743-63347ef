@@ -152,7 +152,9 @@ jobs:
         run: |
           set -euo pipefail
           test -f reviewer/visual/native-semantic-visual.json
+          test -f reviewer/visual/browser-playback-audit.json
           cp reviewer/visual/native-semantic-visual.json "$BATCH/native-semantic-visual.json"
+          cp reviewer/visual/browser-playback-audit.json "$BATCH/browser-playback-audit.json"
           python reviewer/assemble_report.py \
             --batch "$BATCH" \
             --visual reviewer/visual/native-semantic-visual.json \

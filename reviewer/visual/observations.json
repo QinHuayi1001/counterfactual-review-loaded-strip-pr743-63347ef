@@ -1,0 +1,47 @@
+{
+  "observer": "Reviewer agent: real Chrome playback of every native stream of every case on the published public page, plus inspection of the extracted key frames of every stream. This is not Huayi human acceptance.",
+  "browserTransport": "Immutable review media over HTTPS with byte-range support: every media request answered with HTTP 206, every stream decoded at the native contract, seeked to five positions and played continuously through the 5 s clip with no media error and no page error.",
+  "inspectionScope": "Three-case public review page; every native stream of every case was actually played in a real browser and every extracted key frame of every stream was inspected.",
+  "scope": "Automatic, evidence-backed inspection of exactly three rendered Development cases at the reviewed head. Not Huayi human acceptance, not Gate B/C, not Full-stage approval, not merge permission.",
+  "cases": {
+    "loaded_viscoelastic_strip_creep_reversal_00000000": {
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 6.66 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 25.66 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 109,634 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ],
+      "framingObservation": "The specimen, the payload, the fixed ruler and the lowered support platform all stay inside the frame in every frame of both branches; the evidence frame 82 is fully visible."
+    },
+    "loaded_viscoelastic_strip_creep_reversal_00000001": {
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 7.82 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 26.04 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 150,652 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ],
+      "framingObservation": "The specimen, the payload, the fixed ruler and the lowered support platform all stay inside the frame in every frame of both branches; the evidence frame 81 is fully visible."
+    },
+    "loaded_viscoelastic_strip_creep_reversal_00000002": {
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 8.96 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 26.41 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 195,804 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ],
+      "framingObservation": "The specimen, the payload, the fixed ruler and the lowered support platform all stay inside the frame in every frame of both branches; the evidence frame 80 is fully visible."
+    }
+  }
+}

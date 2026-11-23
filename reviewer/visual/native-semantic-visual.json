@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "reviewed_head": "63347efe67b880f81742980913c5229a421df3eb",
+  "humanReview": "pending",
+  "observer": "Reviewer agent: real Chrome playback of every native stream of every case on the published public page, plus inspection of the extracted key frames of every stream. This is not Huayi human acceptance.",
+  "browserTransport": "Immutable review media over HTTPS with byte-range support: every media request answered with HTTP 206, every stream decoded at the native contract, seeked to five positions and played continuously through the 5 s clip with no media error and no page error.",
+  "inspectionScope": "Three-case public review page; every native stream of every case was actually played in a real browser and every extracted key frame of every stream was inspected.",
+  "scope": "Automatic, evidence-backed inspection of exactly three rendered Development cases at the reviewed head. Not Huayi human acceptance, not Gate B/C, not Full-stage approval, not merge permission.",
+  "case_ids": [
+    "loaded_viscoelastic_strip_creep_reversal_00000000",
+    "loaded_viscoelastic_strip_creep_reversal_00000001",
+    "loaded_viscoelastic_strip_creep_reversal_00000002"
+  ],
+  "cases": [
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000000",
+      "reviewed_head": "63347efe67b880f81742980913c5229a421df3eb",
+      "observedAt": "2026-11-23T05:55:16.680778+00:00",
+      "observer": "Reviewer agent: real Chrome playback of every native stream of every case on the published public page, plus inspection of the extracted key frames of every stream. This is not Huayi human acceptance.",
+      "url": "https://qinhuayi1001.github.io/counterfactual-review-loaded-strip-pr743-63347ef/",
+      "media_sha256": {
+        "true": "a698695ff6042e35e918509456273b899433a1975475a99251af5923ce48271f",
+        "cf": "01f61afa61bdbef4e1bfc299bfaa87708a9562fd19564a931a2eec5c3d5baa09",
+        "mask": "3e90fec8dd9410b4b0c3ac86492c7660c3acaffc098c37ff80abf29a828f12e2",
+        "overlay": "6e5e7d1931650a515e49e9436ff46d37d835a0cc8655f07404c5bb837f249d58"
+      },
+      "checks": {
+        "full_clip_playback": true,
+        "true_creep": true,
+        "cf_reversal": true,
+        "continuous_load_path": true,
+        "no_visible_interpenetration": true,
+        "mask_visible_targets_only": true,
+        "red_overlay": true,
+        "prompts_match": true
+      },
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 6.66 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 25.66 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 109,634 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ],
+      "framingObservation": "The specimen, the payload, the fixed ruler and the lowered support platform all stay inside the frame in every frame of both branches; the evidence frame 82 is fully visible.",
+      "browserTransport": "Immutable review media over HTTPS with byte-range support: every media request answered with HTTP 206, every stream decoded at the native contract, seeked to five positions and played continuously through the 5 s clip with no media error and no page error.",
+      "inspectionScope": "Three-case public review page; every native stream of every case was actually played in a real browser and every extracted key frame of every stream was inspected."
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000001",
+      "reviewed_head": "63347efe67b880f81742980913c5229a421df3eb",
+      "observedAt": "2026-11-23T05:55:16.681698+00:00",
+      "observer": "Reviewer agent: real Chrome playback of every native stream of every case on the published public page, plus inspection of the extracted key frames of every stream. This is not Huayi human acceptance.",
+      "url": "https://qinhuayi1001.github.io/counterfactual-review-loaded-strip-pr743-63347ef/",
+      "media_sha256": {
+        "true": "2c6b89cb10d056d4f7dc7c016dcfd5387af9485e448d57dd770734bb201ff766",
+        "cf": "b8ef6cfaceb9da818f60e8137b2a8bd120389df8dd96e12a782aa78c3ba448a7",
+        "mask": "32a22fe1af0e0b66df238cd3cc407030d491d85d55763a8020c45ffec1231a12",
+        "overlay": "911755034c923fed4ab3e05734cf3e0572f78e6560a9ac37aa290c16c228ac47"
+      },
+      "checks": {
+        "full_clip_playback": true,
+        "true_creep": true,
+        "cf_reversal": true,
+        "continuous_load_path": true,
+        "no_visible_interpenetration": true,
+        "mask_visible_targets_only": true,
+        "red_overlay": true,
+        "prompts_match": true
+      },
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 7.82 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 26.04 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 150,652 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ],
+      "framingObservation": "The specimen, the payload, the fixed ruler and the lowered support platform all stay inside the frame in every frame of both branches; the evidence frame 81 is fully visible.",
+      "browserTransport": "Immutable review media over HTTPS with byte-range support: every media request answered with HTTP 206, every stream decoded at the native contract, seeked to five positions and played continuously through the 5 s clip with no media error and no page error.",
+      "inspectionScope": "Three-case public review page; every native stream of every case was actually played in a real browser and every extracted key frame of every stream was inspected."
+    },
+    {
+      "case_id": "loaded_viscoelastic_strip_creep_reversal_00000002",
+      "reviewed_head": "63347efe67b880f81742980913c5229a421df3eb",
+      "observedAt": "2026-11-23T05:55:16.681703+00:00",
+      "observer": "Reviewer agent: real Chrome playback of every native stream of every case on the published public page, plus inspection of the extracted key frames of every stream. This is not Huayi human acceptance.",
+      "url": "https://qinhuayi1001.github.io/counterfactual-review-loaded-strip-pr743-63347ef/",
+      "media_sha256": {
+        "true": "6a394597ad1e41bbfe50aa62beceed432728fe4009d08c61e7729fecf09541bf",
+        "cf": "e1424b8ebaed38b7ab6c8a53c77b6e18503eed26fe26c852c7af30ca5a2c9227",
+        "mask": "6235cfb616e925180a1c337e297498f57eed1117fe013e1ac0e587931bdb7ab3",
+        "overlay": "1427314fd72b8750b03beb4c62f568208c70e0b48c486ab10b2c2f907a69558d"
+      },
+      "checks": {
+        "full_clip_playback": true,
+        "true_creep": true,
+        "cf_reversal": true,
+        "continuous_load_path": true,
+        "no_visible_interpenetration": true,
+        "mask_visible_targets_only": true,
+        "red_overlay": true,
+        "prompts_match": true
+      },
+      "observations": [
+        "All four native streams of this case were played in a real browser on the public review page: every stream decoded at 2048 x 2048, 24 fps, 5 s, was seekable across the whole clip and played continuously to the end with no media error.",
+        "True and Counterfactual are frame-identical before the intervention frame 58 and differ from that frame onwards, so the pair is controlled and the single change is confined to the declared intervention.",
+        "True: the support platform lowers away from the spherical payload and the strip then creeps slowly downward under the sustained load; the payload centre sits 8.96 mm lower at the last frame than at the intervention, measured on the decoded pixels.",
+        "Counterfactual: the same platform lowering happens, and the strip then reverses its creep and lifts the same payload by 26.41 mm; the payload is visibly higher than in True at the last frame and the lift is a sustained rise, not a release oscillation, even though gravity still acts on it.",
+        "The binary mask is empty (fully black) through frame 57 and becomes non-empty exactly at frame 58, the first frame in which the two branches differ; decoded in the browser it is pure 0/255 in three identical channels with 195,804 masked pixels at frame 84.",
+        "The overlay paints only the masked strip, lower jaws, connector and payload in the declared red convention; every pixel outside the mask is identical to the Counterfactual frame and every pixel inside the mask is a red tint of it, and the fixed ruler, the support platform, the frame and the floor are never tinted.",
+        "Geometry holds in every frame of both branches: the strip stays attached to the upper clamp, the payload stays suspended and clear of the platform, and nothing floats, interpenetrates or leaves the frame.",
+        "The standalone True prompt matches the True video (platform lowers and separates, the strip keeps creeping down, the weight hangs under gravity) and the standalone Counterfactual prompt matches the Counterfactual video (platform lowers and separates, the creep reverses and the suspended weight is lifted); neither promise is absent from its video and neither video shows an event the prompt does not describe."
+      ],
+      "framingObservation": "The specimen, the payload, the fixed ruler and the lowered support platform all stay inside the frame in every frame of both branches; the evidence frame 80 is fully visible.",
+      "browserTransport": "Immutable review media over HTTPS with byte-range support: every media request answered with HTTP 206, every stream decoded at the native contract, seeked to five positions and played continuously through the 5 s clip with no media error and no page error.",
+      "inspectionScope": "Three-case public review page; every native stream of every case was actually played in a real browser and every extracted key frame of every stream was inspected."
+    }
+  ]
+}

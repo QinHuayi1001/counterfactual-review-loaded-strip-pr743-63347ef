@@ -115,6 +115,10 @@ def main():
     add_artifact("model-domain.json")
     add_artifact("reviewer-independent-media.json")
     add_artifact("native-semantic-visual.json")
+    if (batch / "browser-playback-audit.json").is_file():
+        add_artifact("browser-playback-audit.json")
+    else:
+        failures.append("browser playback record is missing")
 
     cases = []
     for entry in entries:
@@ -222,6 +226,8 @@ def main():
             "observer": visual.get("observer"),
             "human_review": "pending",
             "cases": sorted(visual_cases),
+            "browser_playback_artifact": (
+                "browser-playback-audit.json" if (batch / "browser-playback-audit.json").is_file() else None),
         },
         "independent_media_audit": {
             "status": independent.get("status"),

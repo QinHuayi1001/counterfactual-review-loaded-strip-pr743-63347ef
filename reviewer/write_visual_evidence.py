@@ -52,6 +52,11 @@ def main():
         "status": "PASS",
         "reviewed_head": args.head,
         "humanReview": "pending",
+        "observer": notes.get("observer",
+                              "reviewer agent via real browser playback and frame inspection; "
+                              "not Huayi human acceptance"),
+        "browserTransport": notes.get("browserTransport", ""),
+        "inspectionScope": notes.get("inspectionScope", ""),
         "scope": notes.get("scope",
                            "Reviewer agent actually played and inspected the three native cases on "
                            "the published public page; this is not Huayi human acceptance."),
