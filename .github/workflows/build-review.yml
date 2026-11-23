@@ -32,7 +32,6 @@ jobs:
       MODE: ${{ inputs.mode }}
     steps:
       - name: Checkout the private source at the exact reviewed head
-        if: inputs.mode == 'render'
         uses: actions/checkout@v4
         with:
           repository: hipo-dev/counterfactual-data
@@ -69,15 +68,12 @@ jobs:
 
       - name: Restore the rendered batch from the earlier render run
         if: inputs.mode != 'render'
-        run: |
-          set -euo pipefail
-          test -n "${{ inputs.artifact_run_id }}" || (echo "artifact_run_id is required for this mode" && exit 1)
-          mkdir -p "$BATCH"
-          gh run download "${{ inputs.artifact_run_id }}" \
-            --repo "$GITHUB_REPOSITORY" \
-            --name "pr743-batch-render" \
-            --dir "$BATCH"
-          ls "$BATCH"
+        uses: actions/download-artifact@v4
+        with:
+          name: pr743-batch-render
+          path: ${{ github.workspace }}/../pr743-batch
+          run-id: ${{ inputs.artifact_run_id }}
+          github-token: ${{ github.token }}
 
       - name: Runtime witness index and independent witness audit
         if: inputs.mode == 'render'
