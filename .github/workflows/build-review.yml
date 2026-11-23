@@ -23,7 +23,7 @@ jobs:
       GEN: loaded_viscoelastic_strip_creep_reversal
       HEAD: 63347efe67b880f81742980913c5229a421df3eb
       PR: https://github.com/hipo-dev/counterfactual-data/pull/743
-      BATCH: ${{ runner.temp }}/batch
+      BATCH: ${{ github.workspace }}/../pr743-batch
       MODE: ${{ inputs.mode }}
     steps:
       - name: Checkout the private source at the exact reviewed head
@@ -159,5 +159,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pr743-batch-${{ inputs.mode }}
-          path: ${{ runner.temp }}/batch
+          path: ${{ github.workspace }}/../pr743-batch
           retention-days: 30
