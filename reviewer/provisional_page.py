@@ -35,8 +35,8 @@ for entry in sorted(manifest["cases"], key=lambda c: c["case_id"]):
         shutil.copyfile(BATCH / cid / rel, target)
         sources[role] = "media/%s/%s.mp4" % (cid, role)
     prompts = {
-        "true": (BATCH / cid / "true/prompt.txt").read_text().strip(),
-        "cf": (BATCH / cid / BRANCH + "/prompt.txt").read_text().strip(),
+        "true": (BATCH / cid / "true" / "prompt.txt").read_text().strip(),
+        "cf": (BATCH / cid / BRANCH / "prompt.txt").read_text().strip(),
     }
     params = meta["scene_params"]
     motion = meta["visible_motion"]

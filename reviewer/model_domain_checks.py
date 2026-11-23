@@ -60,9 +60,19 @@ for cid in case_ids:
         with np.load(folder / "trajectory.npz") as z:
             positions = z["frame_positions"].copy()
             frame_t = z["frame_t"].copy()
-        h = None
-        segments = np.diff(np.vstack([np.zeros((1, 3)), positions]), axis=1)
-        lengths = np.linalg.norm(segments, axis=2)
+        # frame_positions is (frames, nodes, 3): segment lengths are measured
+        # node by node against the previous sampled frame.
+        pos = np.asarray(positions, dtype=float)
+        if pos.ndim == 2:
+            segments = np.diff(np.vstack([np.zeros((1, 3)), pos]), axis=1)
+            lengths = np.linalg.norm(segments, axis=1)
+        elif pos.ndim == 3:
+            previous = np.concatenate(
+                [np.zeros((1,) + tuple(pos.shape[1:]), dtype=pos.dtype), pos[:-1]], axis=0)
+            segments = pos - previous
+            lengths = np.linalg.norm(segments, axis=2)
+        else:
+            raise ValueError("unexpected frame_positions rank: %r" % (pos.shape,))
         h = lengths[0, 0]
         strains.append(lengths / h - 1.0)
         assert np.array_equal(frame_t, np.arange(120) / 24.0), cid + " timebase"
